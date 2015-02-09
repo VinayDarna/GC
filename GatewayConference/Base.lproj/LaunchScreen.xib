@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-6u-JAp">
+                    <rect key="frame" x="-10" y="-14" width="500" height="511"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="500" id="0Y5-uD-iM9"/>
+                        <constraint firstAttribute="height" constant="511" id="abo-dA-0sb"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nCY-6u-JAp" secondAttribute="bottom" constant="-17" id="RdO-yw-HYa"/>
+                <constraint firstItem="nCY-6u-JAp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-14" id="Ta1-Mj-dYj"/>
+                <constraint firstItem="nCY-6u-JAp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="cGR-CU-AAd"/>
+                <constraint firstAttribute="trailing" secondItem="nCY-6u-JAp" secondAttribute="trailing" constant="-10" id="oMC-2n-Zk6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+</document>

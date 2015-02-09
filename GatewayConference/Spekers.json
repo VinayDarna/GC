@@ -1,0 +1,60 @@
+{
+    "Spekers": [
+        {
+            "identifier": "01",
+            "Name": "ROBERT MORRIS",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/psrobert_GC_web_300x350_1.jpg?itok=nmKkFQnb",
+            "Church": "Gateway Church",
+            "Long_Desc": "Robert Morris is the founding senior pastor of Gateway Church, a multicampus, evangelistic, Spirit-empowered church in the Dallas/Fort Worth Metroplex. Since it began in 2000, the church has grown to more than 36,000 active members. He is featured on the weekly television program, The Blessed Life, broadcast to approximately 100 million homes in the United States and more than 200 countries around the world. Robert holds a doctorate of literature and serves as chairman of the board of The King’s University. He is the bestselling author of 11 books, including The Blessed Life, From Dream to Destiny, The God I Never Knew, and The Blessed Church. Robert and his wife, Debbie, have been married 34 years and are blessed with one married daughter, two married sons, and five grandchildren. You can follow Robert on Twitter @PsRobertMorris.",
+            "Short_Desc": "Founding Senior PastorGateway ChurchSouthlake, TX"
+        },
+        {
+            "identifier": "02",
+            "Name": "JIMMY EVANS",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/jimmyevans_GC_web_300x350.jpg?itok=ugzvN7Cz",
+            "Church": "Senior ElderTrinity Fellowship",
+            "Long_Desc": "Jimmy Evans is founder and CEO of MarriageToday, a ministry based in Dallas, Texas, that is devoted to helping couples build strong and fulfilling marriages and families. Jimmy and his wife, Karen, are passionate about marriage. Together, they co-host MarriageToday with Jimmy and Karen, a nationally syndicated television program which is broadcast daily into over 110 million homes in America and more than 200 countries worldwide. Jimmy has been a key of Trinity Fellowship Church in Amarillo, Texas for the past 30 years. During his 30 years of leadership, Trinity has grown from 900 to over 10,000 members. He also serves as an Apostolic Elder of Gateway Church in Southlake, Texas, and is an overseer of New Life Church in Colorado Springs, Colorado. Jimmy has authored more than ten books, among which are his popular works, Marriage on the Rock, Freedom From Your Past, Seven Secrets of Successful Families, Ten Steps Toward Christ, Lifelong Love Affair, and his newest book, When Life Hurts.Jimmy and Karen have been married 40 years and have two married children and five grandchildren.",
+            "Short_Desc": "Senior ElderTrinity Fellowship"
+        },
+        {
+            "identifier": "03",
+            "Name": "THOMAS MILLER",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/thomas_miller_GC_worship_webtemplate_300x350.jpg?itok=cKTHylog",
+            "Church": "Gateway Church",
+            "Long_Desc": "Thomas Miller is a worship pastor and associate senior pastor at Gateway Church. He has more than fifteen years of ministry experience as worship pastor, minister of music, and youth pastor in Texas, West Virginia, and Florida. He founded and was the director of the School of Worship and the Arts at Christ For the Nations Institute in Dallas, Texas, where he also served as assistant director of worship, CFN mass choir director, class instructor, and private piano instructor. Thomas has written many songs including, “New Doxology” and “Come Thou Fount, Come Thou King.” As the leader of Gateway Worship, his passion is for the Church to become a house of creative God-fueled worship.",
+            "Short_Desc": "Associate Senior PastorGateway Church"
+        },
+        {
+            "identifier": "04",
+            "Name": "SION ALFORD",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/Sion_Alford_GC_worship_webtemplate_300x350.jpg?itok=9HWKj1RH",
+            "Church": "Gateway Church",
+            "Long_Desc": "Sion is the executive pastor of worship at Gateway Church. As a worship leader, musician, teacher, songwriter, administrator and pastor, Sion offers a unique perspective to the position of worship pastor through his informative and practical teaching. Though Sion and his wife, Shannon, have traveled around the globe ministering through the Word and song to many churches and congregations, they believe their greatest ministry is to their eight beautiful children.",
+            "Short_Desc": "Gateway Church"
+        },
+        {
+            "identifier": "05",
+            "Name": "KARI JOBE",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/KariJobe_GC_worship_webtemplate_300x350.jpg?itok=5RmWNRk_",
+            "Church": "Gateway Church",
+            "Long_Desc": "Kari is a two-time Dove Award Winner, singer, songwriter, and an associate worship pastor at Gateway. As an alumnus of Dallas Baptist University, Christ For the Nations Institute and Oral Roberts University, she has led worship for more than 18 years. She has written many powerful songs, including “You Are For Me,” “No Sweeter Name” and “Pure,” and she is the original voice behind “Revelation Song.” Kari has co-written with numerous songwriters such as Chris Tomlin, Ed Cash, Paul Baloche, Klaus Kuehn, and Mia Fieldes. She recently released her newest CD, Majestic.",
+            "Short_Desc": "Worship Pastor Gateway Church"
+        },
+        {
+            "identifier": "06",
+            "Name": "MARK HARRIS",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/MarkHarris_GC_worship_webtemplate_300x350.jpg?itok=asgkMuvY",
+            "Church": "Gateway Church",
+            "Long_Desc": "Mark is an associate pastor and artist-in-residence at Gateway. He has a bachelor’s of music from Lee University, and before coming to Gateway he was in the Grammy Award winning group 4Him, and also performed as a solo artist. He and his wife have two wonderful children.",
+            "Short_Desc": "Gateway ChurchSouthlake, TX"
+        },
+        {
+            "identifier": "07",
+            "Name": "TIM SHEPPARD",
+            "ImageURL": "http://gatewayconference.com/sites/gwayconf/files/styles/large/public/images/speakers/Tim_Sheppard_GC_worship_webtemplate_300x350.jpg?itok=j92jp86O",
+            "Church": "Gateway Church",
+            "Long_Desc": "Tim is an executive pastor and artist-in-residence at Gateway Church. He has been in full-time music ministry his entire adult life. At age 21, Tim signed his first recording and publishing contract with a major Christian label and began to tour solo as a contemporary Christian singer/songwriter and also as part of Holm, Sheppard, Johnson. Many of Tim’s songs have been recorded by major artists. His passions are leading worship, writing and recording worship music, and mentoring emerging worship artists, songwriters and producers. Tim and his wife, Kelly, have been married for 31 years.",
+            "Short_Desc": "Gateway ChurchSouthlake, TX"
+        }
+    ]
+}

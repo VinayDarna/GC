@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9FAB67B1-9376-4B1C-B7A1-0C5E9CC71525</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GatewayConference</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B996EB5118BF67CFE1B7A53765031A53713FAF18</key>
+		<string>github.com:Teja-Swaroop/Gateway_conference.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GatewayConference.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B996EB5118BF67CFE1B7A53765031A53713FAF18</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Teja-Swaroop/Gateway_conference.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B996EB5118BF67CFE1B7A53765031A53713FAF18</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B996EB5118BF67CFE1B7A53765031A53713FAF18</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GateWay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
