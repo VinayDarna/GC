@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "More 32 * 32.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "BlueSky.png"
+      "filename" : "More 64 * 64.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "More 99 * 99.png"
     }
   ],
   "info" : {
