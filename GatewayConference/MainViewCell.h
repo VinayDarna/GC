@@ -10,4 +10,8 @@
 
 @interface MainViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *nameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *churchLbl;
+
 @end

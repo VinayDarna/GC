@@ -18,6 +18,8 @@
 		B57601D31A65192400CB4B60 /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57601D21A65192400CB4B60 /* POIViewController.m */; };
 		B57601D61A65489500CB4B60 /* AttendiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57601D51A65489500CB4B60 /* AttendiesListViewController.m */; };
 		B57601D91A65490300CB4B60 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57601D81A65490300CB4B60 /* SurveyViewController.m */; };
+		B5885CD31A89FCF7004D1A98 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5885CD11A89FCF7004D1A98 /* MainViewCell.m */; };
+		B5885CD41A89FCF7004D1A98 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5885CD21A89FCF7004D1A98 /* MainViewCell.xib */; };
 		B5CD3D6B1A66920F00DF0A8E /* SpeakerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD3D6A1A66920F00DF0A8E /* SpeakerDetailsViewController.m */; };
 		B7154E1A1A5FAAD0007D12AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E191A5FAAD0007D12AD /* main.m */; };
 		B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1C1A5FAAD0007D12AD /* AppDelegate.m */; };
@@ -65,6 +67,9 @@
 		B57601D51A65489500CB4B60 /* AttendiesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendiesListViewController.m; sourceTree = "<group>"; };
 		B57601D71A65490300CB4B60 /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		B57601D81A65490300CB4B60 /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
+		B5885CD01A89FCF7004D1A98 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
+		B5885CD11A89FCF7004D1A98 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
+		B5885CD21A89FCF7004D1A98 /* MainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		B5CD3D691A66920F00DF0A8E /* SpeakerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailsViewController.h; sourceTree = "<group>"; };
 		B5CD3D6A1A66920F00DF0A8E /* SpeakerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetailsViewController.m; sourceTree = "<group>"; };
 		B7154E141A5FAAD0007D12AD /* GatewayConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatewayConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +195,9 @@
 				B7154E291A5FAAD0007D12AD /* LaunchScreen.xib */,
 				B7154E1E1A5FAAD0007D12AD /* GatewayConference.xcdatamodeld */,
 				B7154E171A5FAAD0007D12AD /* Supporting Files */,
+				B5885CD01A89FCF7004D1A98 /* MainViewCell.h */,
+				B5885CD11A89FCF7004D1A98 /* MainViewCell.m */,
+				B5885CD21A89FCF7004D1A98 /* MainViewCell.xib */,
 			);
 			path = GatewayConference;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7154E261A5FAAD0007D12AD /* Main.storyboard in Resources */,
+				B5885CD41A89FCF7004D1A98 /* MainViewCell.xib in Resources */,
 				B53AB9371A664A23009CE014 /* Spekers.json in Resources */,
 				B53AB9391A6673B3009CE014 /* Placeholder.jpeg in Resources */,
 				B7154E2B1A5FAAD0007D12AD /* LaunchScreen.xib in Resources */,
@@ -387,6 +396,7 @@
 				B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */,
 				B5CD3D6B1A66920F00DF0A8E /* SpeakerDetailsViewController.m in Sources */,
 				B7154E1A1A5FAAD0007D12AD /* main.m in Sources */,
+				B5885CD31A89FCF7004D1A98 /* MainViewCell.m in Sources */,
 				B53AB92F1A664292009CE014 /* SpeakersViewController.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
 				B57601D61A65489500CB4B60 /* AttendiesListViewController.m in Sources */,
@@ -451,7 +461,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -471,6 +482,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -493,7 +505,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -506,6 +519,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -522,7 +536,7 @@
 				INFOPLIST_FILE = GatewayConference/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c145b935-07de-4662-9426-f56ad5836fd2";
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -537,7 +551,7 @@
 				INFOPLIST_FILE = GatewayConference/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c145b935-07de-4662-9426-f56ad5836fd2";
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -558,7 +572,7 @@
 				INFOPLIST_FILE = GatewayConferenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c145b935-07de-4662-9426-f56ad5836fd2";
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatewayConference.app/GatewayConference";
 			};
 			name = Debug;
@@ -575,7 +589,7 @@
 				INFOPLIST_FILE = GatewayConferenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c145b935-07de-4662-9426-f56ad5836fd2";
+				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatewayConference.app/GatewayConference";
 			};
 			name = Release;

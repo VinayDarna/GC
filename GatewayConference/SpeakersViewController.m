@@ -7,8 +7,12 @@
 //
 
 #import "SpeakersViewController.h"
+
 #import <SDWebImage/UIImageView+WebCache.h>
+
 #import "GCSpeakerModel.h"
+
+#import "MainViewCell.h"
 
 @interface SpeakersViewController ()
 
@@ -23,10 +27,14 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"App-BG"]];
+    [tempImageView setFrame:speakersTableView.frame];
+    speakersTableView.backgroundView = tempImageView;
     [speakersTableView reloadData];
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"speakers" andReturnWith:^(NSMutableArray *speakers, BOOL Success) {
-
-//    [[GCSharedClass sharedInstance]fetchSpeakerDetailsWith:^(NSMutableArray *speakers, BOOL Success) {
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"speakers" andReturnWith:^(NSMutableArray *speakers, BOOL Success)
+    {
         if (Success)
         {
             speakersArray = [speakers copy];
@@ -38,13 +46,15 @@
             [Alert show];
         }
     }];
-    
     [[GCSharedClass sharedInstance]fetchParseDetails];
-
 }
 
-
 #pragma UITableView Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -53,36 +63,30 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.0;
+    return 250.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nil];
+    GCSpeakerModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
+    static NSString *simpleTableIdentifier = @"SpeakerCell";
+    
+    MainViewCell * cell = (MainViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MainViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    GCSpeakerModel *gcSpeak = [speakersArray objectAtIndex:indexPath.row];
     
-    UILabel *nameLbl = [[UILabel alloc]initWithFrame:CGRectMake(120, 15, 200, 30)];
-    [nameLbl setTextAlignment:NSTextAlignmentCenter];
-    [nameLbl setFont:[UIFont fontWithName:@"Heiti TC" size:22]];
-    nameLbl.text = [NSString stringWithFormat:@"%@",gcSpeak.title];
-    [cell.contentView addSubview:nameLbl];
-    
-    UIImageView *strongImgView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 0, 100, 100)];
+    cell.backgroundColor = [UIColor clearColor];
     NSURL *url = [NSURL URLWithString:gcSpeak.image];
-    [strongImgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
-    strongImgView.layer.cornerRadius = strongImgView.frame.size.width / 2;
-    strongImgView.clipsToBounds = YES;
-    [cell.contentView addSubview:strongImgView];
+    [cell.profilePic sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
+    cell.profilePic.clipsToBounds = YES;
     
-    UILabel *churchLabel = [[UILabel alloc]initWithFrame:CGRectMake(110, 35, 180, 70)];
-    [churchLabel setTextAlignment:NSTextAlignmentCenter];
-    [churchLabel setNumberOfLines:2];
-    churchLabel.text = [NSString stringWithFormat:@"%@",[[speakersArray objectAtIndex:indexPath.row]valueForKey:@"organization"]];
-    [cell.contentView addSubview:churchLabel];
+    cell.nameLbl.text = gcSpeak.title;
+    cell.churchLbl.text = gcSpeak.organization;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -92,9 +96,8 @@
 {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SpeakerDetailsViewController *speDet = [story instantiateViewControllerWithIdentifier:@"SpeakerDetailsViewController"];
-    //    speDet.speakersDetailsArray = speakersArray;
     speDet.speakersDetailsArray = [speakersArray objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:speDet animated:YES];;
+    [self.navigationController pushViewController:speDet animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

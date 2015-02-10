@@ -174,8 +174,6 @@ static GCSharedClass * sharedClassObj = nil;
             
         });
     });
-    
-    
 }
 
 

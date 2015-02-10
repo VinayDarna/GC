@@ -123,7 +123,7 @@
     {
         cell.textLabel.text = titles[indexPath.row];
         [cell.textLabel setFont:FONT_NEW_HEADING_BOLDwithFontSize(30.0)];
-        cell.textLabel.textColor = RGBCOLOR(249, 168, 6);
+        cell.textLabel.textColor = RGBCOLOR(255, 255, 255);
     }
     
     return cell;

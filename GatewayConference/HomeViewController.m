@@ -26,7 +26,7 @@
     
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
-    self.backgroundImage = [UIImage imageNamed:@"Launch"];
+    self.backgroundImage = [UIImage imageNamed:@"Application_BG"];
     self.delegate = self;
 }
 

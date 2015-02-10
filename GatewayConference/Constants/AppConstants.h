@@ -24,7 +24,7 @@
 #endif
 
 #define FONT_NEW_HEADING_DEMIBOLDwithFontSize(f)   [UIFont fontWithName: @"DINCompPro-Light" size:(f)]
-#define FONT_NEW_HEADING_BOLDwithFontSize(f)       [UIFont fontWithName: @"DINCompPro-Medium" size:(f)]
+#define FONT_NEW_HEADING_BOLDwithFontSize(f)       [UIFont fontWithName: @"Heiti TC Medium" size:(f)]
 #define FONT_NEW_HEADING_MEDIUMwithFontSize(f)     [UIFont fontWithName: @"DINCompPro" size:(f)]
 
 

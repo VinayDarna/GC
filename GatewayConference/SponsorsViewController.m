@@ -20,9 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    collectionView1.backgroundView = [[UIView alloc] initWithFrame:collectionView1.bounds];
-    UIImageView *imaView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Application_BG"]];
-    [collectionView1.backgroundView addSubview:imaView];
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Application_BG"]];
+    [tempImageView setFrame:collectionView1.frame];
+    collectionView1.backgroundView = tempImageView;
 }
 
 -(void)viewWillAppear:(BOOL)animated
