@@ -14,6 +14,7 @@
 
 #import "GCSpeakerModel.h"
 
+#import "AppDelegate.h"
 
 @implementation GCSharedClass
 
@@ -40,16 +41,31 @@ static GCSharedClass * sharedClassObj = nil;
     
     if (self != nil)
     {
-        // do your init here
+        appdelegateObj = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+        self.window = [[[UIApplication sharedApplication] windows] lastObject];
     }
-    
     return self;
+}
+
+
+
+-(BOOL)checkNetworkAndProceed:(UIViewController*)viewControllerObject
+{
+    if ([self isNetworkAvalible])
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 /*
  This method checks the if the internet connection is available for the device.
  @returns Yes if the internet connection is available, otherwise no.
  */
+
 -(BOOL)isNetworkAvalible
 {
     Reachability* reachability = [Reachability reachabilityForInternetConnection];
@@ -65,6 +81,24 @@ static GCSharedClass * sharedClassObj = nil;
     {
         return YES;
     }
+}
+/**
+ * showGlobalProgressHUDWithTitle
+ *
+ *  @param <#statements#> <#statements#>
+ *  @param <#statements#>   <#statements#>
+ */
+
+- (MBProgressHUD *)showGlobalProgressHUDWithTitle:(NSString *)title
+{
+    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+    hud.labelText = title;
+    return hud;
+}
+
+- (void)dismissGlobalHUD
+{
+    [MBProgressHUD hideHUDForView:self.window animated:YES];
 }
 
 -(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(SpeakersBlock)completionHandler;

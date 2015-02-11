@@ -7,18 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MBProgressHUD.h>
+#import "AppConstants.h"
 
 typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
 
 @interface GCSharedClass : NSObject
 {
     NSMutableArray * responceArray;
+    AppDelegate * appdelegateObj;
 }
+
+@property(nonatomic, strong) UIWindow *window;
+
 +(GCSharedClass *)sharedInstance;
 
+-(BOOL)checkNetworkAndProceed:(UIViewController*)viewControllerObject;
 -(BOOL)isNetworkAvalible;
+
 -(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(SpeakersBlock)completionHandler;
 
 - (void)fetchParseDetails;
+
+- (MBProgressHUD *)showGlobalProgressHUDWithTitle:(NSString *)title;
+- (void)dismissGlobalHUD;
 
 @end

@@ -37,6 +37,7 @@ PODS:
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
+  - WYPopoverController (0.3.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - Reachability (= 3.1.1)
   - RESideMenu (~> 4.0.7)
   - SDWebImage (= 3.7.1)
+  - WYPopoverController (~> 0.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
@@ -57,5 +59,6 @@ SPEC CHECKSUMS:
   Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  WYPopoverController: a46116aded5979c354300ef644b9cce906ee3a57
 
 COCOAPODS: 0.35.0

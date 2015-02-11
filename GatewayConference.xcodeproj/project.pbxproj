@@ -20,6 +20,7 @@
 		B57601D91A65490300CB4B60 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57601D81A65490300CB4B60 /* SurveyViewController.m */; };
 		B5885CD31A89FCF7004D1A98 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5885CD11A89FCF7004D1A98 /* MainViewCell.m */; };
 		B5885CD41A89FCF7004D1A98 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5885CD21A89FCF7004D1A98 /* MainViewCell.xib */; };
+		B5885CD71A8A443C004D1A98 /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5885CD61A8A443C004D1A98 /* PopOverViewController.m */; };
 		B5CD3D6B1A66920F00DF0A8E /* SpeakerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD3D6A1A66920F00DF0A8E /* SpeakerDetailsViewController.m */; };
 		B7154E1A1A5FAAD0007D12AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E191A5FAAD0007D12AD /* main.m */; };
 		B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1C1A5FAAD0007D12AD /* AppDelegate.m */; };
@@ -70,6 +71,8 @@
 		B5885CD01A89FCF7004D1A98 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
 		B5885CD11A89FCF7004D1A98 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
 		B5885CD21A89FCF7004D1A98 /* MainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		B5885CD51A8A443C004D1A98 /* PopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverViewController.h; sourceTree = "<group>"; };
+		B5885CD61A8A443C004D1A98 /* PopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOverViewController.m; sourceTree = "<group>"; };
 		B5CD3D691A66920F00DF0A8E /* SpeakerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailsViewController.h; sourceTree = "<group>"; };
 		B5CD3D6A1A66920F00DF0A8E /* SpeakerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetailsViewController.m; sourceTree = "<group>"; };
 		B7154E141A5FAAD0007D12AD /* GatewayConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatewayConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +193,8 @@
 				B57601D51A65489500CB4B60 /* AttendiesListViewController.m */,
 				B57601D71A65490300CB4B60 /* SurveyViewController.h */,
 				B57601D81A65490300CB4B60 /* SurveyViewController.m */,
+				B5885CD51A8A443C004D1A98 /* PopOverViewController.h */,
+				B5885CD61A8A443C004D1A98 /* PopOverViewController.m */,
 				B7154E241A5FAAD0007D12AD /* Main.storyboard */,
 				B7154E271A5FAAD0007D12AD /* Images.xcassets */,
 				B7154E291A5FAAD0007D12AD /* LaunchScreen.xib */,
@@ -399,6 +404,7 @@
 				B5885CD31A89FCF7004D1A98 /* MainViewCell.m in Sources */,
 				B53AB92F1A664292009CE014 /* SpeakersViewController.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
+				B5885CD71A8A443C004D1A98 /* PopOverViewController.m in Sources */,
 				B57601D61A65489500CB4B60 /* AttendiesListViewController.m in Sources */,
 				B574B8A41A6E5CDF00627F3B /* SponsorsViewController.m in Sources */,
 				B53AB9351A664891009CE014 /* GCSpeakerModel.m in Sources */,

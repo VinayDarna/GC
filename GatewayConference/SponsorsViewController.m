@@ -10,6 +10,8 @@
 #import "GCSpeakerModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "GCSharedClass.h"
+#import "PopOverViewController.h"
+
 
 @interface SponsorsViewController ()
 
@@ -27,16 +29,28 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"sponsors" andReturnWith:^(NSMutableArray *speakers, BOOL Success) {
+    if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
+    {
+        [self getSponsorDetails];
+    }else
+    {
+        NSLog(@"Error");
+    }
+}
+
+-(void)getSponsorDetails
+{
+    [[GCSharedClass sharedInstance] showGlobalProgressHUDWithTitle:@"Loading..."];
+    [[GCSharedClass sharedInstance] fetchDetailsWithParameter:@"sponsors" andReturnWith:^(NSMutableArray *speakers, BOOL Success) {
         if (Success)
         {
+            [[GCSharedClass sharedInstance]dismissGlobalHUD];
             sponsorArray = [speakers copy];
             [collectionView1 reloadData];
         }
         else
         {
-            UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [Alert show];
+            [[GCSharedClass sharedInstance]isNetworkAvalible];
         }
     }];
 }
@@ -64,6 +78,74 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld",(long)indexPath.item);
+    
+    if (settingsPopoverController == nil)
+    {
+        UICollectionViewCell * cell = [collectionView1 cellForItemAtIndexPath:indexPath];
+        PopOverViewController * contro = [self.storyboard instantiateViewControllerWithIdentifier:@"PopOverViewController"];
+        GCSpeakerModel * model = [sponsorArray objectAtIndex:indexPath.row];
+        
+        contro.imageUrlString = model.logo;
+        contro.nameString = model.title;
+        contro.webUrlString = model.url;
+        
+        contro.preferredContentSize = CGSizeMake(320, 400);
+        contro.modalInPopover = NO;
+        contro.delegate = (id)self;
+        UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:contro];
+        
+        settingsPopoverController = [[WYPopoverController alloc]initWithContentViewController:contentViewController];
+        [contro.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
+        settingsPopoverController.delegate = (id)self;
+        settingsPopoverController.passthroughViews = @[cell];
+        settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
+        settingsPopoverController.wantsDefaultContentAppearance = YES;
+        
+        [settingsPopoverController presentPopoverAsDialogAnimated:YES
+                                                          options:WYPopoverAnimationOptionFadeWithScale];
+    }
+    else
+    {
+        [self close:nil];
+    }
+}
+
+- (void)close:(id)sender
+{
+    [settingsPopoverController dismissPopoverAnimated:YES completion:^{
+        [self popoverControllerDidDismissPopover:settingsPopoverController];
+    }];
+}
+
+#pragma mark - WYPopoverControllerDelegate
+
+- (void)popoverControllerDidPresentPopover:(WYPopoverController *)controller
+{
+    NSLog(@"popoverControllerDidPresentPopover");
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
+{
+    return NO;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    if (controller == anotherPopoverController)
+    {
+        anotherPopoverController.delegate = nil;
+        anotherPopoverController = nil;
+    }
+    else if (controller == settingsPopoverController)
+    {
+        settingsPopoverController.delegate = nil;
+        settingsPopoverController = nil;
+    }
+}
+
+- (BOOL)popoverControllerShouldIgnoreKeyboardBounds:(WYPopoverController *)popoverController
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,13 +154,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

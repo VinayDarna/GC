@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WYPopoverController.h>
+#import <WYStoryboardPopoverSegue.h>
 
-@interface SponsorsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SponsorsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, WYPopoverControllerDelegate>
 {
     __weak IBOutlet UICollectionView *collectionView1;
     NSMutableArray *sponsorArray;
     UILabel *titleLabel;
+    
+    WYPopoverController * anotherPopoverController;
+    WYPopoverController * settingsPopoverController;
 }
+@property (nonatomic, strong) UIPopoverController *erpDataPopover;
 @end

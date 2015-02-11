@@ -17,5 +17,6 @@
 #import "GCSharedClass.h"
 
 #import <Parse/Parse.h>
+#import <FacebookSDK.h>
 
 #endif

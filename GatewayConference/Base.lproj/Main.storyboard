@@ -166,6 +166,71 @@
             </objects>
             <point key="canvasLocation" x="1851" y="-346"/>
         </scene>
+        <!--Pop Over View Controller-->
+        <scene sceneID="Jcb-I6-FGL">
+            <objects>
+                <viewController storyboardIdentifier="PopOverViewController" id="Ocd-je-uoB" customClass="PopOverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CD2-Kj-UAu"/>
+                        <viewControllerLayoutGuide type="bottom" id="2bV-mM-o50"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fny-vV-9oc">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-J9-zr8">
+                                <rect key="frame" x="7" y="41" width="387" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="ftb-Oo-xE9"/>
+                                    <constraint firstAttribute="width" constant="387" id="jrZ-3U-EVh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-YT-GAf">
+                                <rect key="frame" x="31" y="292" width="339" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.63840182109999999" blue="0.41925231600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="72w-oq-X0V"/>
+                                    <constraint firstAttribute="width" constant="339" id="gxy-hr-c9j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200-4v-NnQ">
+                                <rect key="frame" x="31" y="350" width="339" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cx2-kt-W2a"/>
+                                    <constraint firstAttribute="width" constant="339" id="ldS-B6-e9Y"/>
+                                </constraints>
+                                <state key="normal" title="Visit Here">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="visitWebPage:" destination="Ocd-je-uoB" eventType="touchUpInside" id="jMJ-IC-cws"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fgo-J9-zr8" secondAttribute="centerX" constant="-0.5" id="9h2-Xh-7lb"/>
+                            <constraint firstAttribute="centerY" secondItem="fgo-J9-zr8" secondAttribute="centerY" constant="45" id="MnR-zx-qWS"/>
+                            <constraint firstItem="9nq-YT-GAf" firstAttribute="centerX" secondItem="fgo-J9-zr8" secondAttribute="centerX" id="OzK-zs-C1R"/>
+                            <constraint firstItem="9nq-YT-GAf" firstAttribute="top" secondItem="fgo-J9-zr8" secondAttribute="bottom" constant="23" id="X6E-ti-ZJB"/>
+                            <constraint firstAttribute="bottom" secondItem="200-4v-NnQ" secondAttribute="bottom" constant="20" symbolic="YES" id="XUO-6I-yAT"/>
+                            <constraint firstItem="200-4v-NnQ" firstAttribute="leading" secondItem="9nq-YT-GAf" secondAttribute="leading" id="urP-Ag-E27"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <connections>
+                        <outlet property="imagView" destination="fgo-J9-zr8" id="Oq5-8K-KYb"/>
+                        <outlet property="nameLbl" destination="9nq-YT-GAf" id="3kg-KB-2RB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IID-Qd-r9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="441"/>
+        </scene>
         <!--Sessions-->
         <scene sceneID="TIa-KT-mkr">
             <objects>

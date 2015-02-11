@@ -28,25 +28,38 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-    
     UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"App-BG"]];
     [tempImageView setFrame:speakersTableView.frame];
     speakersTableView.backgroundView = tempImageView;
-    [speakersTableView reloadData];
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"speakers" andReturnWith:^(NSMutableArray *speakers, BOOL Success)
+
+    if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
-        if (Success)
-        {
-            speakersArray = [speakers copy];
-            [speakersTableView reloadData];
-        }
-        else
-        {
-            UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [Alert show];
-        }
-    }];
+        [self getSpeakerDetails];
+    }
+    else{
+        NSLog(@"Error in fetching");
+    }
     [[GCSharedClass sharedInstance]fetchParseDetails];
+}
+
+-(void)getSpeakerDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"speakers" andReturnWith:^(NSMutableArray *speakers, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+             speakersArray = [speakers copy];
+             [speakersTableView reloadData];
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+         }
+     }];
 }
 
 #pragma UITableView Delegate
