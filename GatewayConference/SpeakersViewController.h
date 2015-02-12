@@ -15,6 +15,4 @@
     NSMutableArray *speakersArray;
 }
 
-
-
 @end

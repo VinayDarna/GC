@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "GCSpeakerModel.h"
+
 
 @interface SpeakerDetailsViewController : UIViewController
 {
@@ -15,8 +17,9 @@
     __weak IBOutlet UIImageView *profilePic;
     __weak IBOutlet UILabel *churchLbl;
     __weak IBOutlet UITextView *detailText;
+    __weak IBOutlet UILabel *textLabel;
 }
 
-@property (nonatomic, strong) NSMutableArray * speakersDetailsArray;
+@property (nonatomic, strong) GCSpeakerModel *speakerDetModelObj;
 
 @end

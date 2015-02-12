@@ -23,15 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"App-BG"]];
-    [tempImageView setFrame:speakersTableView.frame];
-    speakersTableView.backgroundView = tempImageView;
-
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
         [self getSpeakerDetails];
@@ -40,6 +31,14 @@
         NSLog(@"Error in fetching");
     }
     [[GCSharedClass sharedInstance]fetchParseDetails];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"App-BG"]];
+    [tempImageView setFrame:speakersTableView.frame];
+    speakersTableView.backgroundView = tempImageView;
 }
 
 -(void)getSpeakerDetails
@@ -58,6 +57,7 @@
          {
              UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
              [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
      }];
 }
@@ -82,7 +82,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GCSpeakerModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
-    static NSString *simpleTableIdentifier = @"SpeakerCell";
+    static NSString * simpleTableIdentifier = @"SpeakerCell";
     
     MainViewCell * cell = (MainViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
@@ -108,8 +108,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SpeakerDetailsViewController *speDet = [story instantiateViewControllerWithIdentifier:@"SpeakerDetailsViewController"];
-    speDet.speakersDetailsArray = [speakersArray objectAtIndex:indexPath.row];
+    SpeakerDetailsViewController * speDet = [story instantiateViewControllerWithIdentifier:@"SpeakerDetailsViewController"];
+    GCSpeakerModel *modelObj = [speakersArray objectAtIndex:indexPath.row];
+    speDet.speakerDetModelObj = modelObj;
     [self.navigationController pushViewController:speDet animated:YES];
 }
 

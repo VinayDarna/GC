@@ -26,7 +26,6 @@ static GCSharedClass * sharedClassObj = nil;
     {
         sharedClassObj = [[super allocWithZone:NULL]init];
     }
-    
     return sharedClassObj;
 }
 
@@ -46,8 +45,6 @@ static GCSharedClass * sharedClassObj = nil;
     }
     return self;
 }
-
-
 
 -(BOOL)checkNetworkAndProceed:(UIViewController*)viewControllerObject
 {
@@ -82,6 +79,7 @@ static GCSharedClass * sharedClassObj = nil;
         return YES;
     }
 }
+
 /**
  * showGlobalProgressHUDWithTitle
  *
@@ -165,6 +163,7 @@ static GCSharedClass * sharedClassObj = nil;
                      gcspeaker.level = [[dictobj objectForKey:@"sponsor"]objectForKey:@"level"];
                      gcspeaker.twitter = [[dictobj objectForKey:@"sponsor"]objectForKey:@"twitter"];
                      gcspeaker.url = [[dictobj objectForKey:@"sponsor"]objectForKey:@"url"];
+                     gcspeaker.image_banner = [[dictobj objectForKey:@"sponsor"]objectForKey:@"image_banner"];
                      
                      [speakers addObject:gcspeaker];
                  }
@@ -183,7 +182,7 @@ static GCSharedClass * sharedClassObj = nil;
     dispatch_queue_t myQueue = dispatch_queue_create("Deals Queue",NULL);
     
     dispatch_async(myQueue, ^{
-        PFQuery *query = [PFQuery queryWithClassName:@"Installation"];
+        PFQuery *query = [PFQuery queryWithClassName:@"Course"];
         
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             
@@ -194,6 +193,15 @@ static GCSharedClass * sharedClassObj = nil;
                 for (PFObject *object in objects)
                 {
                     NSLog(@"object %@",object);
+                    
+                    
+                    NSLog(@"object %@",[object objectForKey:@"courseJson"]);
+                    
+                    NSMutableDictionary * test = [[NSMutableDictionary alloc]init];
+                    
+                    test = [NSJSONSerialization JSONObjectWithData:[[object objectForKey:@"courseJson"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+                    
+                    NSLog(@"etst %@",test);
                 }
             }
             else

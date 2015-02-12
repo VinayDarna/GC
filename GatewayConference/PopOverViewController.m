@@ -10,6 +10,8 @@
 
 #import "GCSpeakerModel.h"
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 @interface PopOverViewController ()
 
 @end
