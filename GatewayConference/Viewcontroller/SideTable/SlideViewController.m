@@ -40,51 +40,6 @@
 }
 
 #pragma mark -
-#pragma mark UITableView Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    switch (indexPath.row) {
-        case 0:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"]]
-                                                         animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 1:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"]]
-                                                         animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 2: 
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"POIViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 3:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"AttendiesListViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 4:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SponsorsViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 5:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"VideosViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 6:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SurveyViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-            break;
-        case 7:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FAQViewController"]] animated:YES];
-            [self.sideMenuViewController hideMenuViewController];
-        default:
-            break;
-    }
-}
-
-#pragma mark -
 #pragma mark UITableView Datasource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -142,14 +97,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark -
+#pragma mark UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row)
+    {
+        case 0:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FirstViewController"] animated:YES];
+            break;
+        case 1:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
+            break;
+        case 2:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"POIViewController"] animated:YES];
+            break;
+        case 3:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"AttendiesListViewController"] animated:YES];
+            break;
+        case 4:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SponsorsViewController"] animated:YES];
+            break;
+        case 5:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"VideosViewController"] animated:YES];
+            break;
+        case 6:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SurveyViewController"] animated:YES];
+            break;
+        case 7:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
+        default:
+            break;
+    }
+    [self.sideMenuViewController hideMenuViewController];
+}
+
+-(UIViewController*)returnViewcontrollerWithIdentifier:(NSString*)identifierName
+{
+    UIViewController * viewControllerObj = [[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:identifierName]];
+    
+    return viewControllerObj;
+}
 
 @end

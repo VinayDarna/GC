@@ -14,24 +14,48 @@
 
 @implementation FAQViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  
+    if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
+    {
+        [self getFAQDetails];
+    }
+    else
+    {
+        NSLog(@"Error in fetching");
+    }
+
 }
 
-- (void)didReceiveMemoryWarning {
+-(void)getFAQDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Faq andReturnWith:^(NSMutableArray *faqArray, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+             
+             NSLog(@"FAQ %@",faqArray);
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+         }
+     }];
+}
+
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

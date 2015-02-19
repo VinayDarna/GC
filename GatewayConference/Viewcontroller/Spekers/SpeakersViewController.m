@@ -26,7 +26,9 @@
 
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
-        [self getSpeakerDetails];
+        //[self getSpeakerDetails];
+        
+        [self getTracksDetails];
     }
     else
     {
@@ -34,6 +36,29 @@
     }
     
     [[GCSharedClass sharedInstance]fetchParseDetails];
+}
+
+-(void)getTracksDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Tracks andReturnWith:^(NSMutableArray *tracksArray, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+           
+             NSLog(@"tracksArray %@",tracksArray);
+             
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+         }
+     }];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated

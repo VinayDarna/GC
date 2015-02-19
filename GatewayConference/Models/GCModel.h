@@ -39,4 +39,8 @@
 @property (nonatomic, strong) NSString * logo;
 @property (nonatomic, strong) NSString * level;
 
+//Tracks
+
+@property (nonatomic, strong) NSString * survey;
+
 @end

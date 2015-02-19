@@ -25,7 +25,7 @@ NSString * const url_Speakers   = @"speakers";
 
 NSString * const url_Faq        = @"faq";
 
-NSString * const url_Tracks     = @"http://gatewayconference.com/api/tracks";
+NSString * const url_Tracks     = @"tracks";
 
 NSString * const url_Schedules  = @"schedule/full";
 

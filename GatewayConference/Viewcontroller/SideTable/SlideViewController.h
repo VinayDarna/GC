@@ -13,4 +13,7 @@
 {
     NSArray *titles;
 }
+
+-(UIViewController*)returnViewcontrollerWithIdentifier:(NSString*)identifierName;
+
 @end

@@ -10,4 +10,7 @@
 
 @interface FAQViewController : UIViewController
 
+
+-(void)getFAQDetails;
+
 @end

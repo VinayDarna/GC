@@ -119,32 +119,32 @@ static GCSharedClass * sharedClassObj = nil;
              
                  for (NSMutableDictionary * dictObj in responceArray)
                  {
-                     GCModel * gcspeaker = [GCModel new];
+                     GCModel * modelobj = [GCModel new];
 
                     // Speakers
-                     gcspeaker.nid = [[dictObj objectForKey:@"speaker"]objectForKey:@"nid"];
-                     gcspeaker.title = [[dictObj objectForKey:@"speaker"]objectForKey:@"title"];
-                     gcspeaker.body = [[dictObj objectForKey:@"speaker"]objectForKey:@"body"];
-                     gcspeaker.facebook = [[dictObj objectForKey:@"speaker"]objectForKey:@"facebook"];
-                     gcspeaker.group_image = [[dictObj objectForKey:@"speaker"]objectForKey:@"group_image"];
-                     gcspeaker.image = [[dictObj objectForKey:@"speaker"]objectForKey:@"image"];
-                     gcspeaker.image_thumbnail = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_thumbnail"];
-                     gcspeaker.image_api_thumbnail = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_api_thumbnail"];
-                     gcspeaker.image_banner = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_banner"];
-                     gcspeaker.location = [[dictObj objectForKey:@"speaker"]objectForKey:@"location"];
-                     gcspeaker.organization = [[dictObj objectForKey:@"speaker"]objectForKey:@"organization"];
-                     gcspeaker.organization_title = [[dictObj objectForKey:@"speaker"]objectForKey:@"organization_title"];
-                     gcspeaker.quote = [[dictObj objectForKey:@"speaker"]objectForKey:@"quote"];
-                     gcspeaker.session_name = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_name"];
-                     gcspeaker.session_summary = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_summary"];
-                     gcspeaker.speaker_links = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_links"];
-                     gcspeaker.speaker_type = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_type"];
-                     gcspeaker.twitter = [[dictObj objectForKey:@"speaker"]objectForKey:@"twitter"];
-                     gcspeaker.speaker_event = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_event"];
-                     gcspeaker.Banner_Link = [[dictObj objectForKey:@"speaker"]objectForKey:@"Banner Link"];
-                     gcspeaker.url = [[dictObj objectForKey:@"speaker"]objectForKey:@"url"];
+                     modelobj.nid = [[dictObj objectForKey:@"speaker"]objectForKey:@"nid"];
+                     modelobj.title = [[dictObj objectForKey:@"speaker"]objectForKey:@"title"];
+                     modelobj.body = [[dictObj objectForKey:@"speaker"]objectForKey:@"body"];
+                     modelobj.facebook = [[dictObj objectForKey:@"speaker"]objectForKey:@"facebook"];
+                     modelobj.group_image = [[dictObj objectForKey:@"speaker"]objectForKey:@"group_image"];
+                     modelobj.image = [[dictObj objectForKey:@"speaker"]objectForKey:@"image"];
+                     modelobj.image_thumbnail = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_thumbnail"];
+                     modelobj.image_api_thumbnail = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_api_thumbnail"];
+                     modelobj.image_banner = [[dictObj objectForKey:@"speaker"]objectForKey:@"image_banner"];
+                     modelobj.location = [[dictObj objectForKey:@"speaker"]objectForKey:@"location"];
+                     modelobj.organization = [[dictObj objectForKey:@"speaker"]objectForKey:@"organization"];
+                     modelobj.organization_title = [[dictObj objectForKey:@"speaker"]objectForKey:@"organization_title"];
+                     modelobj.quote = [[dictObj objectForKey:@"speaker"]objectForKey:@"quote"];
+                     modelobj.session_name = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_name"];
+                     modelobj.session_summary = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_summary"];
+                     modelobj.speaker_links = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_links"];
+                     modelobj.speaker_type = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_type"];
+                     modelobj.twitter = [[dictObj objectForKey:@"speaker"]objectForKey:@"twitter"];
+                     modelobj.speaker_event = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_event"];
+                     modelobj.Banner_Link = [[dictObj objectForKey:@"speaker"]objectForKey:@"Banner Link"];
+                     modelobj.url = [[dictObj objectForKey:@"speaker"]objectForKey:@"url"];
                      
-                     [responseArray addObject:gcspeaker];
+                     [responseArray addObject:modelobj];
                 }
              }
              else if ([paramStr isEqualToString:url_Sponsors])
@@ -154,19 +154,19 @@ static GCSharedClass * sharedClassObj = nil;
                  for (NSMutableDictionary * dictobj in responceArray)
                  {
                      //Sponsors
-                     GCModel * gcspeaker = [GCModel new];
+                     GCModel * modelobj = [GCModel new];
 
-                     gcspeaker.nid = [[dictobj objectForKey:@"sponsor"]objectForKey:@"nid"];
-                     gcspeaker.title = [[dictobj objectForKey:@"sponsor"]objectForKey:@"title"];
-                     gcspeaker.body = [[dictobj objectForKey:@"sponsor"]objectForKey:@"body"];
-                     gcspeaker.facebook = [[dictobj objectForKey:@"sponsor"]objectForKey:@"facebook"];
-                     gcspeaker.logo = [[dictobj objectForKey:@"sponsor"]objectForKey:@"logo"];
-                     gcspeaker.level = [[dictobj objectForKey:@"sponsor"]objectForKey:@"level"];
-                     gcspeaker.twitter = [[dictobj objectForKey:@"sponsor"]objectForKey:@"twitter"];
-                     gcspeaker.url = [[dictobj objectForKey:@"sponsor"]objectForKey:@"url"];
-                     gcspeaker.image_banner = [[dictobj objectForKey:@"sponsor"]objectForKey:@"image_banner"];
+                     modelobj.nid = [[dictobj objectForKey:@"sponsor"]objectForKey:@"nid"];
+                     modelobj.title = [[dictobj objectForKey:@"sponsor"]objectForKey:@"title"];
+                     modelobj.body = [[dictobj objectForKey:@"sponsor"]objectForKey:@"body"];
+                     modelobj.facebook = [[dictobj objectForKey:@"sponsor"]objectForKey:@"facebook"];
+                     modelobj.logo = [[dictobj objectForKey:@"sponsor"]objectForKey:@"logo"];
+                     modelobj.level = [[dictobj objectForKey:@"sponsor"]objectForKey:@"level"];
+                     modelobj.twitter = [[dictobj objectForKey:@"sponsor"]objectForKey:@"twitter"];
+                     modelobj.url = [[dictobj objectForKey:@"sponsor"]objectForKey:@"url"];
+                     modelobj.image_banner = [[dictobj objectForKey:@"sponsor"]objectForKey:@"image_banner"];
                      
-                     [responseArray addObject:gcspeaker];
+                     [responseArray addObject:modelobj];
                  }
              }
              else if ([paramStr isEqualToString:url_Faq])
@@ -176,16 +176,32 @@ static GCSharedClass * sharedClassObj = nil;
                  for (NSMutableDictionary * dictobj in responceArray)
                  {
                      //FAQ
-                     GCModel * gcspeaker = [GCModel new];
+                     GCModel * modelobj = [GCModel new];
                      
-                     gcspeaker.nid = [[dictobj objectForKey:@"faq"]objectForKey:@"nid"];
-                     gcspeaker.title = [[dictobj objectForKey:@"faq"]objectForKey:@"title"];
-                     gcspeaker.body = [[dictobj objectForKey:@"faq"]objectForKey:@"body"];
+                     modelobj.nid = [[dictobj objectForKey:@"faq"]objectForKey:@"nid"];
+                     modelobj.title = [[dictobj objectForKey:@"faq"]objectForKey:@"title"];
+                     modelobj.body = [[dictobj objectForKey:@"faq"]objectForKey:@"body"];
                      
-                     [responseArray addObject:gcspeaker];
+                     [responseArray addObject:modelobj];
                  }
              }
-
+             else if ([paramStr isEqualToString:url_Tracks])
+             {
+                 responceArray = (NSMutableArray *)[responseObject objectForKey:@"tracks"];
+                 
+                 for (NSMutableDictionary * dictobj in responceArray)
+                 {
+                     //Tracks
+                     GCModel *modelobj = [GCModel new];
+                     
+                     modelobj.nid = [[dictobj objectForKey:@"track"]objectForKey:@"nid"];
+                     modelobj.title = [[dictobj objectForKey:@"track"]objectForKey:@"title"];
+                     modelobj.body = [[dictobj objectForKey:@"track"]objectForKey:@"body"];
+                     modelobj.survey = [[dictobj objectForKey:@"track"]objectForKey:@"survey"];
+                     
+                     [responseArray addObject:modelobj];
+                 }
+             }
          }
          
          NSLog(@"responseArray :%@",responseArray);

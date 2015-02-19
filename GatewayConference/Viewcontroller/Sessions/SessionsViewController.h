@@ -11,6 +11,5 @@
 
 @interface SessionsViewController : UIViewController
 
--(void)getFAQDetails;
 
 @end
