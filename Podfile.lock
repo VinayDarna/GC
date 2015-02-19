@@ -21,9 +21,13 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Bolts (1.1.3)
+  - DCIntrospect (0.0.2)
   - Facebook-iOS-SDK (3.23.0):
     - Bolts (~> 1.0)
   - MBProgressHUD (0.8)
+  - NSLogger (1.5.1):
+    - NSLogger/Standard (= 1.5.1)
+  - NSLogger/Standard (1.5.1)
   - Parse (1.6.2):
     - Bolts (~> 1.1)
   - ParseFacebookUtils (1.6.2):
@@ -41,7 +45,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - DCIntrospect (~> 0.0)
   - MBProgressHUD (= 0.8)
+  - NSLogger (~> 1.5)
   - ParseUI (~> 1.1)
   - Reachability (= 3.1.1)
   - RESideMenu (~> 4.0.7)
@@ -51,8 +57,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  DCIntrospect: 0b013d593593fa70169bc876eeed0579c8a1cc66
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
   MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
+  NSLogger: 7421a0a60df62fb8ff548cd0388c302d3329a322
   Parse: 60d65108fe39da77ec16c9e51d74b4d296b21424
   ParseFacebookUtils: 0b86cd67283c60d10e3ddc8427f989f5e60ebbd7
   ParseUI: 00c4c39aab3944d88758b55416581650caa37f89

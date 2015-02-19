@@ -7,11 +7,8 @@
 //
 
 #import "SponsorsViewController.h"
-#import "GCSpeakerModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-#import "GCSharedClass.h"
-#import "PopOverViewController.h"
 
+#import "PopOverViewController.h"
 
 @interface SponsorsViewController ()
 
@@ -77,17 +74,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%ld",(long)indexPath.item);
-    
     if (settingsPopoverController == nil)
     {
         UICollectionViewCell * cell = [collectionView1 cellForItemAtIndexPath:indexPath];
         PopOverViewController * contro = [self.storyboard instantiateViewControllerWithIdentifier:@"PopOverViewController"];
-        GCSpeakerModel * model = [sponsorArray objectAtIndex:indexPath.row];
-        
-        contro.imageUrlString = model.logo;
-        contro.nameString = model.title;
-        contro.webUrlString = model.url;
+        GCSpeakerModel * modelObj = [sponsorArray objectAtIndex:indexPath.row];
+        contro.sponsorModelObj = modelObj;
         
         contro.preferredContentSize = CGSizeMake(320, 400);
         contro.modalInPopover = NO;

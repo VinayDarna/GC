@@ -47,7 +47,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">AR_bg.png</string>
+							<string key="NSResourceName">AR BG</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="544633024">
@@ -73,7 +73,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">AR_close.png</string>
+							<string key="NSResourceName">AR Close</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="579550661">
 							<int key="type">2</int>
@@ -265,8 +265,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="AR_bg.png">{320, 568}</string>
-			<string key="AR_close.png">{30, 30}</string>
+			<string key="AR BG">{320, 568}</string>
+			<string key="AR Close">{30, 30}</string>
 		</dictionary>
 	</data>
 </archive>

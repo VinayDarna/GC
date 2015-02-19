@@ -11,7 +11,7 @@
 #import "GCSpeakerModel.h"
 
 
-@interface SpeakerDetailsViewController : UIViewController
+@interface SpeakerDetailsViewController : UIViewController<UITextViewDelegate>
 {
     __weak IBOutlet UILabel *nameLbl;
     __weak IBOutlet UIImageView *profilePic;

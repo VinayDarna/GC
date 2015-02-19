@@ -47,7 +47,7 @@ static dispatch_queue_t property_list_request_operation_processing_queue() {
                                                                     success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id propertyList))success
                                                                     failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id propertyList))failure
 {
-    AFPropertyListRequestOperation *requestOperation = [[[self alloc] initWithRequest:request] autorelease];
+    AFPropertyListRequestOperation *requestOperation = [(AFPropertyListRequestOperation *)[self alloc] initWithRequest:request];
     [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
             success(operation.request, operation.response, responseObject);
@@ -72,11 +72,6 @@ static dispatch_queue_t property_list_request_operation_processing_queue() {
     return self;
 }
 
-- (void)dealloc {
-    [_responsePropertyList release];
-    [_propertyListError release];
-    [super dealloc];
-}
 
 - (id)responsePropertyList {
     if (!_responsePropertyList && [self.responseData length] > 0 && [self isFinished]) {

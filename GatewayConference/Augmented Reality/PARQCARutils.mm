@@ -80,7 +80,6 @@ enum iOS6OrientationMask {
     {
         retVal = UIInterfaceOrientationMaskLandscape;
     }
-    
     return retVal;
 }
 

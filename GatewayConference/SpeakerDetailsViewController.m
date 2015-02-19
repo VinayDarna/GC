@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.automaticallyAdjustsScrollViewInsets = false;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -41,7 +41,10 @@
 {
     nameLbl.text = _speakerDetModelObj.title;
     churchLbl.text = _speakerDetModelObj.organization;
+    
     detailText.text = _speakerDetModelObj.body;
+    [detailText setFont:[UIFont fontWithName:@"Heiti TC" size:20]];
+    [detailText setFrame:CGRectMake(detailText.frame.origin.x, detailText.frame.origin.y, detailText.frame.size.width, detailText.frame.size.height)];
     
     UIImage *placeHolderImage = [UIImage imageNamed:@"Placeholder.jpeg"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",_speakerDetModelObj.image_banner]];
