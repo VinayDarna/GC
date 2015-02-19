@@ -42,8 +42,16 @@
          */
        // [self getPlacesDetails];
         
+        /**
+         * Unhide to get the Schedule Details
+         */
+       // [self getScheduleDetails];
+       
+        /**
+         * Unhide to get the Videos Details
+         */
+       // [self getVideosDetails];
         
-        [self getScheduleDetails];
         
     }
     else
@@ -53,6 +61,30 @@
     
     [[GCSharedClass sharedInstance]fetchParseDetails];
 }
+
+-(void)getVideosDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Videos andReturnWith:^(NSMutableArray *videosArray, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+             
+             NSLog(@"videosArray %@",videosArray);
+             
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+         }
+     }];
+    
+}
+
 
 -(void)getScheduleDetails
 {
@@ -64,7 +96,7 @@
          {
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
              
-             NSLog(@"tracksArray %@",schedulesArray);
+             NSLog(@"schedulesArray %@",schedulesArray);
              
          }
          else

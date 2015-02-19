@@ -71,4 +71,9 @@
 
 @property (nonatomic, strong) NSArray *speakers;
 
+
+//Videos
+
+@property (nonatomic, strong) NSString *length;
+@property (nonatomic, strong) NSString *categorization;
 @end

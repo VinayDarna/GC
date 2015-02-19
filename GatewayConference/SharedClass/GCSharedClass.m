@@ -252,7 +252,6 @@ static GCSharedClass * sharedClassObj = nil;
                          [responseArray addObject:modelobj];
                      }
                  }
-                 
                  else if ([paramStr isEqualToString:url_Places])
                  {
                      responceArray = (NSMutableArray *)[responseObject objectForKey:@"places"];
@@ -279,13 +278,34 @@ static GCSharedClass * sharedClassObj = nil;
                          [responseArray addObject:modelobj];
                      }
                  }
+                 else if ([paramStr isEqualToString:url_Videos])
+                 {
+                     responceArray = (NSMutableArray *)[responseObject objectForKey:@"videos"];
+                     
+                     for (NSMutableDictionary * dictobj in responceArray)
+                     {
+                         //Videos
+                         GCModel *modelobj = [GCModel new];
+                         
+                         modelobj.nid = [[dictobj objectForKey:@"video"]objectForKey:@"nid"];
+                         modelobj.title = [[dictobj objectForKey:@"video"]objectForKey:@"title"];
+                         modelobj.body = [[dictobj objectForKey:@"video"]objectForKey:@"body"];
+                         modelobj.categorization = [[dictobj objectForKey:@"video"]objectForKey:@"categorization"];
+                         modelobj.image = [[dictobj objectForKey:@"video"]objectForKey:@"image"];
+                         modelobj.length = [[dictobj objectForKey:@"video"]objectForKey:@"length"];
+                         modelobj.url = [[dictobj objectForKey:@"video"]objectForKey:@"url"];
+                         
+                         [responseArray addObject:modelobj];
+                     }
+                 }
+                 
+                 NSLog(@"responseArray :%@",responseArray);
+                 
+                 completionHandler(responseArray,YES);
              }
              
-             NSLog(@"responseArray :%@",responseArray);
-             
-             completionHandler(responseArray,YES);
          }
-                                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                              NSLog(@" error %@",error);
                                              completionHandler(nil,NO);
                                          }];
