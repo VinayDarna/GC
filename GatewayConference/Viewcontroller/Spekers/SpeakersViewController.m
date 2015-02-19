@@ -42,6 +42,9 @@
          */
        // [self getPlacesDetails];
         
+        
+        [self getScheduleDetails];
+        
     }
     else
     {
@@ -50,6 +53,30 @@
     
     [[GCSharedClass sharedInstance]fetchParseDetails];
 }
+
+-(void)getScheduleDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Schedules andReturnWith:^(NSMutableArray *schedulesArray, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+             
+             NSLog(@"tracksArray %@",schedulesArray);
+             
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+         }
+     }];
+    
+}
+
 
 -(void)getPlacesDetails
 {

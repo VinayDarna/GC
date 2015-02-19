@@ -55,4 +55,20 @@
 @property (nonatomic, strong) NSArray *category;
 
 
+//Schedules
+
+@property (nonatomic, strong) NSString *roomNid;
+@property (nonatomic, strong) NSString *roomFloorPlan;
+@property (nonatomic, strong) NSString *roomImage;
+@property (nonatomic, strong) NSString *roomTitle;
+@property (nonatomic, strong) NSString *sessionDay;
+@property (nonatomic, strong) NSString *track;
+@property (nonatomic, strong) NSString *additionalInformation;
+@property (nonatomic, strong) NSString *isRegistered;
+@property (nonatomic, strong) NSString *roomBody;
+@property (nonatomic, strong) NSString *datetime;
+@property (nonatomic, strong) NSString *sessionTime;
+
+@property (nonatomic, strong) NSArray *speakers;
+
 @end
