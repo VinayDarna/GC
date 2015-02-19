@@ -51,7 +51,7 @@ OBJC_EXPORT NSString * const url_Places;
 
 OBJC_EXPORT NSString * const url_Sponsors;
 
-OBJC_EXPORT NSString * const url_speakers;
+OBJC_EXPORT NSString * const url_Speakers;
 
 OBJC_EXPORT NSString * const url_Faq;
 

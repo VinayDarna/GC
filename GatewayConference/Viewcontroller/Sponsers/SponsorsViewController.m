@@ -38,7 +38,8 @@
 -(void)getSponsorDetails
 {
     [[GCSharedClass sharedInstance] showGlobalProgressHUDWithTitle:@"Loading..."];
-    [[GCSharedClass sharedInstance] fetchDetailsWithParameter:@"sponsors" andReturnWith:^(NSMutableArray *speakers, BOOL Success) {
+    
+    [[GCSharedClass sharedInstance] fetchDetailsWithParameter:url_Sponsors andReturnWith:^(NSMutableArray *speakers, BOOL Success) {
         if (Success)
         {
             [[GCSharedClass sharedInstance]dismissGlobalHUD];

@@ -10,7 +10,7 @@
 #import "RESideMenu.h"
 
 @interface SessionsViewController : UIViewController
-{
-    
-}
+
+-(void)getFAQDetails;
+
 @end

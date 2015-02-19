@@ -100,7 +100,7 @@ static GCSharedClass * sharedClassObj = nil;
 
 -(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(SpeakersBlock)completionHandler;
 {
-    __block NSMutableArray * speakers = [NSMutableArray new];
+    __block NSMutableArray * responseArray = [NSMutableArray new];
     
     NSString *string = [NSString stringWithFormat:@"%@%@",baseURL,paramStr];
     
@@ -113,7 +113,7 @@ static GCSharedClass * sharedClassObj = nil;
      {
          if (responseObject != nil && [responseObject isKindOfClass:[NSDictionary class]])
          {
-             if ([paramStr isEqualToString:@"speakers"])
+             if ([paramStr isEqualToString:url_Speakers])
              {
                  responceArray = (NSMutableArray *)[responseObject objectForKey:@"speakers"];
              
@@ -144,15 +144,16 @@ static GCSharedClass * sharedClassObj = nil;
                      gcspeaker.Banner_Link = [[dictObj objectForKey:@"speaker"]objectForKey:@"Banner Link"];
                      gcspeaker.url = [[dictObj objectForKey:@"speaker"]objectForKey:@"url"];
                      
-                     [speakers addObject:gcspeaker];
-                     NSLog(@"%@",speakers);
-                 }
+                     [responseArray addObject:gcspeaker];
+                }
              }
-             else if ([paramStr isEqualToString:@"sponsors"])
+             else if ([paramStr isEqualToString:url_Sponsors])
              {
                  responceArray = (NSMutableArray *)[responseObject objectForKey:@"sponsors"];
+                 
                  for (NSMutableDictionary * dictobj in responceArray)
                  {
+                     //Sponsors
                      GCSpeakerModel * gcspeaker = [GCSpeakerModel new];
 
                      gcspeaker.nid = [[dictobj objectForKey:@"sponsor"]objectForKey:@"nid"];
@@ -165,11 +166,31 @@ static GCSharedClass * sharedClassObj = nil;
                      gcspeaker.url = [[dictobj objectForKey:@"sponsor"]objectForKey:@"url"];
                      gcspeaker.image_banner = [[dictobj objectForKey:@"sponsor"]objectForKey:@"image_banner"];
                      
-                     [speakers addObject:gcspeaker];
+                     [responseArray addObject:gcspeaker];
                  }
              }
+             else if ([paramStr isEqualToString:url_Faq])
+             {
+                 responceArray = (NSMutableArray *)[responseObject objectForKey:@"faqs"];
+                 
+                 for (NSMutableDictionary * dictobj in responceArray)
+                 {
+                     //FAQ
+                     GCSpeakerModel * gcspeaker = [GCSpeakerModel new];
+                     
+                     gcspeaker.nid = [[dictobj objectForKey:@"faq"]objectForKey:@"nid"];
+                     gcspeaker.title = [[dictobj objectForKey:@"faq"]objectForKey:@"title"];
+                     gcspeaker.body = [[dictobj objectForKey:@"faq"]objectForKey:@"body"];
+                     
+                     [responseArray addObject:gcspeaker];
+                 }
+             }
+
          }
-         completionHandler(speakers,YES);
+         
+         NSLog(@"responseArray :%@",responseArray);
+
+         completionHandler(responseArray,YES);
      }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                          completionHandler(nil,NO);

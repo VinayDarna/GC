@@ -16,6 +16,7 @@
 		B7154E371A5FAAD0007D12AD /* GatewayConferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E361A5FAAD0007D12AD /* GatewayConferenceTests.m */; };
 		B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E461A5FB09D007D12AD /* AppConstants.m */; };
 		B7154E531A5FB62A007D12AD /* GCSharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E521A5FB62A007D12AD /* GCSharedClass.m */; };
+		B766CD201A95FED400A03EAB /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B766CD1F1A95FED400A03EAB /* SlideViewController.m */; };
 		B7F5AE141A95EA0C007D898F /* GCSpeakerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD51A95EA0C007D898F /* GCSpeakerModel.m */; };
 		B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD91A95EA0C007D898F /* POIViewController.m */; };
 		B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */; };
@@ -29,7 +30,6 @@
 		B7F5AE2D1A95EA0C007D898F /* SponsorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE101A95EA0C007D898F /* SponsorsViewController.m */; };
 		B7F5AE2E1A95EA0C007D898F /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE131A95EA0C007D898F /* SurveyViewController.m */; };
 		B7F5AE341A95EA43007D898F /* Placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B7F5AE331A95EA43007D898F /* Placeholder.jpeg */; };
-		B7F5AE371A95EAE9007D898F /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE361A95EAE9007D898F /* SlideViewController.m */; };
 		B7F5AE391A95EEC5007D898F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F5AE381A95EEC5007D898F /* Background.png */; };
 		FCAEDCF6F038909B59BB2DCD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B33C8356A63C9D9D6AEF318 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -65,6 +65,8 @@
 		B7154E491A5FB3EE007D12AD /* GatewayConference-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatewayConference-Prefix.pch"; sourceTree = "<group>"; };
 		B7154E511A5FB62A007D12AD /* GCSharedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSharedClass.h; sourceTree = "<group>"; };
 		B7154E521A5FB62A007D12AD /* GCSharedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSharedClass.m; sourceTree = "<group>"; };
+		B766CD1E1A95FED400A03EAB /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
+		B766CD1F1A95FED400A03EAB /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		B7F5ADD41A95EA0C007D898F /* GCSpeakerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSpeakerModel.h; sourceTree = "<group>"; };
 		B7F5ADD51A95EA0C007D898F /* GCSpeakerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSpeakerModel.m; sourceTree = "<group>"; };
 		B7F5ADD81A95EA0C007D898F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
@@ -89,8 +91,6 @@
 		B7F5AE121A95EA0C007D898F /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		B7F5AE131A95EA0C007D898F /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
 		B7F5AE331A95EA43007D898F /* Placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Placeholder.jpeg; sourceTree = "<group>"; };
-		B7F5AE351A95EAE9007D898F /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
-		B7F5AE361A95EAE9007D898F /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		B7F5AE381A95EEC5007D898F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,10 +156,10 @@
 				B7154E1B1A5FAAD0007D12AD /* AppDelegate.h */,
 				B7154E1C1A5FAAD0007D12AD /* AppDelegate.m */,
 				B7154E441A5FB09D007D12AD /* Constants */,
+				B7154E501A5FB62A007D12AD /* SharedClass */,
 				B7F5ADD31A95EA0C007D898F /* Models */,
 				B7F5ADD61A95EA0C007D898F /* Venders */,
 				B7F5ADFB1A95EA0C007D898F /* Viewcontroller */,
-				B7154E501A5FB62A007D12AD /* SharedClass */,
 				B7F5ADD21A95E9B0007D898F /* Storyboards */,
 				B7154E171A5FAAD0007D12AD /* Supporting Files */,
 			);
@@ -214,6 +214,15 @@
 			path = SharedClass;
 			sourceTree = "<group>";
 		};
+		B766CD1D1A95FED400A03EAB /* SideTable */ = {
+			isa = PBXGroup;
+			children = (
+				B766CD1E1A95FED400A03EAB /* SlideViewController.h */,
+				B766CD1F1A95FED400A03EAB /* SlideViewController.m */,
+			);
+			path = SideTable;
+			sourceTree = "<group>";
+		};
 		B7F5ADD21A95E9B0007D898F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,8 +244,6 @@
 		B7F5ADD61A95EA0C007D898F /* Venders */ = {
 			isa = PBXGroup;
 			children = (
-				B7F5AE351A95EAE9007D898F /* SlideViewController.h */,
-				B7F5AE361A95EAE9007D898F /* SlideViewController.m */,
 				B7F5ADD71A95EA0C007D898F /* PopOverView */,
 			);
 			path = Venders;
@@ -256,6 +263,7 @@
 		B7F5ADFB1A95EA0C007D898F /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				B766CD1D1A95FED400A03EAB /* SideTable */,
 				B7F5ADFC1A95EA0C007D898F /* AttendesList */,
 				B7F5ADFF1A95EA0C007D898F /* HomeView */,
 				B7F5AE021A95EA0C007D898F /* MainviewCell */,
@@ -485,8 +493,8 @@
 				B7154E201A5FAAD0007D12AD /* GatewayConference.xcdatamodeld in Sources */,
 				B7154E531A5FB62A007D12AD /* GCSharedClass.m in Sources */,
 				B7F5AE2E1A95EA0C007D898F /* SurveyViewController.m in Sources */,
-				B7F5AE371A95EAE9007D898F /* SlideViewController.m in Sources */,
 				B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */,
+				B766CD201A95FED400A03EAB /* SlideViewController.m in Sources */,
 				B7F5AE271A95EA0C007D898F /* HomeViewController.m in Sources */,
 				B7F5AE2D1A95EA0C007D898F /* SponsorsViewController.m in Sources */,
 				B7F5AE141A95EA0C007D898F /* GCSpeakerModel.m in Sources */,

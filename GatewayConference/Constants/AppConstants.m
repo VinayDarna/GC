@@ -21,7 +21,7 @@ NSString * const url_Places     = @"places";
 
 NSString * const url_Sponsors   = @"sponsors";
 
-NSString * const url_speakers   = @"speakers";
+NSString * const url_Speakers   = @"speakers";
 
 NSString * const url_Faq        = @"faq";
 

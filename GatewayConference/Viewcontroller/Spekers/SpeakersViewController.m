@@ -20,16 +20,19 @@
 
 @implementation SpeakersViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
         [self getSpeakerDetails];
     }
-    else{
+    else
+    {
         NSLog(@"Error in fetching");
     }
+    
     [[GCSharedClass sharedInstance]fetchParseDetails];
 }
 
@@ -45,7 +48,7 @@
 {
     [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
     
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:@"speakers" andReturnWith:^(NSMutableArray *speakers, BOOL Success)
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Speakers andReturnWith:^(NSMutableArray *speakers, BOOL Success)
      {
          if (Success)
          {
