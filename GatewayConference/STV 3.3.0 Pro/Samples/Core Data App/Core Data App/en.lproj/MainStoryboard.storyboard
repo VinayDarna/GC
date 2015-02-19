@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ftc-qf-Es5">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Kvb-MP-yEQ">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Ftc-qf-Es5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DuP-mb-YtZ">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3gB-Kx-r4b" kind="relationship" relationship="viewControllers" id="89o-Uk-FTR"/>
+                        <segue destination="AHl-le-ki7" kind="relationship" relationship="viewControllers" id="V55-q6-IWQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bw9-2r-jMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="-115"/>
+        </scene>
+        <!--Tasks View Controller - Tasks-->
+        <scene sceneID="NeU-Qp-SDW">
+            <objects>
+                <tableViewController id="dHN-d4-jpu" customClass="TasksViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gHT-Jy-WZb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tasks" id="IYx-wG-NpA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EF-kf-6Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="-466"/>
+        </scene>
+        <!--Navigation Controller - People-->
+        <scene sceneID="9Ki-94-vl2">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="AHl-le-ki7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" id="DPG-ft-s8U"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k6s-Xq-Sxr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jul-2x-AJG" kind="relationship" relationship="rootViewController" id="gzb-Gw-d70"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dw0-EF-w1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="288"/>
+        </scene>
+        <!--People View Controller - People-->
+        <scene sceneID="1w8-Cm-mkl">
+            <objects>
+                <viewController id="Jul-2x-AJG" customClass="PeopleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cKC-tI-oaY"/>
+                        <viewControllerLayoutGuide type="bottom" id="BLk-TT-Dhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mhc-3k-7iz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="People" id="RSz-M9-s8l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk4-QY-9eJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="290"/>
+        </scene>
+        <!--Navigation Controller - Tasks-->
+        <scene sceneID="c2H-C9-cxx">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="3gB-Kx-r4b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tasks" id="yH0-t4-LaA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ew9-Yo-Og7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dHN-d4-jpu" kind="relationship" relationship="rootViewController" id="lQT-BP-FwK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dj-3Z-ip6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="-467"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

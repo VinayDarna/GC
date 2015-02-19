@@ -11,7 +11,9 @@
 #import "SpeakersViewController.h"
 
 @protocol PopOverDelegate <NSObject>
+
 -(void)didSelectRow:(int)row ForValue:(NSString *)value ofType:(NSString *)type;
+
 @end
 
 @interface PopOverViewController : UIViewController
@@ -19,10 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imagView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLbl;
 
-@property (nonatomic, strong) NSString * nameString;
-@property (nonatomic, strong) NSString * imageUrlString;
-@property (nonatomic, strong) NSString * webUrlString;
-
 @property (nonatomic,strong) id <PopOverDelegate> delegate;
+@property (nonatomic, strong) GCSpeakerModel *sponsorModelObj;
 
 @end

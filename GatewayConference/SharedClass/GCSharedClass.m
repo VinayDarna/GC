@@ -8,10 +8,6 @@
 
 #import "GCSharedClass.h"
 
-#import "Reachability.h"
-
-#import "AFNetworking.h"
-
 #import "GCSpeakerModel.h"
 
 #import "AppDelegate.h"
@@ -179,43 +175,43 @@ static GCSharedClass * sharedClassObj = nil;
 
 - (void)fetchParseDetails
 {
-    dispatch_queue_t myQueue = dispatch_queue_create("Deals Queue",NULL);
-    
-    dispatch_async(myQueue, ^{
-        PFQuery *query = [PFQuery queryWithClassName:@"Course"];
-        
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            
-            if (!error)
-            {
-                NSLog(@"Successfully retrieved");
-                
-                for (PFObject *object in objects)
-                {
-                    NSLog(@"object %@",object);
-                    
-                    
-                    NSLog(@"object %@",[object objectForKey:@"courseJson"]);
-                    
-                    NSMutableDictionary * test = [[NSMutableDictionary alloc]init];
-                    
-                    test = [NSJSONSerialization JSONObjectWithData:[[object objectForKey:@"courseJson"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
-                    
-                    NSLog(@"etst %@",test);
-                }
-            }
-            else
-            {
-                NSLog(@"Error: %@ %@", error, [error userInfo]);
-
-            }
-        }];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update the UI
-            
-        });
-    });
+//    dispatch_queue_t myQueue = dispatch_queue_create("Deals Queue",NULL);
+//    
+//    dispatch_async(myQueue, ^{
+//        PFQuery *query = [PFQuery queryWithClassName:@"Course"];
+//        
+//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            
+//            if (!error)
+//            {
+//                NSLog(@"Successfully retrieved");
+//                
+//                for (PFObject *object in objects)
+//                {
+//                    NSLog(@"object %@",object);
+//                    
+//                    
+//                    NSLog(@"object %@",[object objectForKey:@"courseJson"]);
+//                    
+//                    NSMutableDictionary * test = [[NSMutableDictionary alloc]init];
+//                    
+//                    test = [NSJSONSerialization JSONObjectWithData:[[object objectForKey:@"courseJson"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+//                    
+//                    NSLog(@"etst %@",test);
+//                }
+//            }
+//            else
+//            {
+//                NSLog(@"Error: %@ %@", error, [error userInfo]);
+//
+//            }
+//        }];
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            // Update the UI
+//            
+//        });
+//    });
 }
 
 

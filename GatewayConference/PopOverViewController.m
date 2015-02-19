@@ -25,14 +25,15 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    _nameLbl.text = _nameString;
-    NSURL *imageUrl = [NSURL URLWithString:_imageUrlString];
+    _nameLbl.text = _sponsorModelObj.title;
+    NSURL *imageUrl = [NSURL URLWithString:_sponsorModelObj.logo];
     [_imagView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    [_imagView sizeToFit];
 }
 
 - (IBAction)visitWebPage:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_webUrlString]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_sponsorModelObj.url]];
 }
 
 - (void)didReceiveMemoryWarning {

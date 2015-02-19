@@ -10,9 +10,9 @@
 
 @implementation AppConstants
 
-NSString *const MainStoryBoardiPad = @"Main";
+NSString * const MainStoryBoardiPad = @"Main";
 
-NSString *const MainStoryBoardiPhone = @"Main";
+NSString * const MainStoryBoardiPhone = @"Main";
 
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MBProgressHUD.h>
+
 #import "AppConstants.h"
+
+#import <MBProgressHUD.h>
 
 typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
 
@@ -30,6 +32,7 @@ typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
 - (void)fetchParseDetails;
 
 - (MBProgressHUD *)showGlobalProgressHUDWithTitle:(NSString *)title;
+
 - (void)dismissGlobalHUD;
 
 @end
