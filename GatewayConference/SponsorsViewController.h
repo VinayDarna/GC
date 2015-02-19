@@ -19,5 +19,7 @@
     WYPopoverController * anotherPopoverController;
     WYPopoverController * settingsPopoverController;
 }
+
 @property (nonatomic, strong) UIPopoverController *erpDataPopover;
+
 @end

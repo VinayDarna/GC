@@ -77,8 +77,6 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%ld",(long)indexPath.item);
-    
     if (settingsPopoverController == nil)
     {
         UICollectionViewCell * cell = [collectionView1 cellForItemAtIndexPath:indexPath];
@@ -121,7 +119,7 @@
 
 - (void)popoverControllerDidPresentPopover:(WYPopoverController *)controller
 {
-    NSLog(@"popoverControllerDidPresentPopover");
+    
 }
 
 - (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller

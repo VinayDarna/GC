@@ -76,7 +76,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 250.0;
+    return 140.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,8 +98,12 @@
     cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
     cell.profilePic.clipsToBounds = YES;
     
+    cell.bgView.layer.cornerRadius = 15;
+    cell.bgView.layer.masksToBounds = YES;
+    
     cell.nameLbl.text = gcSpeak.title;
     cell.churchLbl.text = gcSpeak.organization;
+    cell.speakerTypeLbl.text = gcSpeak.location;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

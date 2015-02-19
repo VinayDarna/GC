@@ -12,20 +12,24 @@
 	<dict>
 		<key>B996EB5118BF67CFE1B7A53765031A53713FAF18</key>
 		<string>github.com:Teja-Swaroop/Gateway_conference.git</string>
+		<key>D19B06A75A3426017ECA4F45171847BF48B7C02D</key>
+		<string>github.com:VinayDarna/GC.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GatewayConference.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B996EB5118BF67CFE1B7A53765031A53713FAF18</key>
+		<string>../../../GateWay</string>
+		<key>D19B06A75A3426017ECA4F45171847BF48B7C02D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:Teja-Swaroop/Gateway_conference.git</string>
+	<string>github.com:VinayDarna/GC.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B996EB5118BF67CFE1B7A53765031A53713FAF18</string>
+	<string>D19B06A75A3426017ECA4F45171847BF48B7C02D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>B996EB5118BF67CFE1B7A53765031A53713FAF18</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GateWay</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D19B06A75A3426017ECA4F45171847BF48B7C02D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GC%2012%20feb</string>
 		</dict>
 	</array>
 </dict>
