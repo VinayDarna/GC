@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 SaiTeja. All rights reserved.
 //
 
-#import "AppDelegate.h"
 
 #define APPDELEGATE (AppDelegate *)[[UIApplication sharedApplication]delegate]
 

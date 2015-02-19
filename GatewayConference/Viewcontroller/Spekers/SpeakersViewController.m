@@ -36,7 +36,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"App-BG"]];
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
     [tempImageView setFrame:speakersTableView.frame];
     speakersTableView.backgroundView = tempImageView;
 }

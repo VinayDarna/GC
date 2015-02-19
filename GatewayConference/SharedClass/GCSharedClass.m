@@ -14,6 +14,9 @@
 
 @implementation GCSharedClass
 
+AppDelegate * appdelegateObj;
+
+
 static GCSharedClass * sharedClassObj = nil;
 
 +(GCSharedClass *)sharedInstance

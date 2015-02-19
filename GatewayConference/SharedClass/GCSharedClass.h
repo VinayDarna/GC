@@ -17,8 +17,7 @@ typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
 @interface GCSharedClass : NSObject
 {
     NSMutableArray * responceArray;
-    AppDelegate * appdelegateObj;
-}
+   }
 
 @property(nonatomic, strong) UIWindow *window;
 
