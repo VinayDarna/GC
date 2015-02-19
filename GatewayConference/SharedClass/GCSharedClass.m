@@ -137,7 +137,7 @@ static GCSharedClass * sharedClassObj = nil;
                      modelobj.quote = [[dictObj objectForKey:@"speaker"]objectForKey:@"quote"];
                      modelobj.session_name = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_name"];
                      modelobj.session_summary = [[dictObj objectForKey:@"speaker"]objectForKey:@"session_summary"];
-                     modelobj.speaker_links = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_links"];
+                     modelobj.links = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_links"];
                      modelobj.speaker_type = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_type"];
                      modelobj.twitter = [[dictObj objectForKey:@"speaker"]objectForKey:@"twitter"];
                      modelobj.speaker_event = [[dictObj objectForKey:@"speaker"]objectForKey:@"speaker_event"];
@@ -202,6 +202,34 @@ static GCSharedClass * sharedClassObj = nil;
                      [responseArray addObject:modelobj];
                  }
              }
+             
+             else if ([paramStr isEqualToString:url_Places])
+             {
+                 responceArray = (NSMutableArray *)[responseObject objectForKey:@"places"];
+                 
+                 for (NSMutableDictionary * dictobj in responceArray)
+                 {
+                     //Places
+                     GCModel *modelobj = [GCModel new];
+                     
+                     modelobj.nid = [[dictobj objectForKey:@"place"]objectForKey:@"nid"];
+                     modelobj.title = [[dictobj objectForKey:@"place"]objectForKey:@"title"];
+                     modelobj.body = [[dictobj objectForKey:@"place"]objectForKey:@"body"];
+                     modelobj.links = [[dictobj objectForKey:@"place"]objectForKey:@"links"];
+                     modelobj.category = [[dictobj objectForKey:@"place"]objectForKey:@"category"];
+                     modelobj.address = [[dictobj objectForKey:@"place"]objectForKey:@"address"];
+                     modelobj.street = [[dictobj objectForKey:@"place"]objectForKey:@"street"];
+                     modelobj.city = [[dictobj objectForKey:@"place"]objectForKey:@"city"];
+                     modelobj.state = [[dictobj objectForKey:@"place"]objectForKey:@"state"];
+                     modelobj.zip = [[dictobj objectForKey:@"place"]objectForKey:@"zip"];
+                     modelobj.phone = [[dictobj objectForKey:@"place"]objectForKey:@"phone"];
+                     modelobj.latitude = [[dictobj objectForKey:@"place"]objectForKey:@"latitude"];
+                     modelobj.longitude = [[dictobj objectForKey:@"place"]objectForKey:@"longitude"];
+
+                     [responseArray addObject:modelobj];
+                 }
+             }
+
          }
          
          NSLog(@"responseArray :%@",responseArray);

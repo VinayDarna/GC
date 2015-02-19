@@ -26,9 +26,22 @@
 
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
+        /**
+         * Unhide to get the Speker Details
+         */
         //[self getSpeakerDetails];
         
-        [self getTracksDetails];
+        /**
+         * Unhide to get the Tracks Details
+         */
+       // [self getTracksDetails];
+        
+        
+        /**
+         * Unhide to get the Places Details
+         */
+       // [self getPlacesDetails];
+        
     }
     else
     {
@@ -36,6 +49,29 @@
     }
     
     [[GCSharedClass sharedInstance]fetchParseDetails];
+}
+
+-(void)getPlacesDetails
+{
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    
+    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Places andReturnWith:^(NSMutableArray *placesArray, BOOL Success)
+     {
+         if (Success)
+         {
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+             
+             NSLog(@"tracksArray %@",placesArray);
+             
+         }
+         else
+         {
+             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+             [Alert show];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
+         }
+     }];
+    
 }
 
 -(void)getTracksDetails

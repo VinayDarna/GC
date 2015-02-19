@@ -12,7 +12,7 @@
 @interface SpeakersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     __weak IBOutlet UITableView *speakersTableView;
-    NSMutableArray *speakersArray;
+                    NSMutableArray *speakersArray;
 }
 
 @end
