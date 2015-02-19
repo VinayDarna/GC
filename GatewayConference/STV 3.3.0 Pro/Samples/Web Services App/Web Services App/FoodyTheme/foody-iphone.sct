@@ -1,0 +1,30 @@
+
+UINavigationBar
+{
+    backgroundImage: "navbar.png";
+    tintColor: blackColor;
+}
+
+navigationItemTitleLabel
+{
+    backgroundColor: clearColor;
+    font: Helvetica-Bold 20;
+    shadowColor: blackColor;
+    textColor: whiteColor;
+}
+
+UITableView
+{
+    backgroundView: "leather-background.png";
+}
+
+SCTableViewCell
+{
+    backgroundView: "list-item.png";
+    selectedBackgroundView: "ipad-menu-item-selected.png";
+}
+
+VideoDetailCell
+{
+    backgroundColor: cyanColor;
+}

@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		DB52C91715072DD700C56898 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DB52C91815072DD700C56898 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				DB52C91D15072DE500C56898 /* ShellScript */,
+			);
+			dependencies = (
+				DB52C91C15072DE100C56898 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		DB0048871548AC690092B64B /* SCParseComDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0048851548AC690092B64B /* SCParseComDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB0048881548AC690092B64B /* SCParseComDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0048861548AC690092B64B /* SCParseComDefinition.m */; };
+		DB0295EE15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0295EC15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.h */; };
+		DB0295EF15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0295ED15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.m */; };
+		DB0296161526A5FA005F07BD /* SensibleTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0296151526A5FA005F07BD /* SensibleTableView.framework */; };
+		DB02962115294102005F07BD /* UIImageView+WebServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DB02961F15294102005F07BD /* UIImageView+WebServices.h */; };
+		DB02962215294102005F07BD /* UIImageView+WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DB02962015294102005F07BD /* UIImageView+WebServices.m */; };
+		DB52C9041506E9F100C56898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB52C9031506E9F100C56898 /* Foundation.framework */; };
+		DB52C91E15072DF300C56898 /* STV+WebServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DB52C9081506E9F100C56898 /* STV+WebServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB63C7201537EA3F00BC4A00 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7091537EA3F00BC4A00 /* AFHTTPClient.h */; };
+		DB63C7211537EA3F00BC4A00 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C70A1537EA3F00BC4A00 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7221537EA3F00BC4A00 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C70B1537EA3F00BC4A00 /* AFHTTPRequestOperation.h */; };
+		DB63C7231537EA3F00BC4A00 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C70C1537EA3F00BC4A00 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7241537EA3F00BC4A00 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C70D1537EA3F00BC4A00 /* AFImageRequestOperation.h */; };
+		DB63C7251537EA3F00BC4A00 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C70E1537EA3F00BC4A00 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7261537EA3F00BC4A00 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C70F1537EA3F00BC4A00 /* AFJSONRequestOperation.h */; };
+		DB63C7271537EA3F00BC4A00 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7101537EA3F00BC4A00 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7281537EA3F00BC4A00 /* AFJSONUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7111537EA3F00BC4A00 /* AFJSONUtilities.h */; };
+		DB63C7291537EA3F00BC4A00 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7121537EA3F00BC4A00 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C72A1537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7131537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.h */; };
+		DB63C72B1537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7141537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C72C1537EA3F00BC4A00 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7151537EA3F00BC4A00 /* AFNetworking.h */; };
+		DB63C72D1537EA3F00BC4A00 /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7161537EA3F00BC4A00 /* AFPropertyListRequestOperation.h */; };
+		DB63C72E1537EA3F00BC4A00 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7171537EA3F00BC4A00 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C72F1537EA3F00BC4A00 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C7181537EA3F00BC4A00 /* AFURLConnectionOperation.h */; };
+		DB63C7301537EA3F00BC4A00 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C7191537EA3F00BC4A00 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7311537EA3F00BC4A00 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C71A1537EA3F00BC4A00 /* AFXMLRequestOperation.h */; };
+		DB63C7321537EA3F00BC4A00 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C71B1537EA3F00BC4A00 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DB63C7351537EA3F00BC4A00 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DB63C71E1537EA3F00BC4A00 /* JSONKit.h */; settings = {ATTRIBUTES = (); }; };
+		DB63C7361537EA3F00BC4A00 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DB63C71F1537EA3F00BC4A00 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBA29F5A1513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA29F581513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBA29F5B1513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA29F591513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.m */; };
+		DBD724D21547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD724D01547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.h */; };
+		DBD724D31547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD724D11547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBD724D81547F1FF006DF27A /* CJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD724D51547F1FF006DF27A /* CJSONSerializer.h */; };
+		DBD724D91547F1FF006DF27A /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD724D61547F1FF006DF27A /* CJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DBD724DA1547F1FF006DF27A /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD724D71547F1FF006DF27A /* JSONRepresentation.h */; };
+		DBDF2D8816AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDF2D8616AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBDF2D8916AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF2D8716AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.m */; };
+		DBDF2D8D16AE12A100FB05EF /* SCObjectSelectionAttributes+WebServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDF2D8B16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBDF2D8E16AE12A100FB05EF /* SCObjectSelectionAttributes+WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF2D8C16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.m */; };
+		DBE229A215085EE80081FB81 /* SCWebServiceStore.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE229A015085EE80081FB81 /* SCWebServiceStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBE229A315085EE80081FB81 /* SCWebServiceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE229A115085EE80081FB81 /* SCWebServiceStore.m */; };
+		DBE229A615086C340081FB81 /* SCWebServiceDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE229A415086C340081FB81 /* SCWebServiceDefinition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBE229A715086C350081FB81 /* SCWebServiceDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE229A515086C340081FB81 /* SCWebServiceDefinition.m */; };
+		DBE229B0150871450081FB81 /* SCWebServiceFetchOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DBE229AE150871450081FB81 /* SCWebServiceFetchOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBE229B1150871450081FB81 /* SCWebServiceFetchOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE229AF150871450081FB81 /* SCWebServiceFetchOptions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB52C91B15072DE100C56898 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB52C8F71506E9F100C56898 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB52C8FF1506E9F100C56898;
+			remoteInfo = "STV+WebServices";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB0048851548AC690092B64B /* SCParseComDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCParseComDefinition.h; sourceTree = "<group>"; };
+		DB0048861548AC690092B64B /* SCParseComDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCParseComDefinition.m; sourceTree = "<group>"; };
+		DB0295EC15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWebServicesForceLinkerToIncludeCategories.h; sourceTree = "<group>"; };
+		DB0295ED15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWebServicesForceLinkerToIncludeCategories.m; sourceTree = "<group>"; };
+		DB0296151526A5FA005F07BD /* SensibleTableView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SensibleTableView.framework; path = "../SensibleTableView/build/SensibleTableView/Build/Products/Debug-iphoneos/SensibleTableView.framework"; sourceTree = "<group>"; };
+		DB02961F15294102005F07BD /* UIImageView+WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebServices.h"; sourceTree = "<group>"; };
+		DB02962015294102005F07BD /* UIImageView+WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebServices.m"; sourceTree = "<group>"; };
+		DB52C9001506E9F100C56898 /* libSTV+WebServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSTV+WebServices.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB52C9031506E9F100C56898 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB52C9071506E9F100C56898 /* STV+WebServices-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STV+WebServices-Prefix.pch"; sourceTree = "<group>"; };
+		DB52C9081506E9F100C56898 /* STV+WebServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STV+WebServices.h"; sourceTree = "<group>"; };
+		DB63C7091537EA3F00BC4A00 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		DB63C70A1537EA3F00BC4A00 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		DB63C70B1537EA3F00BC4A00 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DB63C70C1537EA3F00BC4A00 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		DB63C70D1537EA3F00BC4A00 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		DB63C70E1537EA3F00BC4A00 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		DB63C70F1537EA3F00BC4A00 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		DB63C7101537EA3F00BC4A00 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		DB63C7111537EA3F00BC4A00 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		DB63C7121537EA3F00BC4A00 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		DB63C7131537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		DB63C7141537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		DB63C7151537EA3F00BC4A00 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DB63C7161537EA3F00BC4A00 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		DB63C7171537EA3F00BC4A00 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		DB63C7181537EA3F00BC4A00 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DB63C7191537EA3F00BC4A00 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		DB63C71A1537EA3F00BC4A00 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DB63C71B1537EA3F00BC4A00 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		DB63C71E1537EA3F00BC4A00 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		DB63C71F1537EA3F00BC4A00 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		DBA29F581513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCArrayOfObjectsSection+WebServices.h"; sourceTree = "<group>"; };
+		DBA29F591513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCArrayOfObjectsSection+WebServices.m"; sourceTree = "<group>"; };
+		DBD724D01547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWebServicesForceLinkerToIncludeCategoriesNonARC.h; sourceTree = "<group>"; };
+		DBD724D11547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWebServicesForceLinkerToIncludeCategoriesNonARC.m; sourceTree = "<group>"; };
+		DBD724D51547F1FF006DF27A /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		DBD724D61547F1FF006DF27A /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		DBD724D71547F1FF006DF27A /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		DBDF2D8616AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCArrayOfObjectsModel+WebServices.h"; sourceTree = "<group>"; };
+		DBDF2D8716AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCArrayOfObjectsModel+WebServices.m"; sourceTree = "<group>"; };
+		DBDF2D8B16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCObjectSelectionAttributes+WebServices.h"; sourceTree = "<group>"; };
+		DBDF2D8C16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCObjectSelectionAttributes+WebServices.m"; sourceTree = "<group>"; };
+		DBE229A015085EE80081FB81 /* SCWebServiceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWebServiceStore.h; sourceTree = "<group>"; };
+		DBE229A115085EE80081FB81 /* SCWebServiceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWebServiceStore.m; sourceTree = "<group>"; };
+		DBE229A415086C340081FB81 /* SCWebServiceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWebServiceDefinition.h; sourceTree = "<group>"; };
+		DBE229A515086C340081FB81 /* SCWebServiceDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWebServiceDefinition.m; sourceTree = "<group>"; };
+		DBE229AE150871450081FB81 /* SCWebServiceFetchOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWebServiceFetchOptions.h; sourceTree = "<group>"; };
+		DBE229AF150871450081FB81 /* SCWebServiceFetchOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWebServiceFetchOptions.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB52C8FD1506E9F100C56898 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB52C9041506E9F100C56898 /* Foundation.framework in Frameworks */,
+				DB0296161526A5FA005F07BD /* SensibleTableView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB52C8F51506E9F100C56898 = {
+			isa = PBXGroup;
+			children = (
+				DB52C9051506E9F100C56898 /* STV+WebServices */,
+				DB52C9021506E9F100C56898 /* Frameworks */,
+				DB52C9011506E9F100C56898 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB52C9011506E9F100C56898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB52C9001506E9F100C56898 /* libSTV+WebServices.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB52C9021506E9F100C56898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB0296151526A5FA005F07BD /* SensibleTableView.framework */,
+				DB52C9031506E9F100C56898 /* Foundation.framework */,
+				DB63C7071537EA3F00BC4A00 /* external */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB52C9051506E9F100C56898 /* STV+WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				DB52C9081506E9F100C56898 /* STV+WebServices.h */,
+				DBE229A415086C340081FB81 /* SCWebServiceDefinition.h */,
+				DBE229A515086C340081FB81 /* SCWebServiceDefinition.m */,
+				DB0048851548AC690092B64B /* SCParseComDefinition.h */,
+				DB0048861548AC690092B64B /* SCParseComDefinition.m */,
+				DBE229AE150871450081FB81 /* SCWebServiceFetchOptions.h */,
+				DBE229AF150871450081FB81 /* SCWebServiceFetchOptions.m */,
+				DBE229A015085EE80081FB81 /* SCWebServiceStore.h */,
+				DBE229A115085EE80081FB81 /* SCWebServiceStore.m */,
+				DBA29F571513EF4F00692E9B /* Categories */,
+				DB52C9061506E9F100C56898 /* Supporting Files */,
+			);
+			path = "STV+WebServices";
+			sourceTree = "<group>";
+		};
+		DB52C9061506E9F100C56898 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB52C9071506E9F100C56898 /* STV+WebServices-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB63C7071537EA3F00BC4A00 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				DBD724DB1547F21F006DF27A /* JSON */,
+				DB63C7081537EA3F00BC4A00 /* AFNetworking */,
+			);
+			name = external;
+			path = "STV+WebServices/external";
+			sourceTree = "<group>";
+		};
+		DB63C7081537EA3F00BC4A00 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DB63C7091537EA3F00BC4A00 /* AFHTTPClient.h */,
+				DB63C70A1537EA3F00BC4A00 /* AFHTTPClient.m */,
+				DB63C70B1537EA3F00BC4A00 /* AFHTTPRequestOperation.h */,
+				DB63C70C1537EA3F00BC4A00 /* AFHTTPRequestOperation.m */,
+				DB63C70D1537EA3F00BC4A00 /* AFImageRequestOperation.h */,
+				DB63C70E1537EA3F00BC4A00 /* AFImageRequestOperation.m */,
+				DB63C70F1537EA3F00BC4A00 /* AFJSONRequestOperation.h */,
+				DB63C7101537EA3F00BC4A00 /* AFJSONRequestOperation.m */,
+				DB63C7111537EA3F00BC4A00 /* AFJSONUtilities.h */,
+				DB63C7121537EA3F00BC4A00 /* AFJSONUtilities.m */,
+				DB63C7131537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.h */,
+				DB63C7141537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.m */,
+				DB63C7151537EA3F00BC4A00 /* AFNetworking.h */,
+				DB63C7161537EA3F00BC4A00 /* AFPropertyListRequestOperation.h */,
+				DB63C7171537EA3F00BC4A00 /* AFPropertyListRequestOperation.m */,
+				DB63C7181537EA3F00BC4A00 /* AFURLConnectionOperation.h */,
+				DB63C7191537EA3F00BC4A00 /* AFURLConnectionOperation.m */,
+				DB63C71A1537EA3F00BC4A00 /* AFXMLRequestOperation.h */,
+				DB63C71B1537EA3F00BC4A00 /* AFXMLRequestOperation.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		DBA29F571513EF4F00692E9B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DBDF2D8B16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.h */,
+				DBDF2D8C16AE12A000FB05EF /* SCObjectSelectionAttributes+WebServices.m */,
+				DBA29F581513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.h */,
+				DBA29F591513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.m */,
+				DBDF2D8616AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.h */,
+				DBDF2D8716AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.m */,
+				DB02961F15294102005F07BD /* UIImageView+WebServices.h */,
+				DB02962015294102005F07BD /* UIImageView+WebServices.m */,
+				DB0295EC15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.h */,
+				DB0295ED15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.m */,
+				DBD724D01547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.h */,
+				DBD724D11547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DBD724DB1547F21F006DF27A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				DB63C71E1537EA3F00BC4A00 /* JSONKit.h */,
+				DB63C71F1537EA3F00BC4A00 /* JSONKit.m */,
+				DBD724D51547F1FF006DF27A /* CJSONSerializer.h */,
+				DBD724D61547F1FF006DF27A /* CJSONSerializer.m */,
+				DBD724D71547F1FF006DF27A /* JSONRepresentation.h */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DB52C8FE1506E9F100C56898 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB52C91E15072DF300C56898 /* STV+WebServices.h in Headers */,
+				DBE229A215085EE80081FB81 /* SCWebServiceStore.h in Headers */,
+				DBE229A615086C340081FB81 /* SCWebServiceDefinition.h in Headers */,
+				DBE229B0150871450081FB81 /* SCWebServiceFetchOptions.h in Headers */,
+				DBA29F5A1513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.h in Headers */,
+				DB0295EE15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.h in Headers */,
+				DB02962115294102005F07BD /* UIImageView+WebServices.h in Headers */,
+				DB63C7201537EA3F00BC4A00 /* AFHTTPClient.h in Headers */,
+				DB63C7221537EA3F00BC4A00 /* AFHTTPRequestOperation.h in Headers */,
+				DB63C7241537EA3F00BC4A00 /* AFImageRequestOperation.h in Headers */,
+				DB63C7261537EA3F00BC4A00 /* AFJSONRequestOperation.h in Headers */,
+				DB63C7281537EA3F00BC4A00 /* AFJSONUtilities.h in Headers */,
+				DB63C72A1537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				DB63C72C1537EA3F00BC4A00 /* AFNetworking.h in Headers */,
+				DB63C72D1537EA3F00BC4A00 /* AFPropertyListRequestOperation.h in Headers */,
+				DB63C72F1537EA3F00BC4A00 /* AFURLConnectionOperation.h in Headers */,
+				DB63C7311537EA3F00BC4A00 /* AFXMLRequestOperation.h in Headers */,
+				DB63C7351537EA3F00BC4A00 /* JSONKit.h in Headers */,
+				DBD724D21547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.h in Headers */,
+				DBD724D81547F1FF006DF27A /* CJSONSerializer.h in Headers */,
+				DBD724DA1547F1FF006DF27A /* JSONRepresentation.h in Headers */,
+				DB0048871548AC690092B64B /* SCParseComDefinition.h in Headers */,
+				DBDF2D8816AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.h in Headers */,
+				DBDF2D8D16AE12A100FB05EF /* SCObjectSelectionAttributes+WebServices.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DB52C8FF1506E9F100C56898 /* STV+WebServices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB52C90D1506E9F100C56898 /* Build configuration list for PBXNativeTarget "STV+WebServices" */;
+			buildPhases = (
+				DB52C8FC1506E9F100C56898 /* Sources */,
+				DB52C8FD1506E9F100C56898 /* Frameworks */,
+				DB52C8FE1506E9F100C56898 /* Headers */,
+				DB52C91315072D8C00C56898 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STV+WebServices";
+			productName = "STV+WebServices";
+			productReference = DB52C9001506E9F100C56898 /* libSTV+WebServices.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB52C8F71506E9F100C56898 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Sensible Cocoa";
+			};
+			buildConfigurationList = DB52C8FA1506E9F100C56898 /* Build configuration list for PBXProject "STV+WebServices" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB52C8F51506E9F100C56898;
+			productRefGroup = DB52C9011506E9F100C56898 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB52C8FF1506E9F100C56898 /* STV+WebServices */,
+				DB52C91715072DD700C56898 /* Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB52C91315072D8C00C56898 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Special thanks goes to Jeff Verkoeyen (jeffverkoeyen.com) for providing this script.\n\nset -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A\"\n\nln -sf A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\nln -sf Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\nln -sf \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		DB52C91D15072DE500C56898 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Special thanks goes to Jeff Verkoeyen (jeffverkoeyen.com) for providing this script.\n\nset -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nSF_ARCHS=i386\nelse\nSF_OTHER_PLATFORM=iphoneos\n# Force armv6 to be built because Xcode 4 likes to only build armv7\nSF_ARCHS=\"armv6 armv7 armv7s arm64\"\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${SF_OTHER_PLATFORM}\" ARCHS=\"${SF_ARCHS}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB52C8FC1506E9F100C56898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE229A315085EE80081FB81 /* SCWebServiceStore.m in Sources */,
+				DBE229A715086C350081FB81 /* SCWebServiceDefinition.m in Sources */,
+				DBE229B1150871450081FB81 /* SCWebServiceFetchOptions.m in Sources */,
+				DBA29F5B1513EF9C00692E9B /* SCArrayOfObjectsSection+WebServices.m in Sources */,
+				DB0295EF15268039005F07BD /* SCWebServicesForceLinkerToIncludeCategories.m in Sources */,
+				DB02962215294102005F07BD /* UIImageView+WebServices.m in Sources */,
+				DB63C7211537EA3F00BC4A00 /* AFHTTPClient.m in Sources */,
+				DB63C7231537EA3F00BC4A00 /* AFHTTPRequestOperation.m in Sources */,
+				DB63C7251537EA3F00BC4A00 /* AFImageRequestOperation.m in Sources */,
+				DB63C7271537EA3F00BC4A00 /* AFJSONRequestOperation.m in Sources */,
+				DB63C7291537EA3F00BC4A00 /* AFJSONUtilities.m in Sources */,
+				DB63C72B1537EA3F00BC4A00 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				DB63C72E1537EA3F00BC4A00 /* AFPropertyListRequestOperation.m in Sources */,
+				DB63C7301537EA3F00BC4A00 /* AFURLConnectionOperation.m in Sources */,
+				DB63C7321537EA3F00BC4A00 /* AFXMLRequestOperation.m in Sources */,
+				DB63C7361537EA3F00BC4A00 /* JSONKit.m in Sources */,
+				DBD724D31547E3ED006DF27A /* SCWebServicesForceLinkerToIncludeCategoriesNonARC.m in Sources */,
+				DBD724D91547F1FF006DF27A /* CJSONSerializer.m in Sources */,
+				DB0048881548AC690092B64B /* SCParseComDefinition.m in Sources */,
+				DBDF2D8916AE038B00FB05EF /* SCArrayOfObjectsModel+WebServices.m in Sources */,
+				DBDF2D8E16AE12A100FB05EF /* SCObjectSelectionAttributes+WebServices.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB52C91C15072DE100C56898 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB52C8FF1506E9F100C56898 /* STV+WebServices */;
+			targetProxy = DB52C91B15072DE100C56898 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB52C90B1506E9F100C56898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		DB52C90C1506E9F100C56898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB52C90E1506E9F100C56898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/STV_WebServices.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SensibleTableView/build/SensibleTableView/Build/Products/Debug-iphoneos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STV+WebServices/STV+WebServices-Prefix.pch";
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DB52C90F1506E9F100C56898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/STV_WebServices.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SensibleTableView/build/SensibleTableView/Build/Products/Debug-iphoneos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "STV+WebServices/STV+WebServices-Prefix.pch";
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DB52C91915072DD700C56898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB52C91A15072DD700C56898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB52C8FA1506E9F100C56898 /* Build configuration list for PBXProject "STV+WebServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB52C90B1506E9F100C56898 /* Debug */,
+				DB52C90C1506E9F100C56898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB52C90D1506E9F100C56898 /* Build configuration list for PBXNativeTarget "STV+WebServices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB52C90E1506E9F100C56898 /* Debug */,
+				DB52C90F1506E9F100C56898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB52C91815072DD700C56898 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB52C91915072DD700C56898 /* Debug */,
+				DB52C91A15072DD700C56898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB52C8F71506E9F100C56898 /* Project object */;
+}
