@@ -33,8 +33,6 @@
 
 #define APPLICATION_NAME @"Gateway Conference"
 
-#define GATEWAY_BASEURL @"http://gatewayconference.com/api"
-
 #import <Foundation/Foundation.h>
 
 @interface AppConstants : NSObject
@@ -44,5 +42,24 @@
 OBJC_EXPORT NSString * const MainStoryBoardiPad;
 
 OBJC_EXPORT NSString * const MainStoryBoardiPhone;
+
+#pragma APP URLs
+
+OBJC_EXPORT NSString * const baseURL;
+
+OBJC_EXPORT NSString * const url_Places;
+
+OBJC_EXPORT NSString * const url_Sponsors;
+
+OBJC_EXPORT NSString * const url_speakers;
+
+OBJC_EXPORT NSString * const url_Faq;
+
+OBJC_EXPORT NSString * const url_Tracks;
+
+OBJC_EXPORT NSString * const url_Schedules;
+
+OBJC_EXPORT NSString * const url_Videos;
+
 
 @end

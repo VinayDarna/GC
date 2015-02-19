@@ -15,4 +15,21 @@ NSString * const MainStoryBoardiPad = @"Main";
 NSString * const MainStoryBoardiPhone = @"Main";
 
 
+NSString * const baseURL        = @"http://gatewayconference.com/api/";
+
+NSString * const url_Places     = @"places";
+
+NSString * const url_Sponsors   = @"sponsors";
+
+NSString * const url_speakers   = @"speakers";
+
+NSString * const url_Faq        = @"faq";
+
+NSString * const url_Tracks     = @"http://gatewayconference.com/api/tracks";
+
+NSString * const url_Schedules  = @"schedule/full";
+
+NSString * const url_Videos     = @"videos";
+
+
 @end

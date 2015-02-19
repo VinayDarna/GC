@@ -102,7 +102,8 @@ static GCSharedClass * sharedClassObj = nil;
 {
     __block NSMutableArray * speakers = [NSMutableArray new];
     
-    NSString *string = [NSString stringWithFormat:@"%@/%@",GATEWAY_BASEURL,paramStr];
+    NSString *string = [NSString stringWithFormat:@"%@%@",baseURL,paramStr];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:string]];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
