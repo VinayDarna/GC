@@ -36,7 +36,7 @@
         tableView;
     });
     [self.view addSubview:self.tableView];
-    titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors", @"Survey", nil];
+    titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
 }
 
 #pragma mark -
@@ -69,7 +69,15 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 5:
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"VideosViewController"]] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 6:
             [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SurveyViewController"]] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 7:
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FAQViewController"]] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
         default:
             break;
@@ -95,7 +103,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 6;
+    return titles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

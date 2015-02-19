@@ -269,7 +269,7 @@
             </objects>
             <point key="canvasLocation" x="1231" y="441"/>
         </scene>
-        <!--Sponsors View Controller-->
+        <!--Sponsors-->
         <scene sceneID="Zs8-rT-Ard">
             <objects>
                 <viewController storyboardIdentifier="SponsorsViewController" id="xX1-VG-DcC" customClass="SponsorsViewController" sceneMemberID="viewController">
@@ -325,7 +325,7 @@
                             <constraint firstItem="Raw-2R-9mW" firstAttribute="leading" secondItem="hbl-PX-ard" secondAttribute="leading" id="cJS-n2-CWX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nq8-lu-3hZ">
+                    <navigationItem key="navigationItem" title="Sponsors" id="nq8-lu-3hZ">
                         <barButtonItem key="leftBarButtonItem" image="Hamburger" id="0Sg-RM-e96">
                             <connections>
                                 <action selector="presentLeftMenuViewController:" destination="xX1-VG-DcC" id="b8x-ix-M2g"/>
@@ -338,7 +338,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vv4-Lc-bUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="3417"/>
+            <point key="canvasLocation" x="1221" y="3229"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="szp-tt-Sxs">
+            <objects>
+                <viewController storyboardIdentifier="VideosViewController" id="UGK-8C-UXX" customClass="VideosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQv-7Y-cnv"/>
+                        <viewControllerLayoutGuide type="bottom" id="rp9-gF-o5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XL8-L1-8qW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-H2-Gmk">
+                                <rect key="frame" x="260" y="289" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GU0-wi-WRQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="Ogg-LA-fje"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="XS1-H2-Gmk" secondAttribute="centerY" constant="0.5" id="egv-qa-G30"/>
+                            <constraint firstAttribute="centerX" secondItem="XS1-H2-Gmk" secondAttribute="centerX" id="r7S-9H-nmd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Videos" id="glj-P3-lyW">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="X5q-P8-wCa">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="UGK-8C-UXX" id="5rg-uA-psE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVF-Ha-iZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="3896"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="dwA-Vi-bXH">
+            <objects>
+                <viewController storyboardIdentifier="FAQViewController" id="zrF-hu-h9c" customClass="FAQViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VOr-s3-eAq"/>
+                        <viewControllerLayoutGuide type="bottom" id="eXJ-qs-lUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hYF-qi-uxj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INm-bb-Dzj">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1NZ-0i-3FC"/>
+                                    <constraint firstAttribute="width" constant="42" id="Xsw-lN-KAq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="INm-bb-Dzj" secondAttribute="centerY" constant="0.5" id="n4z-wu-mmE"/>
+                            <constraint firstAttribute="centerX" secondItem="INm-bb-Dzj" secondAttribute="centerX" id="oiE-kV-OYX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAQ" id="HUo-65-gaA">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="Aco-wz-nuX">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="zrF-hu-h9c" id="7tT-Vi-BR1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qb2-Uj-nKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="4558"/>
         </scene>
         <!--POI-->
         <scene sceneID="rrq-bE-7Q9">
@@ -468,11 +550,13 @@
                         <segue destination="TgB-YM-KTe" kind="push" id="aqd-rj-80j"/>
                         <segue destination="gB8-7J-7V6" kind="push" id="XML-9v-CEB"/>
                         <segue destination="xX1-VG-DcC" kind="push" id="agt-6k-UcM"/>
+                        <segue destination="UGK-8C-UXX" kind="push" id="ua9-v9-CnU"/>
+                        <segue destination="zrF-hu-h9c" kind="push" id="GIP-Gi-rqp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AU-qc-TM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="1969"/>
+            <point key="canvasLocation" x="18" y="3461"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="haR-PI-UG2">
@@ -490,6 +574,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smX-Sw-7mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="490" y="441"/>
         </scene>
     </scenes>
     <resources>
