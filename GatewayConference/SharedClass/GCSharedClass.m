@@ -8,7 +8,7 @@
 
 #import "GCSharedClass.h"
 
-#import "GCSpeakerModel.h"
+#import "GCModel.h"
 
 #import "AppDelegate.h"
 
@@ -98,7 +98,7 @@ static GCSharedClass * sharedClassObj = nil;
     [MBProgressHUD hideHUDForView:self.window animated:YES];
 }
 
--(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(SpeakersBlock)completionHandler;
+-(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(GCBlock)completionHandler;
 {
     __block NSMutableArray * responseArray = [NSMutableArray new];
     
@@ -119,7 +119,7 @@ static GCSharedClass * sharedClassObj = nil;
              
                  for (NSMutableDictionary * dictObj in responceArray)
                  {
-                     GCSpeakerModel * gcspeaker = [GCSpeakerModel new];
+                     GCModel * gcspeaker = [GCModel new];
 
                     // Speakers
                      gcspeaker.nid = [[dictObj objectForKey:@"speaker"]objectForKey:@"nid"];
@@ -154,7 +154,7 @@ static GCSharedClass * sharedClassObj = nil;
                  for (NSMutableDictionary * dictobj in responceArray)
                  {
                      //Sponsors
-                     GCSpeakerModel * gcspeaker = [GCSpeakerModel new];
+                     GCModel * gcspeaker = [GCModel new];
 
                      gcspeaker.nid = [[dictobj objectForKey:@"sponsor"]objectForKey:@"nid"];
                      gcspeaker.title = [[dictobj objectForKey:@"sponsor"]objectForKey:@"title"];
@@ -176,7 +176,7 @@ static GCSharedClass * sharedClassObj = nil;
                  for (NSMutableDictionary * dictobj in responceArray)
                  {
                      //FAQ
-                     GCSpeakerModel * gcspeaker = [GCSpeakerModel new];
+                     GCModel * gcspeaker = [GCModel new];
                      
                      gcspeaker.nid = [[dictobj objectForKey:@"faq"]objectForKey:@"nid"];
                      gcspeaker.title = [[dictobj objectForKey:@"faq"]objectForKey:@"title"];

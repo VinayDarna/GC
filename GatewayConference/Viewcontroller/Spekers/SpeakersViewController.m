@@ -10,7 +10,7 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "GCSpeakerModel.h"
+#import "GCModel.h"
 
 #import "MainViewCell.h"
 
@@ -84,7 +84,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GCSpeakerModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
+    GCModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
     static NSString * simpleTableIdentifier = @"SpeakerCell";
     
     MainViewCell * cell = (MainViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -116,7 +116,7 @@
 {
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SpeakerDetailsViewController * speDet = [story instantiateViewControllerWithIdentifier:@"SpeakerDetailsViewController"];
-    GCSpeakerModel *modelObj = [speakersArray objectAtIndex:indexPath.row];
+    GCModel *modelObj = [speakersArray objectAtIndex:indexPath.row];
     speDet.speakerDetModelObj = modelObj;
     [self.navigationController pushViewController:speDet animated:YES];
 }

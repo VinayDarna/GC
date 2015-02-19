@@ -8,7 +8,7 @@
 
 #import "PopOverViewController.h"
 
-#import "GCSpeakerModel.h"
+#import "GCModel.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
 

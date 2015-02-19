@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 SaiTeja. All rights reserved.
 //
 
-#import "GCSpeakerModel.h"
+#import "GCModel.h"
 
-@implementation GCSpeakerModel
+@implementation GCModel
 
 @end

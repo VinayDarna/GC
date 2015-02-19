@@ -17,7 +17,7 @@
 		B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E461A5FB09D007D12AD /* AppConstants.m */; };
 		B7154E531A5FB62A007D12AD /* GCSharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E521A5FB62A007D12AD /* GCSharedClass.m */; };
 		B766CD201A95FED400A03EAB /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B766CD1F1A95FED400A03EAB /* SlideViewController.m */; };
-		B7F5AE141A95EA0C007D898F /* GCSpeakerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD51A95EA0C007D898F /* GCSpeakerModel.m */; };
+		B7F5AE141A95EA0C007D898F /* GCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD51A95EA0C007D898F /* GCModel.m */; };
 		B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD91A95EA0C007D898F /* POIViewController.m */; };
 		B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */; };
 		B7F5AE261A95EA0C007D898F /* AttendiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADFE1A95EA0C007D898F /* AttendiesListViewController.m */; };
@@ -67,8 +67,8 @@
 		B7154E521A5FB62A007D12AD /* GCSharedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSharedClass.m; sourceTree = "<group>"; };
 		B766CD1E1A95FED400A03EAB /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		B766CD1F1A95FED400A03EAB /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
-		B7F5ADD41A95EA0C007D898F /* GCSpeakerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSpeakerModel.h; sourceTree = "<group>"; };
-		B7F5ADD51A95EA0C007D898F /* GCSpeakerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSpeakerModel.m; sourceTree = "<group>"; };
+		B7F5ADD41A95EA0C007D898F /* GCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCModel.h; sourceTree = "<group>"; };
+		B7F5ADD51A95EA0C007D898F /* GCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCModel.m; sourceTree = "<group>"; };
 		B7F5ADD81A95EA0C007D898F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
 		B7F5ADD91A95EA0C007D898F /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		B7F5ADDA1A95EA0C007D898F /* PopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverViewController.h; sourceTree = "<group>"; };
@@ -235,8 +235,8 @@
 		B7F5ADD31A95EA0C007D898F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B7F5ADD41A95EA0C007D898F /* GCSpeakerModel.h */,
-				B7F5ADD51A95EA0C007D898F /* GCSpeakerModel.m */,
+				B7F5ADD41A95EA0C007D898F /* GCModel.h */,
+				B7F5ADD51A95EA0C007D898F /* GCModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -497,7 +497,7 @@
 				B766CD201A95FED400A03EAB /* SlideViewController.m in Sources */,
 				B7F5AE271A95EA0C007D898F /* HomeViewController.m in Sources */,
 				B7F5AE2D1A95EA0C007D898F /* SponsorsViewController.m in Sources */,
-				B7F5AE141A95EA0C007D898F /* GCSpeakerModel.m in Sources */,
+				B7F5AE141A95EA0C007D898F /* GCModel.m in Sources */,
 				B7F5AE2A1A95EA0C007D898F /* SessionsViewController.m in Sources */,
 				B7F5AE261A95EA0C007D898F /* AttendiesListViewController.m in Sources */,
 				B7F5AE281A95EA0C007D898F /* MainViewCell.m in Sources */,

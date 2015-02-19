@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GCSpeakerModel : NSObject
+@interface GCModel : NSObject
 
 //Speaker
 

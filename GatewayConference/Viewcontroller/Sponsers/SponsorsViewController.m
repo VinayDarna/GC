@@ -59,7 +59,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    GCSpeakerModel *model = [sponsorArray objectAtIndex:indexPath.row];
+    GCModel *model = [sponsorArray objectAtIndex:indexPath.row];
     static NSString *identifier = @"Cell";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
@@ -79,7 +79,7 @@
     {
         UICollectionViewCell * cell = [collectionView1 cellForItemAtIndexPath:indexPath];
         PopOverViewController * contro = [self.storyboard instantiateViewControllerWithIdentifier:@"PopOverViewController"];
-        GCSpeakerModel * modelObj = [sponsorArray objectAtIndex:indexPath.row];
+        GCModel * modelObj = [sponsorArray objectAtIndex:indexPath.row];
         contro.sponsorModelObj = modelObj;
         
         contro.preferredContentSize = CGSizeMake(320, 400);

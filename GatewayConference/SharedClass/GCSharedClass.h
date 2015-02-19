@@ -12,7 +12,8 @@
 
 #import <MBProgressHUD.h>
 
-typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
+typedef void(^GCBlock)(NSMutableArray * modelObjectsArray, BOOL Success);
+
 
 @interface GCSharedClass : NSObject
 {
@@ -26,7 +27,7 @@ typedef void(^SpeakersBlock)(NSMutableArray * speakers, BOOL Success);
 -(BOOL)checkNetworkAndProceed:(UIViewController*)viewControllerObject;
 -(BOOL)isNetworkAvalible;
 
--(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(SpeakersBlock)completionHandler;
+-(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(GCBlock)completionHandler;
 
 - (void)fetchParseDetails;
 

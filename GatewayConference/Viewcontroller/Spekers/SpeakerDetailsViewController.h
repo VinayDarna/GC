@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GCSpeakerModel.h"
+#import "GCModel.h"
 
 
 @interface SpeakerDetailsViewController : UIViewController<UITextViewDelegate>
@@ -20,6 +20,6 @@
     __weak IBOutlet UILabel *textLabel;
 }
 
-@property (nonatomic, strong) GCSpeakerModel *speakerDetModelObj;
+@property (nonatomic, strong) GCModel *speakerDetModelObj;
 
 @end
