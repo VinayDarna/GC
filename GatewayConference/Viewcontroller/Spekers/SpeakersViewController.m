@@ -10,8 +10,6 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "GCModel.h"
-
 #import "MainViewCell.h"
 
 @interface SpeakersViewController ()
@@ -29,7 +27,7 @@
         /**
          * Unhide to get the Speker Details
          */
-        //[self getSpeakerDetails];
+        [self getSpeakerDetails];
         
         /**
          * Unhide to get the Tracks Details
@@ -47,12 +45,7 @@
          */
        // [self getScheduleDetails];
        
-        /**
-         * Unhide to get the Videos Details
-         */
-       // [self getVideosDetails];
-        
-        
+               
     }
     else
     {
@@ -62,28 +55,6 @@
     [[GCSharedClass sharedInstance]fetchParseDetails];
 }
 
--(void)getVideosDetails
-{
-    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
-    
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Videos andReturnWith:^(NSMutableArray *videosArray, BOOL Success)
-     {
-         if (Success)
-         {
-             [[GCSharedClass sharedInstance] dismissGlobalHUD];
-             
-             NSLog(@"videosArray %@",videosArray);
-             
-         }
-         else
-         {
-             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-             [Alert show];
-             [[GCSharedClass sharedInstance] dismissGlobalHUD];
-         }
-     }];
-    
-}
 
 
 -(void)getScheduleDetails
@@ -205,6 +176,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GCModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
+    
     static NSString * simpleTableIdentifier = @"SpeakerCell";
     
     MainViewCell * cell = (MainViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -216,8 +188,7 @@
     }
     
     cell.backgroundColor = [UIColor clearColor];
-    NSURL *url = [NSURL URLWithString:gcSpeak.image];
-    [cell.profilePic sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    [cell.profilePic sd_setImageWithURL:[NSURL URLWithString:gcSpeak.image]  placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
     cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
     cell.profilePic.clipsToBounds = YES;
     

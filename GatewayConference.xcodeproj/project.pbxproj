@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71448A01A97099400F4CF39 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B714489E1A97099400F4CF39 /* MainViewCell.m */; };
+		B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B714489F1A97099400F4CF39 /* MainViewCell.xib */; };
+		B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */; };
+		B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */; };
 		B7154E1A1A5FAAD0007D12AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E191A5FAAD0007D12AD /* main.m */; };
 		B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1C1A5FAAD0007D12AD /* AppDelegate.m */; };
 		B7154E201A5FAAD0007D12AD /* GatewayConference.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1E1A5FAAD0007D12AD /* GatewayConference.xcdatamodeld */; };
@@ -24,8 +28,6 @@
 		B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */; };
 		B7F5AE261A95EA0C007D898F /* AttendiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADFE1A95EA0C007D898F /* AttendiesListViewController.m */; };
 		B7F5AE271A95EA0C007D898F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE011A95EA0C007D898F /* HomeViewController.m */; };
-		B7F5AE281A95EA0C007D898F /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE041A95EA0C007D898F /* MainViewCell.m */; };
-		B7F5AE291A95EA0C007D898F /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F5AE051A95EA0C007D898F /* MainViewCell.xib */; };
 		B7F5AE2A1A95EA0C007D898F /* SessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE081A95EA0C007D898F /* SessionsViewController.m */; };
 		B7F5AE2B1A95EA0C007D898F /* SpeakerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE0B1A95EA0C007D898F /* SpeakerDetailsViewController.m */; };
 		B7F5AE2C1A95EA0C007D898F /* SpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE0D1A95EA0C007D898F /* SpeakersViewController.m */; };
@@ -50,6 +52,12 @@
 		0D6D92A0A38A91BBB19AC42A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6B33C8356A63C9D9D6AEF318 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B714489D1A97099400F4CF39 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
+		B714489E1A97099400F4CF39 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
+		B714489F1A97099400F4CF39 /* MainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		B71448A31A970A3B00F4CF39 /* VideosCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCellTableViewCell.h; sourceTree = "<group>"; };
+		B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCellTableViewCell.m; sourceTree = "<group>"; };
+		B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideosCellTableViewCell.xib; sourceTree = "<group>"; };
 		B7154E141A5FAAD0007D12AD /* GatewayConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatewayConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7154E181A5FAAD0007D12AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7154E191A5FAAD0007D12AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,9 +91,6 @@
 		B7F5ADFE1A95EA0C007D898F /* AttendiesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendiesListViewController.m; sourceTree = "<group>"; };
 		B7F5AE001A95EA0C007D898F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B7F5AE011A95EA0C007D898F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		B7F5AE031A95EA0C007D898F /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
-		B7F5AE041A95EA0C007D898F /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
-		B7F5AE051A95EA0C007D898F /* MainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		B7F5AE071A95EA0C007D898F /* SessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsViewController.h; sourceTree = "<group>"; };
 		B7F5AE081A95EA0C007D898F /* SessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionsViewController.m; sourceTree = "<group>"; };
 		B7F5AE0A1A95EA0C007D898F /* SpeakerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailsViewController.h; sourceTree = "<group>"; };
@@ -136,6 +141,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B714489B1A97099400F4CF39 /* Tablecells */ = {
+			isa = PBXGroup;
+			children = (
+				B71448A21A970A1D00F4CF39 /* VideosCell */,
+				B714489C1A97099400F4CF39 /* MainviewCell */,
+			);
+			path = Tablecells;
+			sourceTree = "<group>";
+		};
+		B714489C1A97099400F4CF39 /* MainviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B714489D1A97099400F4CF39 /* MainViewCell.h */,
+				B714489E1A97099400F4CF39 /* MainViewCell.m */,
+				B714489F1A97099400F4CF39 /* MainViewCell.xib */,
+			);
+			path = MainviewCell;
+			sourceTree = "<group>";
+		};
+		B71448A21A970A1D00F4CF39 /* VideosCell */ = {
+			isa = PBXGroup;
+			children = (
+				B71448A31A970A3B00F4CF39 /* VideosCellTableViewCell.h */,
+				B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */,
+				B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */,
+			);
+			path = VideosCell;
+			sourceTree = "<group>";
+		};
 		B7154E0B1A5FAAD0007D12AD = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +198,7 @@
 				B7154E441A5FB09D007D12AD /* Constants */,
 				B7154E501A5FB62A007D12AD /* SharedClass */,
 				B7F5ADD31A95EA0C007D898F /* Models */,
+				B714489B1A97099400F4CF39 /* Tablecells */,
 				B7F5ADD61A95EA0C007D898F /* Venders */,
 				B7F5ADFB1A95EA0C007D898F /* Viewcontroller */,
 				B7F5ADD21A95E9B0007D898F /* Storyboards */,
@@ -292,7 +327,6 @@
 				B766CD1D1A95FED400A03EAB /* SideTable */,
 				B7F5ADFC1A95EA0C007D898F /* AttendesList */,
 				B7F5ADFF1A95EA0C007D898F /* HomeView */,
-				B7F5AE021A95EA0C007D898F /* MainviewCell */,
 				B7F5AE061A95EA0C007D898F /* Sessions */,
 				B7F5AE091A95EA0C007D898F /* Spekers */,
 				B7F5AE0E1A95EA0C007D898F /* Sponsers */,
@@ -317,16 +351,6 @@
 				B7F5AE011A95EA0C007D898F /* HomeViewController.m */,
 			);
 			path = HomeView;
-			sourceTree = "<group>";
-		};
-		B7F5AE021A95EA0C007D898F /* MainviewCell */ = {
-			isa = PBXGroup;
-			children = (
-				B7F5AE031A95EA0C007D898F /* MainViewCell.h */,
-				B7F5AE041A95EA0C007D898F /* MainViewCell.m */,
-				B7F5AE051A95EA0C007D898F /* MainViewCell.xib */,
-			);
-			path = MainviewCell;
 			sourceTree = "<group>";
 		};
 		B7F5AE061A95EA0C007D898F /* Sessions */ = {
@@ -459,9 +483,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7154E261A5FAAD0007D12AD /* Main.storyboard in Resources */,
-				B7F5AE291A95EA0C007D898F /* MainViewCell.xib in Resources */,
+				B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */,
 				B7154E2B1A5FAAD0007D12AD /* LaunchScreen.xib in Resources */,
 				B7F5AE391A95EEC5007D898F /* Background.png in Resources */,
+				B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */,
 				B7154E281A5FAAD0007D12AD /* Images.xcassets in Resources */,
 				B7F5AE341A95EA43007D898F /* Placeholder.jpeg in Resources */,
 			);
@@ -524,13 +549,14 @@
 				B766CD201A95FED400A03EAB /* SlideViewController.m in Sources */,
 				B7F5AE271A95EA0C007D898F /* HomeViewController.m in Sources */,
 				B7F5AE2D1A95EA0C007D898F /* SponsorsViewController.m in Sources */,
+				B71448A01A97099400F4CF39 /* MainViewCell.m in Sources */,
 				B7F5AE141A95EA0C007D898F /* GCModel.m in Sources */,
 				B7F5AE2A1A95EA0C007D898F /* SessionsViewController.m in Sources */,
 				B7F5AE261A95EA0C007D898F /* AttendiesListViewController.m in Sources */,
-				B7F5AE281A95EA0C007D898F /* MainViewCell.m in Sources */,
 				B766CD271A9605D500A03EAB /* FAQViewController.m in Sources */,
 				B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */,
 				B7154E1A1A5FAAD0007D12AD /* main.m in Sources */,
+				B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */,
 				B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
 			);
