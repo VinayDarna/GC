@@ -58,7 +58,7 @@
 
 - (void) moviePlayerDidExitFullScreen:(NSNotification*)notification
 {
-    NSLog(@"EXITED FULLSCREEN");  
+    NSLog(@"EXITED FULLSCREEN");
 }
 
 

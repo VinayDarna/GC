@@ -140,7 +140,7 @@ static GCSharedClass * sharedClassObj = nil;
                     
                     [responseArray addObject:modelobj];
                 }
-                NSLog(@"responseArray :%@",responseArray);
+               // NSLog(@"responseArray :%@",responseArray);
 
                  completionHandler(responseArray,YES);
             }

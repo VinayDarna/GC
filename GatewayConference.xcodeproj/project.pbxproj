@@ -463,6 +463,7 @@
 				TargetAttributes = {
 					B7154E131A5FAAD0007D12AD = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = QEY6UXHPPV;
 					};
 					B7154E2F1A5FAAD0007D12AD = {
 						CreatedOnToolsVersion = 6.1;
@@ -702,6 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GatewayConference/STV",
@@ -718,7 +720,7 @@
 					"$(PROJECT_DIR)/GatewayConference/Vuforia/build/lib/arm",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
+				PROVISIONING_PROFILE = "5dbf998d-98da-4b3a-9bd0-d23a2206a504";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -729,6 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GatewayConference/STV",
@@ -745,7 +748,7 @@
 					"$(PROJECT_DIR)/GatewayConference/Vuforia/build/lib/arm",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0a6d511d-3f7f-4994-b629-427f25473854";
+				PROVISIONING_PROFILE = "5dbf998d-98da-4b3a-9bd0-d23a2206a504";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
