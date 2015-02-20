@@ -15,29 +15,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ1-gD-bZ5">
-                        <rect key="frame" x="72" y="50" width="289" height="90"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IJ1-gD-bZ5">
+                        <rect key="frame" x="73" y="52" width="288" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npb-40-XgI">
-                                <rect key="frame" x="46" y="8" width="198" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <rect key="frame" x="45" y="8" width="198" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SQ-S5-VJu">
-                                <rect key="frame" x="46" y="34" width="198" height="21"/>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
+                                <rect key="frame" x="45" y="34" width="198" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="     Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU0-iN-mKz">
-                                <rect key="frame" x="20" y="64" width="230" height="21"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU0-iN-mKz">
+                                <rect key="frame" x="45" y="65" width="222" height="14"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.66666666666666663" green="0.47163927199727845" blue="0.41858794806367833" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46717178943013821" green="0.48411852904040398" blue="0.47460291567681978" alpha="0.66000000000000003" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="90" id="LYx-n6-kc1"/>
                             <constraint firstAttribute="width" constant="267" id="Lfj-JZ-4Pt"/>
@@ -48,14 +48,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
-                        <rect key="frame" x="20" y="24" width="80" height="80"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
+                        <rect key="frame" x="35" y="21" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="ep9-1R-GIE"/>
                             <constraint firstAttribute="height" constant="80" id="f16-DJ-Dm6"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.27450980392156865" green="0.13333333333333333" blue="0.031372549019607843" alpha="0.78000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="42" id="AEe-qU-aD0"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="DY0-MR-JZ8"/>
@@ -79,7 +80,7 @@
                 <outlet property="profilePic" destination="DFb-Hj-7Sa" id="DaY-jd-Mzj"/>
                 <outlet property="speakerTypeLbl" destination="QU0-iN-mKz" id="BHk-cl-l5z"/>
             </connections>
-            <point key="canvasLocation" x="725" y="156"/>
+            <point key="canvasLocation" x="725" y="152"/>
         </tableViewCell>
     </objects>
 </document>

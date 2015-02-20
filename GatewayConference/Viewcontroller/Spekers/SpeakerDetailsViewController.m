@@ -43,8 +43,8 @@
     churchLbl.text = _speakerDetModelObj.organization;
     
     detailText.text = _speakerDetModelObj.body;
-    [detailText setFont:[UIFont fontWithName:@"Heiti TC" size:20]];
-    [detailText setFrame:CGRectMake(detailText.frame.origin.x, detailText.frame.origin.y, detailText.frame.size.width, detailText.frame.size.height)];
+//    [detailText setFrame:CGRectMake(detailText.frame.origin.x, detailText.frame.origin.y, detailText.frame.size.width, detailText.frame.size.height)];
+    detailText.textColor = [UIColor whiteColor];
     
     UIImage *placeHolderImage = [UIImage imageNamed:@"Placeholder.jpeg"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",_speakerDetModelObj.image_banner]];
