@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+   // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SideBackMenu.png"]]];
+    
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 500) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -38,7 +41,7 @@
     [self.view addSubview:self.tableView];
   //  titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
     
-    titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
+    titles = [[NSArray alloc] initWithObjects:@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", @"Attendies List",@"Sessions", nil];
 
 }
 
@@ -88,8 +91,8 @@
     
     {
         cell.textLabel.text = titles[indexPath.row];
-        [cell.textLabel setFont:FONT_NEW_HEADING_BOLDwithFontSize(30.0)];
-        cell.textLabel.textColor = RGBCOLOR(255, 255, 255);
+        [cell.textLabel setFont:[UIFont fontWithName: @"Heiti TC" size:(20.0f)]];
+        cell.textLabel.textColor = [UIColor whiteColor];
     }
     
     return cell;
@@ -113,25 +116,25 @@
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FirstViewController"] animated:YES];
             break;
         case 1:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
-            break;
-        case 2:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"AttendiesListViewController"] animated:YES];
-            break;
-        case 3:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SponsorsViewController"] animated:YES];
             break;
-        case 4:
+        case 2:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"VideosViewController"] animated:YES];
             break;
-        case 5:
+        case 3:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SurveyViewController"] animated:YES];
             break;
-        case 6:
+        case 4:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
+            break;
+        case 5:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"AttendiesListViewController"] animated:YES];
+            break;
+        case 6:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
         default:
             break;
-    }
+    }    
     [self.sideMenuViewController hideMenuViewController];
 }
 

@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     
-    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.surveyWebView.delegate = self;
     
     [self.surveyWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.surveymonkey.com/user/sign-in/"]]];
@@ -31,12 +31,12 @@
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [[GCSharedClass sharedInstance] dismissGlobalHUD];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    [[GCSharedClass sharedInstance] dismissGlobalHUD];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 
 }
 
