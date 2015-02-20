@@ -45,6 +45,7 @@
              
              NSLog(@"FAQ %@",faqArray);
              _mainFaqArray = [faqArray copy];
+             [_faqTableView reloadData];
          }
          else
          {
@@ -57,11 +58,6 @@
 
 #pragma UITableView Delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_mainFaqArray count];
@@ -69,13 +65,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 140.0;
+    return 290;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GCModel *model = [_mainFaqArray objectAtIndex:indexPath.row];
+    
     static NSString * simpleTableIdentifier = @"FaqCell";
+    
     FAQTableViewCell *cell = (FAQTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil)
@@ -84,6 +82,11 @@
         cell = [nib objectAtIndex:0];
     }
     
+    cell.faqView.layer.cornerRadius = 15;
+    cell.faqView.layer.masksToBounds = YES;
+    
+    cell.questionLabel.text = model.title;
+    cell.answerLabel.text = model.body;
     
     
     cell.backgroundColor = [UIColor clearColor];

@@ -21,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    speakersTableView.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
+
 
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
@@ -129,10 +132,10 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
-    [tempImageView setFrame:speakersTableView.frame];
-    speakersTableView.backgroundView = tempImageView;
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
+//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
+//    [tempImageView setFrame:speakersTableView.frame];
+//    speakersTableView.backgroundView = tempImageView;
 }
 
 -(void)getSpeakerDetails

@@ -48,20 +48,20 @@
                             </mask>
                         </variation>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
-                        <rect key="frame" x="35" y="21" width="60" height="60"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
+                        <rect key="frame" x="34" y="18" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="ep9-1R-GIE"/>
                             <constraint firstAttribute="height" constant="80" id="f16-DJ-Dm6"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.27450980392156865" green="0.13333333333333333" blue="0.031372549019607843" alpha="0.78000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.27450980390000002" green="0.094117647060000004" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="42" id="AEe-qU-aD0"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="DY0-MR-JZ8"/>
-                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="Eml-bQ-g1J"/>
-                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="PY8-lc-q1Q"/>
+                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Eml-bQ-g1J"/>
+                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="PY8-lc-q1Q"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="iRP-E4-17l"/>
                     <constraint firstAttribute="trailingMargin" secondItem="IJ1-gD-bZ5" secondAttribute="trailing" constant="45" id="oTW-Sf-oiq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="IJ1-gD-bZ5" secondAttribute="trailing" constant="25" id="w4l-3e-8sx"/>
