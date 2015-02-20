@@ -10,8 +10,6 @@
 
 #import <SDWebImage/UIImageView+WebCache.h>
 
-#import "GCModel.h"
-
 #import "MainViewCell.h"
 
 @interface SpeakersViewController ()
@@ -47,10 +45,7 @@
          */
        // [self getScheduleDetails];
        
-        /**
-         * Unhide to get the Videos Details
-         */
-       // [self getVideosDetails];
+               
     }
     else
     {
@@ -60,25 +55,7 @@
     [[GCSharedClass sharedInstance]fetchParseDetails];
 }
 
--(void)getVideosDetails
-{
-    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
-    
-    [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Videos andReturnWith:^(NSMutableArray *videosArray, BOOL Success)
-     {
-         if (Success)
-         {
-             [[GCSharedClass sharedInstance] dismissGlobalHUD];
-             NSLog(@"videosArray %@",videosArray);
-         }
-         else
-         {
-             UIAlertView *Alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Data can't be Fetched" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-             [Alert show];
-             [[GCSharedClass sharedInstance] dismissGlobalHUD];
-         }
-     }];
-}
+
 
 -(void)getScheduleDetails
 {
@@ -100,6 +77,7 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
      }];
+    
 }
 
 
@@ -151,11 +129,10 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
-//    [tempImageView setFrame:speakersTableView.frame];
-//    speakersTableView.backgroundView = tempImageView;
-    speakersTableView.backgroundColor = [UIColor colorWithRed:71.0/255.0 green:65.0/255.0 blue:62.0/255.0 alpha:1.0];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
+    [tempImageView setFrame:speakersTableView.frame];
+    speakersTableView.backgroundView = tempImageView;
 }
 
 -(void)getSpeakerDetails
@@ -199,6 +176,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GCModel * gcSpeak = [speakersArray objectAtIndex:indexPath.row];
+    
     static NSString * simpleTableIdentifier = @"SpeakerCell";
     
     MainViewCell * cell = (MainViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -210,9 +188,8 @@
     }
     
     cell.backgroundColor = [UIColor clearColor];
-    NSURL *url = [NSURL URLWithString:gcSpeak.image];
-    [cell.profilePic sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
-    cell.profilePic.layer.cornerRadius = 40;//cell.profilePic.frame.size.width / 2;
+    [cell.profilePic sd_setImageWithURL:[NSURL URLWithString:gcSpeak.image]  placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
     cell.profilePic.clipsToBounds = YES;
     
     cell.bgView.layer.cornerRadius = 15;
@@ -220,7 +197,7 @@
     
     cell.nameLbl.text = gcSpeak.title;
     cell.churchLbl.text = gcSpeak.organization;
-    cell.speakerTypeLbl.text = gcSpeak.organization_title;
+    cell.speakerTypeLbl.text = gcSpeak.location;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GCModel.h"
-
-
 @interface SpeakerDetailsViewController : UIViewController<UITextViewDelegate>
 {
     __weak IBOutlet UILabel *nameLbl;
