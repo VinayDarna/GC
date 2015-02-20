@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SurveyViewController : UIViewController
+@interface SurveyViewController : UIViewController<UIWebViewDelegate>
 
+
+@property (nonatomic, strong) IBOutlet UIWebView * surveyWebView;
 @end

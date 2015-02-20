@@ -14,14 +14,35 @@
 
 @implementation SurveyViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
+    self.surveyWebView.delegate = self;
+    
+    [self.surveyWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.surveymonkey.com/user/sign-in/"]]];
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [[GCSharedClass sharedInstance] dismissGlobalHUD];
+
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [[GCSharedClass sharedInstance] dismissGlobalHUD];
+
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

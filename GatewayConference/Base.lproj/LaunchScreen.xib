@@ -11,24 +11,23 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-6u-JAp">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="nCY-6u-JAp">
                     <rect key="frame" x="-10" y="-14" width="500" height="511"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="500" id="0Y5-uD-iM9"/>
-                        <constraint firstAttribute="height" constant="511" id="abo-dA-0sb"/>
-                    </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.23529411764705882" green="0.2196078431372549" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="nCY-6u-JAp" secondAttribute="bottom" constant="-17" id="RdO-yw-HYa"/>
-                <constraint firstItem="nCY-6u-JAp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-14" id="Ta1-Mj-dYj"/>
-                <constraint firstItem="nCY-6u-JAp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="cGR-CU-AAd"/>
-                <constraint firstAttribute="trailing" secondItem="nCY-6u-JAp" secondAttribute="trailing" constant="-10" id="oMC-2n-Zk6"/>
+                <constraint firstItem="nCY-6u-JAp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-14" id="But-At-ARu"/>
+                <constraint firstItem="nCY-6u-JAp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="JNe-Sg-ajp"/>
+                <constraint firstItem="nCY-6u-JAp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="i2D-lv-aHh"/>
+                <constraint firstAttribute="bottom" secondItem="nCY-6u-JAp" secondAttribute="bottom" constant="-17" id="lwX-qL-Jpy"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="Placeholder.jpeg" width="400" height="400"/>
+    </resources>
 </document>

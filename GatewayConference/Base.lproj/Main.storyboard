@@ -546,17 +546,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkI-Lh-2uT">
-                                <rect key="frame" x="273" y="289" width="56" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-o3-D21">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="xkI-Lh-2uT" secondAttribute="centerY" constant="0.5" id="RDU-0S-f9t"/>
-                            <constraint firstAttribute="centerX" secondItem="xkI-Lh-2uT" secondAttribute="centerX" constant="-0.5" id="gtw-VP-PYn"/>
+                            <constraint firstAttribute="centerX" secondItem="Qrh-o3-D21" secondAttribute="centerX" id="9fK-Pg-eo7"/>
+                            <constraint firstItem="Qrh-o3-D21" firstAttribute="leading" secondItem="R3b-pO-Udj" secondAttribute="leading" id="KRZ-7i-UYC"/>
+                            <constraint firstItem="Qrh-o3-D21" firstAttribute="bottom" secondItem="cpS-dB-Hwn" secondAttribute="top" id="dQd-MJ-Htv"/>
+                            <constraint firstAttribute="centerY" secondItem="Qrh-o3-D21" secondAttribute="centerY" id="xY4-D9-Lc8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Survey" id="V21-y1-tgd">
@@ -566,6 +566,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="surveyWebView" destination="Qrh-o3-D21" id="QlD-Xj-vQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iAj-kh-EOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

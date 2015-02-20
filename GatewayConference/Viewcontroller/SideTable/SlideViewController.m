@@ -36,7 +36,10 @@
         tableView;
     });
     [self.view addSubview:self.tableView];
-    titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
+  //  titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
+    
+    titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
+
 }
 
 #pragma mark -
@@ -103,7 +106,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+
     switch (indexPath.row)
     {
         case 0:
@@ -113,21 +116,18 @@
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
             break;
         case 2:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"POIViewController"] animated:YES];
-            break;
-        case 3:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"AttendiesListViewController"] animated:YES];
             break;
-        case 4:
+        case 3:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SponsorsViewController"] animated:YES];
             break;
-        case 5:
+        case 4:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"VideosViewController"] animated:YES];
             break;
-        case 6:
+        case 5:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SurveyViewController"] animated:YES];
             break;
-        case 7:
+        case 6:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
         default:
             break;
