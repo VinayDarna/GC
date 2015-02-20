@@ -10,6 +10,8 @@
 
 #import "VideosCellTableViewCell.h"
 
+#import "VideoplayerViewController.h"
+
 @interface VideosViewController ()
 
 @end
@@ -124,6 +126,13 @@
     GCModel * gcObject = [self.videosArray objectAtIndex:indexPath.row];
     
     NSLog(@"play videos %@",gcObject.url);
+    
+    VideoplayerViewController * playerObj = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"VideoplayerViewController"];
+
+    playerObj.modelObj = gcObject;
+    [self.navigationController pushViewController:playerObj animated:YES];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
