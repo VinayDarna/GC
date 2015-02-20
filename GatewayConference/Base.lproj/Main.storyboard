@@ -377,21 +377,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-H2-Gmk">
-                                <rect key="frame" x="260" y="289" width="80" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="GU0-wi-WRQ"/>
-                                    <constraint firstAttribute="width" constant="80" id="Ogg-LA-fje"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XOb-7P-l5K">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.094117647060000004" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UGK-8C-UXX" id="AxB-0G-mg2"/>
+                                    <outlet property="delegate" destination="UGK-8C-UXX" id="ft0-VJ-4sX"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="XS1-H2-Gmk" secondAttribute="centerY" constant="0.5" id="egv-qa-G30"/>
-                            <constraint firstAttribute="centerX" secondItem="XS1-H2-Gmk" secondAttribute="centerX" id="r7S-9H-nmd"/>
+                            <constraint firstItem="XOb-7P-l5K" firstAttribute="top" secondItem="CQv-7Y-cnv" secondAttribute="bottom" constant="-64" id="0ny-vu-up0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XOb-7P-l5K" secondAttribute="bottom" id="aOv-fk-YVR"/>
+                            <constraint firstAttribute="trailing" secondItem="XOb-7P-l5K" secondAttribute="trailing" id="fKm-7K-WdC"/>
+                            <constraint firstItem="XOb-7P-l5K" firstAttribute="leading" secondItem="XL8-L1-8qW" secondAttribute="leading" id="uAr-tz-t9q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Videos" id="glj-P3-lyW">
@@ -401,6 +401,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="videosTable" destination="XOb-7P-l5K" id="gmG-Ws-fPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVF-Ha-iZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

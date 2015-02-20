@@ -20,31 +20,33 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="61" id="qcC-UK-yum"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSm-3c-o0G">
-                        <rect key="frame" x="101" y="81" width="266" height="16"/>
-                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="16"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="101" y="81" width="266" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="clP-ov-5m3">
-                        <rect key="frame" x="8" y="21" width="85" height="78"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="clP-ov-5m3">
+                        <rect key="frame" x="8" y="20" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="85" id="PSW-Z9-HAp"/>
+                            <constraint firstAttribute="width" constant="80" id="PSW-Z9-HAp"/>
+                            <constraint firstAttribute="height" constant="80" id="VHf-k2-Szn"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.27450980390000002" green="0.094117647060000004" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="clP-ov-5m3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1ls-IP-SDT"/>
                     <constraint firstItem="GSm-3c-o0G" firstAttribute="top" secondItem="8bd-jU-QcY" secondAttribute="bottom" constant="8" symbolic="YES" id="EVQ-Xa-vMx"/>
                     <constraint firstItem="clP-ov-5m3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HQi-Aa-j1S"/>
-                    <constraint firstItem="GSm-3c-o0G" firstAttribute="leading" secondItem="clP-ov-5m3" secondAttribute="trailing" constant="8" id="QPg-li-qO7"/>
-                    <constraint firstItem="8bd-jU-QcY" firstAttribute="leading" secondItem="clP-ov-5m3" secondAttribute="trailing" constant="8" id="Qoq-Mg-QI9"/>
+                    <constraint firstItem="GSm-3c-o0G" firstAttribute="leading" secondItem="clP-ov-5m3" secondAttribute="trailing" constant="13" id="QPg-li-qO7"/>
+                    <constraint firstItem="8bd-jU-QcY" firstAttribute="leading" secondItem="clP-ov-5m3" secondAttribute="trailing" constant="13" id="Qoq-Mg-QI9"/>
                     <constraint firstItem="8bd-jU-QcY" firstAttribute="trailing" secondItem="GSm-3c-o0G" secondAttribute="trailing" id="Urt-sC-HEO"/>
-                    <constraint firstItem="clP-ov-5m3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="jzQ-HV-oEP"/>
+                    <constraint firstItem="clP-ov-5m3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="jzQ-HV-oEP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="8bd-jU-QcY" secondAttribute="trailing" id="kux-mD-EI7"/>
                     <constraint firstItem="8bd-jU-QcY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="vyT-o4-94r"/>
                 </constraints>

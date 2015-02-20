@@ -21,9 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    [self createTableView];
+    self.videosTable.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
     
     /**
      * To get the Videos Details
@@ -31,22 +29,13 @@
     
      [self getVideosDetails];
 }
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
 }
 
--(void)createTableView
-{
-    self.videosTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 70, self.view.frame.size.width, self.view.frame.size.height)];
-    self.videosTable .autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-
-    self.videosTable .delegate = self;
-    self.videosTable .dataSource = self;
-    
-    [self.view addSubview:self.videosTable ];
-}
 -(void)getVideosDetails
 {
     self.videosArray = [NSMutableArray new];
@@ -90,29 +79,24 @@
 {
     GCModel * gcObject = [self.videosArray objectAtIndex:indexPath.row];
     
-    VideosCellTableViewCell * cell = nil;
+    static NSString * simpleTableIdentifier = @"VideoCell";
     
-    cell = (VideosCellTableViewCell *) [tableView dequeueReusableCellWithIdentifier:nil];
+    VideosCellTableViewCell * cell = (VideosCellTableViewCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideosCellTableViewCell" owner:self options:nil];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"VideosCellTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     
-    cell = [nib objectAtIndex:0];
-//    if (cell == nil)
-//    {
-//       
-//    }
-//    
-     cell.title.text = gcObject.title;
-     cell.category.text = gcObject.categorization;
+    cell.title.text = gcObject.title;
+    cell.category.text = gcObject.categorization;
     
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:gcObject.image] placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    [cell.imageObj sd_setImageWithURL:[NSURL URLWithString:gcObject.image] placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
     cell.imageObj.layer.cornerRadius = cell.imageObj.frame.size.width / 2;
     cell.imageObj.clipsToBounds = YES;
     
-    cell.imageObj.layer.cornerRadius = 15;
-    cell.imageObj.layer.masksToBounds = YES;
-    [cell.backgroundView setBackgroundColor:[UIColor clearColor]];
-
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -120,6 +104,7 @@
 {
     return 120;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     

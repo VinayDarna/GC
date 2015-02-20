@@ -10,11 +10,9 @@
 
 @interface VideosViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic ,strong)UITableView * videosTable;
+@property (weak, nonatomic) IBOutlet UITableView *videosTable;
 @property(nonatomic ,strong)NSMutableArray * videosArray;
 
-
 -(void)getVideosDetails;
-- (void)createTableView;
 
 @end
