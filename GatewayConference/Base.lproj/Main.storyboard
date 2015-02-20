@@ -250,9 +250,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorkInProgres.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U81-Kq-D2P">
+                                <rect key="frame" x="168" y="205" width="265" height="190"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="U81-Kq-D2P" secondAttribute="centerX" id="7Qf-vh-QsS"/>
+                            <constraint firstAttribute="centerY" secondItem="U81-Kq-D2P" secondAttribute="centerY" id="VIP-4q-Re0"/>
                             <constraint firstAttribute="centerY" secondItem="6nn-as-g6H" secondAttribute="centerY" constant="0.5" id="wDD-nN-b4V"/>
                             <constraint firstAttribute="centerX" secondItem="6nn-as-g6H" secondAttribute="centerX" id="zxE-pe-3bb"/>
                         </constraints>
@@ -440,10 +445,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorkInProgres.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UM3-Bp-xtl">
+                                <rect key="frame" x="168" y="205" width="265" height="190"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="UM3-Bp-xtl" secondAttribute="centerY" id="1pk-D7-y0W"/>
                             <constraint firstAttribute="centerY" secondItem="Eez-HH-68l" secondAttribute="centerY" constant="0.5" id="3kj-CH-ttg"/>
+                            <constraint firstAttribute="centerX" secondItem="UM3-Bp-xtl" secondAttribute="centerX" id="4Bi-kn-t66"/>
                             <constraint firstAttribute="centerX" secondItem="Eez-HH-68l" secondAttribute="centerX" constant="6.5" id="OWW-rt-QVd"/>
                         </constraints>
                     </view>
@@ -477,11 +487,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WorkInProgres.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-Dn-GYd">
+                                <rect key="frame" x="168" y="205" width="265" height="190"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="lHC-pc-d4e" secondAttribute="centerY" constant="0.5" id="5UT-VL-1le"/>
                             <constraint firstAttribute="centerX" secondItem="lHC-pc-d4e" secondAttribute="centerX" id="D78-de-OZB"/>
+                            <constraint firstAttribute="centerX" secondItem="BzY-Dn-GYd" secondAttribute="centerX" id="lhJ-OF-6KW"/>
+                            <constraint firstAttribute="centerY" secondItem="BzY-Dn-GYd" secondAttribute="centerY" id="nTz-ig-dbH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AttendiesList" id="2Tt-tc-aCN">
@@ -579,5 +594,6 @@
     </scenes>
     <resources>
         <image name="Hamburger" width="32" height="32"/>
+        <image name="WorkInProgres.jpg" width="265" height="190"/>
     </resources>
 </document>
