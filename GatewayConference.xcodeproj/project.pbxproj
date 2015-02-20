@@ -12,6 +12,8 @@
 		B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */; };
 		B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */; };
 		B71448AA1A972EB400F4CF39 /* WorkInProgres.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B71448A91A972EB400F4CF39 /* WorkInProgres.jpg */; };
+		B71448AC1A97349300F4CF39 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71448AB1A97349300F4CF39 /* MediaPlayer.framework */; };
+		B71448AF1A9734F100F4CF39 /* VideoplayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B71448AE1A9734F100F4CF39 /* VideoplayerViewController.m */; };
 		B7154E1A1A5FAAD0007D12AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E191A5FAAD0007D12AD /* main.m */; };
 		B7154E1D1A5FAAD0007D12AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1C1A5FAAD0007D12AD /* AppDelegate.m */; };
 		B7154E201A5FAAD0007D12AD /* GatewayConference.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7154E1E1A5FAAD0007D12AD /* GatewayConference.xcdatamodeld */; };
@@ -60,6 +62,9 @@
 		B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCellTableViewCell.m; sourceTree = "<group>"; };
 		B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideosCellTableViewCell.xib; sourceTree = "<group>"; };
 		B71448A91A972EB400F4CF39 /* WorkInProgres.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WorkInProgres.jpg; sourceTree = "<group>"; };
+		B71448AB1A97349300F4CF39 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B71448AD1A9734F100F4CF39 /* VideoplayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoplayerViewController.h; sourceTree = "<group>"; };
+		B71448AE1A9734F100F4CF39 /* VideoplayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoplayerViewController.m; sourceTree = "<group>"; };
 		B7154E141A5FAAD0007D12AD /* GatewayConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatewayConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7154E181A5FAAD0007D12AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7154E191A5FAAD0007D12AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71448AC1A97349300F4CF39 /* MediaPlayer.framework in Frameworks */,
 				FCAEDCF6F038909B59BB2DCD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +135,7 @@
 		0EAF706CCA2E588337A387BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B71448AB1A97349300F4CF39 /* MediaPlayer.framework */,
 				6B33C8356A63C9D9D6AEF318 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -280,6 +287,8 @@
 			children = (
 				B766CD251A9605D500A03EAB /* VideosViewController.h */,
 				B766CD261A9605D500A03EAB /* VideosViewController.m */,
+				B71448AD1A9734F100F4CF39 /* VideoplayerViewController.h */,
+				B71448AE1A9734F100F4CF39 /* VideoplayerViewController.m */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -561,6 +570,7 @@
 				B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */,
 				B7154E1A1A5FAAD0007D12AD /* main.m in Sources */,
 				B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */,
+				B71448AF1A9734F100F4CF39 /* VideoplayerViewController.m in Sources */,
 				B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
 			);
