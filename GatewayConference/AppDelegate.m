@@ -21,6 +21,8 @@
 {
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
     
     [self setUpParseDetails];
     

@@ -10,4 +10,8 @@
 
 @interface FAQTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIView *faqView;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+
 @end

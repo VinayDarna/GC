@@ -21,20 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.automaticallyAdjustsScrollViewInsets = false;
+    
+    [self speakerDetails];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
-    {
-        [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
-        [self speakerDetails];
-    }
-    else
-    {
-        
-    }
+    [self.navigationItem setTitle:_speakerDetModelObj.title];
 }
 
 -(void)speakerDetails
@@ -43,8 +38,8 @@
     churchLbl.text = _speakerDetModelObj.organization;
     
     detailText.text = _speakerDetModelObj.body;
-//    [detailText setFrame:CGRectMake(detailText.frame.origin.x, detailText.frame.origin.y, detailText.frame.size.width, detailText.frame.size.height)];
     detailText.textColor = [UIColor whiteColor];
+    [detailText setFont:[UIFont fontWithName:@"Heiti TC" size:22.0]];
     
     UIImage *placeHolderImage = [UIImage imageNamed:@"Placeholder.jpeg"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",_speakerDetModelObj.image_banner]];

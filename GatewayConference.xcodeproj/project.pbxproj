@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5B842BF1A97387200A20E7B /* FAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B842BD1A97387200A20E7B /* FAQTableViewCell.m */; };
+		B5B842C01A97387200A20E7B /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B842BE1A97387200A20E7B /* FAQTableViewCell.xib */; };
 		B71448A01A97099400F4CF39 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B714489E1A97099400F4CF39 /* MainViewCell.m */; };
 		B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B714489F1A97099400F4CF39 /* MainViewCell.xib */; };
 		B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */; };
@@ -55,6 +57,9 @@
 		0D6D92A0A38A91BBB19AC42A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6B33C8356A63C9D9D6AEF318 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5B842BC1A97387200A20E7B /* FAQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQTableViewCell.h; sourceTree = "<group>"; };
+		B5B842BD1A97387200A20E7B /* FAQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQTableViewCell.m; sourceTree = "<group>"; };
+		B5B842BE1A97387200A20E7B /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		B714489D1A97099400F4CF39 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
 		B714489E1A97099400F4CF39 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
 		B714489F1A97099400F4CF39 /* MainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
@@ -150,9 +155,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B5B842BB1A97387200A20E7B /* FaqTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				B5B842BC1A97387200A20E7B /* FAQTableViewCell.h */,
+				B5B842BD1A97387200A20E7B /* FAQTableViewCell.m */,
+				B5B842BE1A97387200A20E7B /* FAQTableViewCell.xib */,
+			);
+			path = FaqTableCell;
+			sourceTree = "<group>";
+		};
 		B714489B1A97099400F4CF39 /* Tablecells */ = {
 			isa = PBXGroup;
 			children = (
+				B5B842BB1A97387200A20E7B /* FaqTableCell */,
 				B71448A21A970A1D00F4CF39 /* VideosCell */,
 				B714489C1A97099400F4CF39 /* MainviewCell */,
 			);
@@ -499,6 +515,7 @@
 				B7154E261A5FAAD0007D12AD /* Main.storyboard in Resources */,
 				B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */,
 				B7154E2B1A5FAAD0007D12AD /* LaunchScreen.xib in Resources */,
+				B5B842C01A97387200A20E7B /* FAQTableViewCell.xib in Resources */,
 				B7F5AE391A95EEC5007D898F /* Background.png in Resources */,
 				B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */,
 				B7154E281A5FAAD0007D12AD /* Images.xcassets in Resources */,
@@ -573,6 +590,7 @@
 				B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */,
 				B71448AF1A9734F100F4CF39 /* VideoplayerViewController.m in Sources */,
 				B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */,
+				B5B842BF1A97387200A20E7B /* FAQTableViewCell.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

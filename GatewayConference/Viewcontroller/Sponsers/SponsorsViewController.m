@@ -22,7 +22,7 @@
 //    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Application_BG"]];
 //    [tempImageView setFrame:collectionView1.frame];
 //    collectionView1.backgroundView = tempImageView;
-    collectionView1.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:34.0/255.0 blue:8.0/255.0 alpha:1.0];
+    collectionView1.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
 }
 
 -(void)viewWillAppear:(BOOL)animated
