@@ -10,6 +10,9 @@
 
 @interface FAQViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *faqTableView;
+
+@property (nonatomic, retain) NSMutableArray *mainFaqArray;;
 
 -(void)getFAQDetails;
 

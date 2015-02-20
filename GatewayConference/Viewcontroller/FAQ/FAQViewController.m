@@ -8,6 +8,10 @@
 
 #import "FAQViewController.h"
 
+#import "FAQTableViewCell.h"
+
+#import "GCModel.h"
+
 @interface FAQViewController ()
 
 @end
@@ -40,6 +44,7 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
              
              NSLog(@"FAQ %@",faqArray);
+             _mainFaqArray = [faqArray copy];
          }
          else
          {
@@ -50,6 +55,41 @@
      }];
 }
 
+#pragma UITableView Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_mainFaqArray count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 140.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GCModel *model = [_mainFaqArray objectAtIndex:indexPath.row];
+    static NSString * simpleTableIdentifier = @"FaqCell";
+    FAQTableViewCell *cell = (FAQTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FAQTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
 
 - (void)didReceiveMemoryWarning
 {

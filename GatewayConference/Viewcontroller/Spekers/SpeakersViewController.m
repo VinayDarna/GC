@@ -29,7 +29,7 @@
         /**
          * Unhide to get the Speker Details
          */
-        //[self getSpeakerDetails];
+        [self getSpeakerDetails];
         
         /**
          * Unhide to get the Tracks Details
@@ -51,8 +51,6 @@
          * Unhide to get the Videos Details
          */
        // [self getVideosDetails];
-        
-        
     }
     else
     {
@@ -71,9 +69,7 @@
          if (Success)
          {
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
-             
              NSLog(@"videosArray %@",videosArray);
-             
          }
          else
          {
@@ -82,9 +78,7 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
      }];
-    
 }
-
 
 -(void)getScheduleDetails
 {
@@ -106,7 +100,6 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
      }];
-    
 }
 
 
@@ -158,10 +151,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
-    [tempImageView setFrame:speakersTableView.frame];
-    speakersTableView.backgroundView = tempImageView;
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Application_BG"]]];
+//    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]];
+//    [tempImageView setFrame:speakersTableView.frame];
+//    speakersTableView.backgroundView = tempImageView;
+    speakersTableView.backgroundColor = [UIColor colorWithRed:71.0/255.0 green:65.0/255.0 blue:62.0/255.0 alpha:1.0];
 }
 
 -(void)getSpeakerDetails
@@ -218,7 +212,7 @@
     cell.backgroundColor = [UIColor clearColor];
     NSURL *url = [NSURL URLWithString:gcSpeak.image];
     [cell.profilePic sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
-    cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
+    cell.profilePic.layer.cornerRadius = 40;//cell.profilePic.frame.size.width / 2;
     cell.profilePic.clipsToBounds = YES;
     
     cell.bgView.layer.cornerRadius = 15;
@@ -226,7 +220,7 @@
     
     cell.nameLbl.text = gcSpeak.title;
     cell.churchLbl.text = gcSpeak.organization;
-    cell.speakerTypeLbl.text = gcSpeak.location;
+    cell.speakerTypeLbl.text = gcSpeak.organization_title;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
