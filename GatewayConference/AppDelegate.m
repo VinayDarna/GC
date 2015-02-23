@@ -10,7 +10,6 @@
 
 #import "HockeySDK.h"
 
-
 #import "AFNetworkActivityIndicatorManager.h"
 
 @interface AppDelegate ()
@@ -22,7 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"0f02dedbd9c31d9909ea2be6fdb159b0"];
+ 
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"edd6012f3cbe55c1c676d3d6a6cb8fab"];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator
      authenticateInstallation];
