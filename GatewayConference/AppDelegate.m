@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "HockeySDK.h"
+
+
 #import "AFNetworkActivityIndicatorManager.h"
 
 @interface AppDelegate ()
@@ -19,6 +22,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"0f02dedbd9c31d9909ea2be6fdb159b0"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator
+     authenticateInstallation];
+
+    
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
