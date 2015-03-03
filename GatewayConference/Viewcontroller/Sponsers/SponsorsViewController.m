@@ -8,6 +8,8 @@
 
 #import "SponsorsViewController.h"
 
+#import "SponserCell.h"
+
 #import "PopOverViewController.h"
 
 @interface SponsorsViewController ()
@@ -16,17 +18,23 @@
 
 @implementation SponsorsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Application_BG"]];
 //    [tempImageView setFrame:collectionView1.frame];
 //    collectionView1.backgroundView = tempImageView;
-    collectionView1.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
-}
+   // collectionView1.backgroundColor = [UIColor colorWithRed:94.0/255.0 green:63.0/255.0 blue:67.0/255.0 alpha:1.0];
+    
+    sponsersTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 65, self.view.frame.size.width, self.view.frame.size.height-65)];
+    sponsersTableView.backgroundColor = [UIColor colorWithRed:95/255.0 green:63/255.0 blue:67/255.0 alpha:1.0];
 
--(void)viewWillAppear:(BOOL)animated
-{
+    sponsersTableView.delegate = self;
+    sponsersTableView.dataSource = self;
+    [self.view addSubview:sponsersTableView];
+   
+    
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
     {
         [self getSponsorDetails];
@@ -34,7 +42,14 @@
     {
         NSLog(@"Error");
     }
+
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    }
 
 -(void)getSponsorDetails
 {
@@ -45,7 +60,7 @@
         {
             [[GCSharedClass sharedInstance]dismissGlobalHUD];
             sponsorArray = [speakers copy];
-            [collectionView1 reloadData];
+            [sponsersTableView reloadData];
         }
         else
         {
@@ -54,6 +69,75 @@
     }];
 }
 
+#pragma UITableView Delegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [sponsorArray count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 108.0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GCModel * gcSpeak = [sponsorArray objectAtIndex:indexPath.row];
+    
+    static NSString * simpleTableIdentifier = @"SponserCell";
+    
+    SponserCell * cell = (SponserCell *) [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SponserCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    cell.backgroundColor = [UIColor clearColor];
+    
+    [cell.sponser_image sd_setImageWithURL:[NSURL URLWithString:gcSpeak.logo]  placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
+    //cell.sponser_image.layer.cornerRadius = cell.sponser_image.frame.size.width / 2;
+    cell.sponser_image.clipsToBounds = YES;
+
+    
+    cell.sponser_title.text = gcSpeak.title;
+  
+    [cell.sponser_site addTarget:self action:@selector(ShowSelectedSite:) forControlEvents:UIControlEventTouchUpInside];
+    cell.sponser_site.tag = indexPath.row;
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+-(IBAction)ShowSelectedSite:(id)sender
+{
+    UIButton *buttonObj = (UIButton*)sender;
+    
+    NSLog(@"but %ld",(long)buttonObj.tag);
+    
+    GCModel * gcSpeak = [sponsorArray objectAtIndex:buttonObj.tag];
+    
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:gcSpeak.url]];
+}
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    SpeakerDetailsViewController * speDet = [story instantiateViewControllerWithIdentifier:@"SpeakerDetailsViewController"];
+//    GCModel *modelObj = [sponsorArray objectAtIndex:indexPath.row];
+//    speDet.speakerDetModelObj = modelObj;
+//    [self.navigationController pushViewController:speDet animated:YES];
+//}
+
+
+/*
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return sponsorArray.count;
 }
@@ -103,6 +187,7 @@
         [self close:nil];
     }
 }
+*/
 
 - (void)close:(id)sender
 {

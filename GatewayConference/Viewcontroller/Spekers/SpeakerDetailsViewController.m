@@ -18,9 +18,9 @@
 
 @implementation SpeakerDetailsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = false;
     
@@ -30,6 +30,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationItem setTitle:_speakerDetModelObj.title];
+    detailText = [[UITextView alloc]init];
+    [detailText reloadInputViews];
+    
 }
 
 -(void)speakerDetails
@@ -39,7 +42,7 @@
     
     detailText.text = _speakerDetModelObj.body;
     detailText.textColor = [UIColor whiteColor];
-    [detailText setFont:[UIFont fontWithName:@"Heiti TC" size:22.0]];
+    [detailText setFont:[UIFont fontWithName:@"Heiti TC" size:17.0]];
     
     UIImage *placeHolderImage = [UIImage imageNamed:@"Placeholder.jpeg"];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",_speakerDetModelObj.image_banner]];
@@ -51,7 +54,7 @@
                                    [profilePic setImage:image];
                                    [[GCSharedClass sharedInstance] dismissGlobalHUD];
                                } failure:nil];
-    [self labelAnimation];
+  //  [self labelAnimation];
 }
 
 -(void)labelAnimation
@@ -65,7 +68,8 @@
      }];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

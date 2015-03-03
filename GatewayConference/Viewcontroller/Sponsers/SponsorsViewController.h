@@ -10,14 +10,17 @@
 #import <WYPopoverController.h>
 #import <WYStoryboardPopoverSegue.h>
 
-@interface SponsorsViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, WYPopoverControllerDelegate>
+@interface SponsorsViewController : UIViewController <WYPopoverControllerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
-    __weak IBOutlet UICollectionView *collectionView1;
+   // __weak IBOutlet UICollectionView *collectionView1;
     NSMutableArray *sponsorArray;
     UILabel *titleLabel;
     
     WYPopoverController * anotherPopoverController;
     WYPopoverController * settingsPopoverController;
+    
+    
+    UITableView *sponsersTableView;
 }
 
 @property (nonatomic, strong) UIPopoverController *erpDataPopover;

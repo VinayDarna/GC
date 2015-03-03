@@ -21,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.videosTable.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
+    self.videosTable.backgroundColor = [UIColor colorWithRed:94.0/255.0 green:63.0/255.0 blue:67.0/255.0 alpha:1.0];
     
     /**
      * To get the Videos Details
@@ -102,7 +102,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 120;
+    return 100;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

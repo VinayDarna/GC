@@ -88,7 +88,6 @@
     cell.questionLabel.text = model.title;
     cell.answerLabel.text = model.body;
     
-    
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -97,8 +96,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-  
 }
-
 
 @end

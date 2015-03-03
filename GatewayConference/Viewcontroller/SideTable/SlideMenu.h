@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface SlideViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate>
+@interface SlideMenu : UIViewController <UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate>
 {
     NSArray *titles;
 }

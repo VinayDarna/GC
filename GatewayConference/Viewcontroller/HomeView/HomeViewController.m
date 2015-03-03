@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "SlideViewController.h"
+#import "SlideMenu.h"
 
 @interface HomeViewController ()
 
@@ -27,7 +27,7 @@
     self.contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentViewController"];
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
 //    self.backgroundImage = [UIImage imageNamed:@"App-BG"];
-    self.view.backgroundColor = [UIColor colorWithRed:71.0/255.0 green:65.0/255.0 blue:62.0/255.0 alpha:1.0];
+//    self.view.backgroundColor = [UIColor colorWithRed:71.0/255.0 green:65.0/255.0 blue:62.0/255.0 alpha:1.0];
     self.delegate = self;
 }
 
@@ -57,6 +57,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIVisualEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    //    effectView.frame = self.imageView.bounds;
+    [effectView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+20)];
+    [self.imageView addSubview:effectView];
 }
 
 - (void)didReceiveMemoryWarning

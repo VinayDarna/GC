@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    speakersTableView.backgroundColor = [UIColor colorWithRed:70.0/255.0 green:24.0/255.0 blue:8.0/255.0 alpha:1.0];
+    speakersTableView.backgroundColor = [UIColor colorWithRed:94.0/255.0 green:63.0/255.0 blue:67.0/255.0 alpha:1.0];
 
 
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])

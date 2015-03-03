@@ -6,27 +6,27 @@
 //  Copyright (c) 2015 Teja Swaroop. All rights reserved.
 //
 
-#import "SlideViewController.h"
+#import "SlideMenu.h"
 #import "SessionsViewController.h"
 #import "POIViewController.h"
 #import "UIViewController+RESideMenu.h"
 
-@interface SlideViewController ()
+@interface SlideMenu ()
 
 @property (strong, readwrite, nonatomic) UITableView *tableView;
 
 @end
 
-@implementation SlideViewController
+@implementation SlideMenu
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
    // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SideBackMenu.png"]]];
-    
+     
     self.tableView = ({
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 500) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -41,7 +41,7 @@
     [self.view addSubview:self.tableView];
   //  titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
     
-    titles = [[NSArray alloc] initWithObjects:@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", @"Attendies List",@"Sessions", nil];
+    titles = [[NSArray alloc] initWithObjects:@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules", nil];
 
 }
 
@@ -128,10 +128,8 @@
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
             break;
         case 5:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"AttendiesListViewController"] animated:YES];
-            break;
-        case 6:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
+            break;
         default:
             break;
     }    

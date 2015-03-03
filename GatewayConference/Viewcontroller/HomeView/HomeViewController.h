@@ -11,4 +11,6 @@
 
 @interface HomeViewController : RESideMenu <RESideMenuDelegate>
 
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+
 @end

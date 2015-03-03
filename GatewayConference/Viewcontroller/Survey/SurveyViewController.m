@@ -17,27 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.surveyWebView.delegate = self;
-    
-    [self.surveyWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.surveymonkey.com/user/sign-in/"]]];
-}
-
-
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
-    
-}
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-
-}
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,4 +34,8 @@
 }
 */
 
+- (IBAction)visitServeySite:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.surveymonkey.com/user/sign-in/"]];
+}
 @end

@@ -13,7 +13,7 @@
     __weak IBOutlet UILabel *nameLbl;
     __weak IBOutlet UIImageView *profilePic;
     __weak IBOutlet UILabel *churchLbl;
-    __weak IBOutlet UITextView *detailText;
+     IBOutlet UITextView *detailText;
     __weak IBOutlet UILabel *textLabel;
 }
 

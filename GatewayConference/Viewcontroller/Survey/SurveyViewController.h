@@ -10,6 +10,5 @@
 
 @interface SurveyViewController : UIViewController<UIWebViewDelegate>
 
-
-@property (nonatomic, strong) IBOutlet UIWebView * surveyWebView;
+- (IBAction)visitServeySite:(id)sender;
 @end
