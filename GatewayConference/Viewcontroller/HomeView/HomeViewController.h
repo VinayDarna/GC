@@ -7,7 +7,6 @@
 //
 
 #import "RESideMenu.h"
-#import "RESideMenu.h"
 
 @interface HomeViewController : RESideMenu <RESideMenuDelegate>
 

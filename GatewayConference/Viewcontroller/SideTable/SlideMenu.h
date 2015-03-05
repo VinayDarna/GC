@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "RESideMenu.h"
 
 @interface SlideMenu : UIViewController <UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate>

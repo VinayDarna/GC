@@ -7,8 +7,7 @@
 //
 
 #import "SlideMenu.h"
-#import "SessionsViewController.h"
-#import "POIViewController.h"
+
 #import "UIViewController+RESideMenu.h"
 
 @interface SlideMenu ()
@@ -41,7 +40,7 @@
     [self.view addSubview:self.tableView];
   //  titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
     
-    titles = [[NSArray alloc] initWithObjects:@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules", nil];
+    titles = [[NSArray alloc] initWithObjects:@"DashBoard",@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules", nil];
 
 }
 
@@ -113,22 +112,25 @@
     switch (indexPath.row)
     {
         case 0:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FirstViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"DashBoardViewController"] animated:YES];
             break;
         case 1:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SponsorsViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SpeakersViewController"] animated:YES];
             break;
         case 2:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"VideosViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SponsorsViewController"] animated:YES];
             break;
         case 3:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SurveyViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"VideosViewController"] animated:YES];
             break;
         case 4:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SurveyViewController"] animated:YES];
             break;
         case 5:
-            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SecondViewController"] animated:YES];
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"FAQViewController"] animated:YES];
+            break;
+        case 6:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SessionsViewController"] animated:YES];
             break;
         default:
             break;

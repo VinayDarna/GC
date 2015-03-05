@@ -12,11 +12,8 @@
 
 @interface SessionsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
-   
     UITableView *schedulesTable;
-    
-     NSMutableArray *scheduleArray;
-
+    NSMutableArray *scheduleArray;
 }
 
 @end

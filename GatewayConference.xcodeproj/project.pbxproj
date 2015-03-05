@@ -12,6 +12,10 @@
 		B56507A51AA5AF3900B68968 /* FAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B56507A31AA5AF3900B68968 /* FAQTableViewCell.m */; };
 		B56507A61AA5AF3900B68968 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56507A41AA5AF3900B68968 /* FAQTableViewCell.xib */; };
 		B56507A91AA5AF6700B68968 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56507A81AA5AF6700B68968 /* FAQViewController.m */; };
+		B56A2B6F1AA6DBC100F0D643 /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A2B6E1AA6DBC100F0D643 /* DashBoardViewController.m */; };
+		B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B701AA6E54900F0D643 /* add_friend.png */; };
+		B56A2B731AA6E85500F0D643 /* No_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B721AA6E85500F0D643 /* No_profilePic.png */; };
+		B57833961AA85135008D8EB7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57833951AA85135008D8EB7 /* LoginViewController.m */; };
 		B5B842C21A97593C00A20E7B /* SideBackMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B842C11A97593C00A20E7B /* SideBackMenu.png */; };
 		B71448A01A97099400F4CF39 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B714489E1A97099400F4CF39 /* MainViewCell.m */; };
 		B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B714489F1A97099400F4CF39 /* MainViewCell.xib */; };
@@ -70,6 +74,12 @@
 		B56507A41AA5AF3900B68968 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		B56507A71AA5AF6700B68968 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
 		B56507A81AA5AF6700B68968 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		B56A2B6D1AA6DBC100F0D643 /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
+		B56A2B6E1AA6DBC100F0D643 /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
+		B56A2B701AA6E54900F0D643 /* add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_friend.png; sourceTree = "<group>"; };
+		B56A2B721AA6E85500F0D643 /* No_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_profilePic.png; sourceTree = "<group>"; };
+		B57833941AA85135008D8EB7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B57833951AA85135008D8EB7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B5B842C11A97593C00A20E7B /* SideBackMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideBackMenu.png; sourceTree = "<group>"; };
 		B714489D1A97099400F4CF39 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
 		B714489E1A97099400F4CF39 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
@@ -166,6 +176,24 @@
 				2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B56A2B6C1AA6DBB000F0D643 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B56A2B6D1AA6DBC100F0D643 /* DashBoardViewController.h */,
+				B56A2B6E1AA6DBC100F0D643 /* DashBoardViewController.m */,
+			);
+			path = DashBoard;
+			sourceTree = "<group>";
+		};
+		B57833931AA8511A008D8EB7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B57833941AA85135008D8EB7 /* LoginViewController.h */,
+				B57833951AA85135008D8EB7 /* LoginViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B5B842BB1A97387200A20E7B /* FaqTableCell */ = {
@@ -374,6 +402,8 @@
 		B7F5ADFB1A95EA0C007D898F /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				B57833931AA8511A008D8EB7 /* Login */,
+				B56A2B6C1AA6DBB000F0D643 /* DashBoard */,
 				B766CD211A9605D500A03EAB /* FAQ */,
 				B766CD241A9605D500A03EAB /* Videos */,
 				B766CD1D1A95FED400A03EAB /* SlideTable */,
@@ -446,6 +476,8 @@
 		B7F5AE321A95EA26007D898F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B56A2B721AA6E85500F0D643 /* No_profilePic.png */,
+				B56A2B701AA6E54900F0D643 /* add_friend.png */,
 				B723B5611A9EFD250032FDB2 /* Survey.png */,
 				22A4F7E81A9E323500B31FC4 /* systemMenuLogo.png */,
 				22A4F7E61A9E2C9000B31FC4 /* Bkg_SideMenu.png */,
@@ -552,8 +584,10 @@
 				B7F5AE391A95EEC5007D898F /* Background.png in Resources */,
 				B723B5671A9F193E0032FDB2 /* SponserCell.xib in Resources */,
 				22A4F7EA1A9E323500B31FC4 /* systemMenuLogo.png in Resources */,
+				B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */,
 				B723B5621A9EFD250032FDB2 /* Survey.png in Resources */,
 				B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */,
+				B56A2B731AA6E85500F0D643 /* No_profilePic.png in Resources */,
 				B7154E281A5FAAD0007D12AD /* Images.xcassets in Resources */,
 				B7F5AE341A95EA43007D898F /* Placeholder.jpeg in Resources */,
 			);
@@ -622,6 +656,8 @@
 				B766CD281A9605D500A03EAB /* VideosViewController.m in Sources */,
 				B7F5AE2C1A95EA0C007D898F /* SpeakersViewController.m in Sources */,
 				B7F5AE2B1A95EA0C007D898F /* SpeakerDetailsViewController.m in Sources */,
+				B56A2B6F1AA6DBC100F0D643 /* DashBoardViewController.m in Sources */,
+				B57833961AA85135008D8EB7 /* LoginViewController.m in Sources */,
 				B7154E201A5FAAD0007D12AD /* GatewayConference.xcdatamodeld in Sources */,
 				B7154E531A5FB62A007D12AD /* GCSharedClass.m in Sources */,
 				B7F5AE2E1A95EA0C007D898F /* SurveyViewController.m in Sources */,

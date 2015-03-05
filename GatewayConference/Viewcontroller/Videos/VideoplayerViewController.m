@@ -78,6 +78,7 @@
 //    self.moviePlayer= nil;
 //    
 //}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
