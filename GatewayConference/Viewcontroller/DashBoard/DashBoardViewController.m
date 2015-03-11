@@ -30,6 +30,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    
 }
 
 -(void)addTapgestureToImageView

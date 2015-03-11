@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <FacebookSDK.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    NSString *Fbreqid;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -20,6 +23,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+@property(assign) BOOL checktheId;
+@property (strong, nonatomic) FBSession *session;
 
 @end
 

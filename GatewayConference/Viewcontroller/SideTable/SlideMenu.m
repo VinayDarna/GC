@@ -38,10 +38,10 @@
         tableView;
     });
     [self.view addSubview:self.tableView];
-  //  titles = [[NSArray alloc] initWithObjects:@"Speakers", @"Sessions", @"POI", @"Attendies List",@"Sponsors",@"Videos" ,@"Survey",@"FAQ", nil];
     
     titles = [[NSArray alloc] initWithObjects:@"DashBoard",@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules", nil];
-
+    
+    imagesArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages4@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"], nil];
 }
 
 #pragma mark -
@@ -92,8 +92,10 @@
         cell.textLabel.text = titles[indexPath.row];
         [cell.textLabel setFont:[UIFont fontWithName: @"Heiti TC" size:(20.0f)]];
         cell.textLabel.textColor = [UIColor whiteColor];
+
+        cell.imageView.image = imagesArray[indexPath.row];
+
     }
-    
     return cell;
 }
 
@@ -138,7 +140,7 @@
     [self.sideMenuViewController hideMenuViewController];
 }
 
--(UIViewController*)returnViewcontrollerWithIdentifier:(NSString*)identifierName
+-(UIViewController *)returnViewcontrollerWithIdentifier:(NSString*)identifierName
 {
     UIViewController * viewControllerObj = [[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:identifierName]];
     

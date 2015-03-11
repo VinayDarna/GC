@@ -13,6 +13,7 @@
 @interface SlideMenu : UIViewController <UITableViewDataSource, UITableViewDelegate, RESideMenuDelegate>
 {
     NSArray *titles;
+    NSArray *imagesArray;
 }
 
 -(UIViewController*)returnViewcontrollerWithIdentifier:(NSString*)identifierName;

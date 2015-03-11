@@ -7,10 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "DashBoardViewController.h"
+
+#import "SessionsViewController.h"
+
+@class HomeViewController;
 
 @interface LoginViewController : UIViewController
 {
+    AppDelegate *appObj;
+    HomeViewController * home;
+    DashBoardViewController *dash;
     
+    NSString * facebookID;
+    NSString * name;
+    NSString * place;
+    NSString * email;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

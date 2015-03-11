@@ -32,6 +32,8 @@
 
     sponsersTableView.delegate = self;
     sponsersTableView.dataSource = self;
+    sponsersTableView.separatorStyle = NO;
+    
     [self.view addSubview:sponsersTableView];
    
     
@@ -83,7 +85,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 108.0;
+    return 140.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,9 +105,11 @@
     cell.backgroundColor = [UIColor clearColor];
     
     [cell.sponser_image sd_setImageWithURL:[NSURL URLWithString:gcSpeak.logo]  placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
-    //cell.sponser_image.layer.cornerRadius = cell.sponser_image.frame.size.width / 2;
+    cell.sponser_image.layer.cornerRadius = cell.sponser_image.frame.size.width / 2;
     cell.sponser_image.clipsToBounds = YES;
 
+    cell.bgView.layer.cornerRadius = 15;
+    cell.bgView.layer.masksToBounds = YES;
     
     cell.sponser_title.text = gcSpeak.title;
   

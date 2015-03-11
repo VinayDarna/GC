@@ -16,6 +16,10 @@
 		B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B701AA6E54900F0D643 /* add_friend.png */; };
 		B56A2B731AA6E85500F0D643 /* No_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B721AA6E85500F0D643 /* No_profilePic.png */; };
 		B57833961AA85135008D8EB7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57833951AA85135008D8EB7 /* LoginViewController.m */; };
+		B5811FB31AB0545600DD001D /* SidebarImages1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5811FAF1AB0545600DD001D /* SidebarImages1@2x.png */; };
+		B5811FB41AB0545600DD001D /* SidebarImages2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5811FB01AB0545600DD001D /* SidebarImages2@2x.png */; };
+		B5811FB51AB0545600DD001D /* SidebarImages3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5811FB11AB0545600DD001D /* SidebarImages3@2x.png */; };
+		B5811FB61AB0545600DD001D /* SidebarImages4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5811FB21AB0545600DD001D /* SidebarImages4@2x.png */; };
 		B5B842C21A97593C00A20E7B /* SideBackMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B842C11A97593C00A20E7B /* SideBackMenu.png */; };
 		B71448A01A97099400F4CF39 /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B714489E1A97099400F4CF39 /* MainViewCell.m */; };
 		B71448A11A97099400F4CF39 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B714489F1A97099400F4CF39 /* MainViewCell.xib */; };
@@ -80,6 +84,11 @@
 		B56A2B721AA6E85500F0D643 /* No_profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = No_profilePic.png; sourceTree = "<group>"; };
 		B57833941AA85135008D8EB7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B57833951AA85135008D8EB7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B57DD4761AAEF8B400EB83C5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B5811FAF1AB0545600DD001D /* SidebarImages1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidebarImages1@2x.png"; sourceTree = "<group>"; };
+		B5811FB01AB0545600DD001D /* SidebarImages2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidebarImages2@2x.png"; sourceTree = "<group>"; };
+		B5811FB11AB0545600DD001D /* SidebarImages3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidebarImages3@2x.png"; sourceTree = "<group>"; };
+		B5811FB21AB0545600DD001D /* SidebarImages4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidebarImages4@2x.png"; sourceTree = "<group>"; };
 		B5B842C11A97593C00A20E7B /* SideBackMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideBackMenu.png; sourceTree = "<group>"; };
 		B714489D1A97099400F4CF39 /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
 		B714489E1A97099400F4CF39 /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
@@ -163,6 +172,7 @@
 		0EAF706CCA2E588337A387BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B57DD4761AAEF8B400EB83C5 /* FacebookSDK.framework */,
 				B71448AB1A97349300F4CF39 /* MediaPlayer.framework */,
 				6B33C8356A63C9D9D6AEF318 /* libPods.a */,
 			);
@@ -209,6 +219,7 @@
 		B714489B1A97099400F4CF39 /* Tablecells */ = {
 			isa = PBXGroup;
 			children = (
+				B723B5681A9F19430032FDB2 /* SponserCell */,
 				B5B842BB1A97387200A20E7B /* FaqTableCell */,
 				B71448A21A970A1D00F4CF39 /* VideosCell */,
 				B714489C1A97099400F4CF39 /* MainviewCell */,
@@ -229,7 +240,6 @@
 		B71448A21A970A1D00F4CF39 /* VideosCell */ = {
 			isa = PBXGroup;
 			children = (
-				B723B5681A9F19430032FDB2 /* SponserCell */,
 				B71448A31A970A3B00F4CF39 /* VideosCellTableViewCell.h */,
 				B71448A41A970A3B00F4CF39 /* VideosCellTableViewCell.m */,
 				B71448A51A970A3B00F4CF39 /* VideosCellTableViewCell.xib */,
@@ -330,6 +340,7 @@
 				B723B5651A9F193E0032FDB2 /* SponserCell.xib */,
 			);
 			name = SponserCell;
+			path = VideosCell;
 			sourceTree = "<group>";
 		};
 		B766CD1D1A95FED400A03EAB /* SlideTable */ = {
@@ -476,6 +487,10 @@
 		B7F5AE321A95EA26007D898F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5811FAF1AB0545600DD001D /* SidebarImages1@2x.png */,
+				B5811FB01AB0545600DD001D /* SidebarImages2@2x.png */,
+				B5811FB11AB0545600DD001D /* SidebarImages3@2x.png */,
+				B5811FB21AB0545600DD001D /* SidebarImages4@2x.png */,
 				B56A2B721AA6E85500F0D643 /* No_profilePic.png */,
 				B56A2B701AA6E54900F0D643 /* add_friend.png */,
 				B723B5611A9EFD250032FDB2 /* Survey.png */,
@@ -581,14 +596,18 @@
 				B56507A61AA5AF3900B68968 /* FAQTableViewCell.xib in Resources */,
 				B7154E2B1A5FAAD0007D12AD /* LaunchScreen.xib in Resources */,
 				B5B842C21A97593C00A20E7B /* SideBackMenu.png in Resources */,
+				B5811FB51AB0545600DD001D /* SidebarImages3@2x.png in Resources */,
 				B7F5AE391A95EEC5007D898F /* Background.png in Resources */,
 				B723B5671A9F193E0032FDB2 /* SponserCell.xib in Resources */,
 				22A4F7EA1A9E323500B31FC4 /* systemMenuLogo.png in Resources */,
 				B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */,
+				B5811FB31AB0545600DD001D /* SidebarImages1@2x.png in Resources */,
 				B723B5621A9EFD250032FDB2 /* Survey.png in Resources */,
+				B5811FB61AB0545600DD001D /* SidebarImages4@2x.png in Resources */,
 				B71448A71A970A3B00F4CF39 /* VideosCellTableViewCell.xib in Resources */,
 				B56A2B731AA6E85500F0D643 /* No_profilePic.png in Resources */,
 				B7154E281A5FAAD0007D12AD /* Images.xcassets in Resources */,
+				B5811FB41AB0545600DD001D /* SidebarImages2@2x.png in Resources */,
 				B7F5AE341A95EA43007D898F /* Placeholder.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,7 +825,7 @@
 			baseConfigurationReference = 0D6D92A0A38A91BBB19AC42A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,6 +833,8 @@
 					3.3.0,
 					Pro/Static,
 					Frameworks,
+					"$(PROJECT_DIR)",
+					/Users/apple/Documents/FacebookSDK,
 				);
 				GCC_PREFIX_HEADER = "GatewayConference/GatewayConference-Prefix.pch";
 				INFOPLIST_FILE = GatewayConference/Info.plist;
@@ -834,7 +855,7 @@
 			baseConfigurationReference = 2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -842,6 +863,8 @@
 					3.3.0,
 					Pro/Static,
 					Frameworks,
+					"$(PROJECT_DIR)",
+					/Users/apple/Documents/FacebookSDK,
 				);
 				GCC_PREFIX_HEADER = "GatewayConference/GatewayConference-Prefix.pch";
 				INFOPLIST_FILE = GatewayConference/Info.plist;

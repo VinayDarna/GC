@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -16,10 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ1-gD-bZ5">
-                        <rect key="frame" x="72" y="50" width="289" height="90"/>
+                        <rect key="frame" x="72" y="51" width="289" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npb-40-XgI">
-                                <rect key="frame" x="45" y="8" width="198" height="21"/>
+                                <rect key="frame" x="45" y="9" width="244" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU0-iN-mKz">
-                                <rect key="frame" x="45" y="65" width="222" height="14"/>
+                                <rect key="frame" x="45" y="63" width="222" height="14"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                         </variation>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
-                        <rect key="frame" x="34" y="18" width="80" height="80"/>
+                        <rect key="frame" x="34" y="19" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="ep9-1R-GIE"/>
                             <constraint firstAttribute="height" constant="80" id="f16-DJ-Dm6"/>
@@ -58,9 +58,9 @@
                 </subviews>
                 <color key="backgroundColor" red="0.36798469387755106" green="0.24863839052012809" blue="0.26134616073059336" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="IJ1-gD-bZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="42" id="AEe-qU-aD0"/>
+                    <constraint firstItem="IJ1-gD-bZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="43" id="AEe-qU-aD0"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="DY0-MR-JZ8"/>
-                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Eml-bQ-g1J"/>
+                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="Eml-bQ-g1J"/>
                     <constraint firstItem="DFb-Hj-7Sa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="PY8-lc-q1Q"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="iRP-E4-17l"/>
                     <constraint firstAttribute="trailingMargin" secondItem="IJ1-gD-bZ5" secondAttribute="trailing" constant="45" id="oTW-Sf-oiq"/>
@@ -80,7 +80,7 @@
                 <outlet property="profilePic" destination="DFb-Hj-7Sa" id="DaY-jd-Mzj"/>
                 <outlet property="speakerTypeLbl" destination="QU0-iN-mKz" id="BHk-cl-l5z"/>
             </connections>
-            <point key="canvasLocation" x="725" y="152"/>
+            <point key="canvasLocation" x="725" y="150"/>
         </tableViewCell>
     </objects>
 </document>

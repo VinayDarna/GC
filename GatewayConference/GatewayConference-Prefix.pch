@@ -23,4 +23,7 @@
 
     #import "GCModel.h"
     #import "AppDelegate.h"
+
+    #import "RESideMenu.h"
+
 #endif

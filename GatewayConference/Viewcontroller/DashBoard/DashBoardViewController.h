@@ -11,5 +11,6 @@
 @interface DashBoardViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *nameLable;
 
 @end

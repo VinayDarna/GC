@@ -10,8 +10,9 @@
 
 @interface SponserCell : UITableViewCell
 
-@property(nonatomic, strong) IBOutlet UIImageView *sponser_image;
-@property(nonatomic, strong) IBOutlet UILabel *sponser_title;
-@property(nonatomic, strong) IBOutlet UIButton *sponser_site;
+@property(nonatomic, strong) IBOutlet UIImageView * sponser_image;
+@property(nonatomic, strong) IBOutlet UILabel * sponser_title;
+@property(nonatomic, strong) IBOutlet UIButton * sponser_site;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @end
