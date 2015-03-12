@@ -26,11 +26,34 @@
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
     [self addTapgestureToImageView];
+    
+    appObj = [UIApplication sharedApplication].delegate;
+    
+    if (![[NSFileManager defaultManager]fileExistsAtPath:[NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]]])
+    {
+        [[NSFileManager defaultManager] createDirectoryAtPath:[NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]] withIntermediateDirectories:NO attributes:nil error:nil];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    NSString *imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
+    NSString *filePath = [imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]];
+    NSArray *imageContains = [NSArray arrayWithObject:filePath];
     
+    BOOL isDirectory;
+    for (NSString *item in imageContains){
+        BOOL fileExistsAtPath = [[NSFileManager defaultManager] fileExistsAtPath:item isDirectory:&isDirectory];
+        if (fileExistsAtPath)
+        {
+            NSString * imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
+            _profilePic.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@",[imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]]]];
+        }
+        else
+        {
+            _profilePic.image = [UIImage imageNamed:@"No_profilePic.png"];
+        }
+    }
 }
 
 -(void)addTapgestureToImageView
@@ -127,6 +150,12 @@
     self.profilePic.layer.masksToBounds=YES;
     self.profilePic.backgroundColor = [UIColor blackColor];
     imageSelected = YES;
+    
+    NSData *imageData = UIImageJPEGRepresentation(croppedImage, 2.0);
+    NSString *imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
+    NSString *filePath = [imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]];
+    [imageData writeToFile:filePath atomically:YES];
+    
     [controlleris dismissViewControllerAnimated:YES completion:NULL];
 }
 

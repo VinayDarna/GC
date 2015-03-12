@@ -34,7 +34,6 @@
                                                          forBarMetrics:UIBarMetricsDefault];
     
     [self setUpParseDetails];
-    
     return YES;
 }
 
@@ -68,6 +67,14 @@
     // If you would like all objects to be private by default, remove this line.
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+}
+
+-(NSString *)docPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains
+    (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return documentsDirectory;
 }
 
 #pragma mark face book methods
@@ -162,7 +169,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
     return _persistentStoreCoordinator;
 }
 

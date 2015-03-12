@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DashBoardViewController : UIViewController
-
+{
+    AppDelegate *appObj;
+    int noIs;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *nameLable;
 

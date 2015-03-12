@@ -123,9 +123,7 @@
              
              [[NSUserDefaults standardUserDefaults]setValue:facebookID forKey:@"fbid"];
              [[NSUserDefaults standardUserDefaults]synchronize];
-            
-             [home awakeFromNib];
-             
+                         
 //             DashBoardViewController * obj =(DashBoardViewController*)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
 //             UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:obj];
 //             [self.navigationController pushViewController:nav animated:YES];

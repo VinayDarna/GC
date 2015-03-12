@@ -73,7 +73,7 @@
                 <outlet property="sponser_site" destination="g5E-Zf-HnC" id="Eh1-dN-hRq"/>
                 <outlet property="sponser_title" destination="HQK-Ef-OZh" id="kCm-X3-ibH"/>
             </connections>
-            <point key="canvasLocation" x="395" y="326"/>
+            <point key="canvasLocation" x="410" y="344"/>
         </tableViewCell>
     </objects>
 </document>

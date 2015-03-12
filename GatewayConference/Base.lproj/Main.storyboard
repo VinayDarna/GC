@@ -303,7 +303,7 @@
                                     <action selector="loginwithTwitter:" destination="UBF-Ac-erI" eventType="touchUpInside" id="Bbc-i4-ab6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="systemMenuLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-LC-TIN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="systemMenuLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-LC-TIN">
                                 <rect key="frame" x="154" y="28" width="293" height="98"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293" id="1QI-hB-s6G"/>
