@@ -105,14 +105,15 @@
     cell.backgroundColor = [UIColor clearColor];
     
     [cell.sponser_image sd_setImageWithURL:[NSURL URLWithString:gcSpeak.logo]  placeholderImage:[UIImage imageNamed:@"Placeholder.jpeg"]];
-    cell.sponser_image.layer.cornerRadius = cell.sponser_image.frame.size.width / 2;
+    cell.sponser_image.layer.cornerRadius = 15.0;
     cell.sponser_image.clipsToBounds = YES;
 
     cell.bgView.layer.cornerRadius = 15;
     cell.bgView.layer.masksToBounds = YES;
     
     cell.sponser_title.text = gcSpeak.title;
-  
+    [cell.sponser_site setTitle:gcSpeak.url forState:UIControlStateNormal];
+    
     [cell.sponser_site addTarget:self action:@selector(ShowSelectedSite:) forControlEvents:UIControlEventTouchUpInside];
     cell.sponser_site.tag = indexPath.row;
     

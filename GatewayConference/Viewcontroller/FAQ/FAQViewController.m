@@ -12,6 +12,8 @@
 
 #import "GCModel.h"
 
+static NSString * simpleTableIdentifier = @"FaqCell";
+
 @interface FAQViewController ()
 
 @end
@@ -22,19 +24,18 @@
 {
     [super viewDidLoad];
   
-    if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
-    {
+    if ([[GCSharedClass sharedInstance] checkNetworkAndProceed:self]) {
         [self getFAQDetails];
     }
-    else
-    {
+    else {
         NSLog(@"Error in fetching");
     }
 
+    self.faqTableView.estimatedRowHeight = 68.0;
+    self.faqTableView.rowHeight = UITableViewAutomaticDimension;
 }
 
--(void)getFAQDetails
-{
+- (void)getFAQDetails {
     [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
     
     [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Faq andReturnWith:^(NSMutableArray *faqArray, BOOL Success)
@@ -56,46 +57,51 @@
      }];
 }
 
-#pragma UITableView Delegate
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.faqTableView reloadData];
+}
+
+#pragma UITableView Datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_mainFaqArray count];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 290;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GCModel *model = [_mainFaqArray objectAtIndex:indexPath.row];
     
-    static NSString * simpleTableIdentifier = @"FaqCell";
+//    static NSString * simpleTableIdentifier = @"FaqCell";
     
     FAQTableViewCell *cell = (FAQTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"FAQTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    
-    cell.faqView.layer.cornerRadius = 15;
-    cell.faqView.layer.masksToBounds = YES;
-    
-    cell.questionLabel.text = model.title;
-    cell.answerLabel.text = model.body;
-    
-    cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    [self configureCell:cell forRowAtIndexPath:indexPath];
+
     return cell;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)configureCell:(FAQTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell isKindOfClass:[FAQTableViewCell class]]) {
+       GCModel *model = [_mainFaqArray objectAtIndex:indexPath.row];
+        cell.questionLabel.text = model.title;
+        cell.answerLabel.text = model.body;
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell setNeedsUpdateConstraints];
+        [cell updateConstraintsIfNeeded];
+    }
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 @end

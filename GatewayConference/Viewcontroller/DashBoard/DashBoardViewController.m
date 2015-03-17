@@ -10,6 +10,8 @@
 
 #import <PECropViewController.h>
 
+#import "LoginViewController.h"
+
 @interface DashBoardViewController ()
 {
     PECropViewController *peController;
@@ -27,6 +29,8 @@
     self.profilePic.clipsToBounds = YES;
     [self addTapgestureToImageView];
     
+    
+    
     appObj = [UIApplication sharedApplication].delegate;
     
     if (![[NSFileManager defaultManager]fileExistsAtPath:[NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]]])
@@ -37,22 +41,45 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    NSString *imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
-    NSString *filePath = [imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]];
-    NSArray *imageContains = [NSArray arrayWithObject:filePath];
-    
-    BOOL isDirectory;
-    for (NSString *item in imageContains){
-        BOOL fileExistsAtPath = [[NSFileManager defaultManager] fileExistsAtPath:item isDirectory:&isDirectory];
-        if (fileExistsAtPath)
-        {
-            NSString * imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
-            _profilePic.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@",[imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]]]];
+    if ([[NSUserDefaults standardUserDefaults]valueForKey:@"ConnectLater"] || [[NSUserDefaults standardUserDefaults]valueForKey:@"FileManager"])
+    {
+        NSString *imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
+        NSString *filePath = [imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]];
+        NSArray *imageContains = [NSArray arrayWithObject:filePath];
+        
+        BOOL isDirectory;
+        for (NSString *item in imageContains){
+            BOOL fileExistsAtPath = [[NSFileManager defaultManager] fileExistsAtPath:item isDirectory:&isDirectory];
+            if (fileExistsAtPath)
+            {
+                NSString * imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
+                _profilePic.image = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@",[imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]]]];
+                
+                _nameLable.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_name"];
+                _fbIDLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"];
+                _fbLinkLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_link"];
+            }
+            else
+            {
+                _profilePic.image = [UIImage imageNamed:@"No_profilePic.png"];
+            }
         }
-        else
-        {
-            _profilePic.image = [UIImage imageNamed:@"No_profilePic.png"];
-        }
+    }
+    else if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"]length]>0)
+    {
+        LoginViewController *loginObj = (LoginViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:loginObj animated:YES completion:^{
+            NSLog(@"Presented");
+        }];
+    }
+    else
+    {
+        NSURL *url = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:@"fb_image"]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        _profilePic.image = [UIImage imageWithData:data];
+        _nameLable.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_name"];
+        _fbIDLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"];
+        _fbLinkLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_link"];
     }
 }
 
@@ -156,6 +183,9 @@
     NSString *filePath = [imagePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.png",noIs]];
     [imageData writeToFile:filePath atomically:YES];
     
+    [[NSUserDefaults standardUserDefaults]setObject:@"FM" forKey:@"FileManager"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
     [controlleris dismissViewControllerAnimated:YES completion:NULL];
 }
 
@@ -169,15 +199,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

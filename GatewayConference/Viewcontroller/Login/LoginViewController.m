@@ -23,19 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     UIVisualEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    //    effectView.frame = self.imageView.bounds;
     [effectView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+20)];
     [self.imageView addSubview:effectView];
     appObj = [UIApplication sharedApplication].delegate;
-    
-   // home = [[HomeViewController alloc] init];
     dash = [[DashBoardViewController alloc] init];
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
-   
+    
     appObj.checktheId = NO;
     
     if ([[GCSharedClass sharedInstance]checkNetworkAndProceed:self])
@@ -45,10 +43,10 @@
             appObj.session = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObjects:@"user_events",@"rsvp_event",@"publish_stream",@"friends_events",nil]];
             
             [appObj.session openWithCompletionHandler:^(FBSession *session,
-                                                         FBSessionState status,
-                                                         NSError *error)
+                                                        FBSessionState status,
+                                                        NSError *error)
              {
-                     [self updateView];
+                 [self updateView];
              }];
         }
         else
@@ -61,8 +59,6 @@
         NSLog(@"No internet");
     }
 }
-
-//// Login With Facebook /////////////////
 
 - (void)updateView
 {
@@ -108,7 +104,6 @@
      {
          if (!error)
          {
-             //
              NSString * fbImagelink = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[result valueForKey:@"id"]];
              
              NSLog(@"face book info is = %@\n %@ \n%@", fbImagelink ,[result valueForKey:@"name"],[result valueForKey:@"email"]);
@@ -117,17 +112,21 @@
              name=[result valueForKey:@"name"];
              place=[result valueForKey:@"place"];
              email=[result valueForKey:@"email"];
+             faceBookLink = [result valueForKey:@"link"];
              
-//             [self sendRequest:[result valueForKey:@"id"]];
-//              stroing user id in user defaults
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"remove" object:nil];
              
-             [[NSUserDefaults standardUserDefaults]setValue:facebookID forKey:@"fbid"];
+             [[NSUserDefaults standardUserDefaults]setValue:nil forKey:@"ConnectLater"];
+             
+             [[NSUserDefaults standardUserDefaults]setValue:name forKey:@"fb_name"];
+             [[NSUserDefaults standardUserDefaults]setValue:facebookID forKey:@"fb_id"];
+             [[NSUserDefaults standardUserDefaults]setValue:faceBookLink forKey:@"fb_link"];
+             [[NSUserDefaults standardUserDefaults]setValue:fbImagelink forKey:@"fb_image"];
+             
              [[NSUserDefaults standardUserDefaults]synchronize];
-                         
-//             DashBoardViewController * obj =(DashBoardViewController*)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
-//             UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:obj];
-//             [self.navigationController pushViewController:nav animated:YES];
              
+             
+             [self dismissViewControllerAnimated:YES completion:nil];
          }
      }];
 }
@@ -144,23 +143,14 @@
 
 - (IBAction)connectLater:(id)sender
 {
-    dash = (DashBoardViewController*) [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"DashBoardViewController"];
-    [self.navigationController presentViewController:dash animated:YES completion:nil];
+    [[NSUserDefaults standardUserDefaults] setValue:@"connectlater" forKey:@"ConnectLater"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -14,6 +14,7 @@
 {
     NSArray *titles;
     NSArray *imagesArray;
+    UIButton *button;
 }
 
 -(UIViewController*)returnViewcontrollerWithIdentifier:(NSString*)identifierName;

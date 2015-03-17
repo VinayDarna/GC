@@ -25,6 +25,7 @@
     NSString * name;
     NSString * place;
     NSString * email;
+    NSString * faceBookLink;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

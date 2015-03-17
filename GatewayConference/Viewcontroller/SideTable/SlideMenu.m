@@ -10,6 +10,8 @@
 
 #import "UIViewController+RESideMenu.h"
 
+#import "LoginViewController.h"
+
 @interface SlideMenu ()
 
 @property (strong, readwrite, nonatomic) UITableView *tableView;
@@ -22,8 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-   // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SideBackMenu.png"]]];
-     
+    
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 125, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -42,6 +43,13 @@
     titles = [[NSArray alloc] initWithObjects:@"DashBoard",@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules",@"PontsOfInterest",@"#Tag",@"RealEyes", nil];
     
     imagesArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages4@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"], nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeCoonectNowBtn) name:@"remove" object:nil];
+}
+
+-(void)removeCoonectNowBtn
+{
+    [button removeFromSuperview];
 }
 
 #pragma mark -
@@ -49,20 +57,24 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        if (indexPath.row == 0)
-        {
-            return 50;
-        }
-    return 54;
+    if (indexPath.row == 0)
+    {
+        return 50;
+    }
+    return 45;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
+    if (sectionIndex==0)
+    {
+        return 1;
+    }
     return titles.count;
 }
 
@@ -81,37 +93,43 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-        if (indexPath.row == 0)
+    if (indexPath.section == 0)
+    {
+        button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button addTarget:self action:@selector(connectNowClk)
+         forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:@"Connect Now" forState:UIControlStateNormal];
+        button.frame = CGRectMake(self.view.frame.origin.x+50, 0, 150 ,50);
+        button.titleLabel.font = [UIFont fontWithName: @"Helvetica Bold" size:(20.0f)];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        if ([[[NSUserDefaults standardUserDefaults]valueForKey:@"fb_id"]length]> 0)
         {
-//            UIImageView*  imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x+10, 0, 80 ,20)];
-//            imgView.image = [UIImage imageNamed:@"Hamburger"];
-//            [cell.contentView addSubview:imgView];
-            
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            [button addTarget:self
-                       action:@selector(connectNowClk)
-             forControlEvents:UIControlEventTouchUpInside];
-            button.backgroundColor = [UIColor blackColor];
-            [button setTitle:@"Connect Now" forState:UIControlStateNormal];
-            button.frame = CGRectMake(self.view.frame.origin.x+10, 0, 150 ,40);
+            [button removeFromSuperview];
+        }
+        else
+        {
             [cell.contentView addSubview:button];
-            
-        } else
-    
+        }
+    }
+    else
     {
         cell.textLabel.text = titles[indexPath.row];
         [cell.textLabel setFont:[UIFont fontWithName: @"Heiti TC" size:(20.0f)]];
         cell.textLabel.textColor = [UIColor whiteColor];
-
+        
         cell.imageView.image = imagesArray[indexPath.row];
-
+        
     }
     return cell;
 }
 
 -(void)connectNowClk
 {
-    NSLog(@"CoonectNowClicked");
+    LoginViewController *loginObj = (LoginViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self presentViewController:loginObj animated:YES completion:^{
+        NSLog(@"Presented");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,7 +143,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
     switch (indexPath.row)
     {
         case 0:
@@ -149,9 +167,18 @@
         case 6:
             [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"SessionsViewController"] animated:YES];
             break;
+        case 7:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"POIViewController"] animated:YES];
+            break;
+        case 8:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"HashTagViewController"] animated:YES];
+            break;
+        case 9:
+            [self.sideMenuViewController setContentViewController:[self returnViewcontrollerWithIdentifier:@"RealEyesViewController"] animated:YES];
+            break;
         default:
             break;
-    }    
+    }
     [self.sideMenuViewController hideMenuViewController];
 }
 
