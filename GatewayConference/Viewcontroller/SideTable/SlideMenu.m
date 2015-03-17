@@ -44,12 +44,15 @@
     
     imagesArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages4@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"], nil];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeCoonectNowBtn) name:@"remove" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeCoonectNowBtn) name:@"removeConnectNowBtn" object:nil];
 }
 
 -(void)removeCoonectNowBtn
 {
     [button removeFromSuperview];
+    
+     [self.sideMenuViewController hideMenuViewController];
+    
 }
 
 #pragma mark -

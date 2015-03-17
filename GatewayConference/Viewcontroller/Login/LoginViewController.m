@@ -114,8 +114,8 @@
              email=[result valueForKey:@"email"];
              faceBookLink = [result valueForKey:@"link"];
              
-             [[NSNotificationCenter defaultCenter]postNotificationName:@"remove" object:nil];
-             
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"removeConnectNowBtn" object:nil];
+
              [[NSUserDefaults standardUserDefaults]setValue:nil forKey:@"ConnectLater"];
              
              [[NSUserDefaults standardUserDefaults]setValue:name forKey:@"fb_name"];
