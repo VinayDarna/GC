@@ -13,7 +13,8 @@
     AppDelegate *appObj;
     int noIs;
 }
-@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
-@property (weak, nonatomic) IBOutlet UILabel *nameLable;
+
+@property (weak, nonatomic) IBOutlet UIImageView * profilePic;
+@property (weak, nonatomic) IBOutlet UILabel * nameLable;
 
 @end

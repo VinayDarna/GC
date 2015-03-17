@@ -25,7 +25,7 @@
    // [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SideBackMenu.png"]]];
      
     self.tableView = ({
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 125, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
         tableView.delegate = self;
         tableView.dataSource = self;
@@ -39,9 +39,9 @@
     });
     [self.view addSubview:self.tableView];
     
-    titles = [[NSArray alloc] initWithObjects:@"DashBoard",@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules", nil];
+    titles = [[NSArray alloc] initWithObjects:@"DashBoard",@"Speakers",@"Sponsors",@"Videos" ,@"Survey",@"FAQ",@"Schedules",@"PontsOfInterest",@"#Tag",@"RealEyes", nil];
     
-    imagesArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages4@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"], nil];
+    imagesArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages4@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"],[UIImage imageNamed:@"SidebarImages1@2x.png"],[UIImage imageNamed:@"SidebarImages2@2x.png"],[UIImage imageNamed:@"SidebarImages3@2x.png"], nil];
 }
 
 #pragma mark -
@@ -49,10 +49,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    if (indexPath.row == 0)
-    //    {
-    //        return 200;
-    //    }
+        if (indexPath.row == 0)
+        {
+            return 50;
+        }
     return 54;
 }
 
@@ -81,12 +81,22 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    //    if (indexPath.row == 0)
-    //    {
-    //        UIImageView*  imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x+10, 0, 80 ,20)];
-    //        imgView.image = [UIImage imageNamed:@"Hamburger"];
-    //        [cell.contentView addSubview:imgView];
-    //    }else
+        if (indexPath.row == 0)
+        {
+//            UIImageView*  imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x+10, 0, 80 ,20)];
+//            imgView.image = [UIImage imageNamed:@"Hamburger"];
+//            [cell.contentView addSubview:imgView];
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            [button addTarget:self
+                       action:@selector(connectNowClk)
+             forControlEvents:UIControlEventTouchUpInside];
+            button.backgroundColor = [UIColor blackColor];
+            [button setTitle:@"Connect Now" forState:UIControlStateNormal];
+            button.frame = CGRectMake(self.view.frame.origin.x+10, 0, 150 ,40);
+            [cell.contentView addSubview:button];
+            
+        } else
     
     {
         cell.textLabel.text = titles[indexPath.row];
@@ -97,6 +107,11 @@
 
     }
     return cell;
+}
+
+-(void)connectNowClk
+{
+    NSLog(@"CoonectNowClicked");
 }
 
 - (void)didReceiveMemoryWarning {

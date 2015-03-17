@@ -22,6 +22,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLbl;
 
 @property (nonatomic,strong) id <PopOverDelegate> delegate;
-@property (nonatomic, strong) GCModel *sponsorModelObj;
+@property (nonatomic, strong) GCModel * sponsorModelObj;
 
 @end

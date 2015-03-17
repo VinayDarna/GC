@@ -12,6 +12,7 @@
 		B56507A51AA5AF3900B68968 /* FAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B56507A31AA5AF3900B68968 /* FAQTableViewCell.m */; };
 		B56507A61AA5AF3900B68968 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56507A41AA5AF3900B68968 /* FAQTableViewCell.xib */; };
 		B56507A91AA5AF6700B68968 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56507A81AA5AF6700B68968 /* FAQViewController.m */; };
+		B566F0C01AB8049100F2A2D4 /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B566F0BF1AB8049100F2A2D4 /* POIViewController.m */; };
 		B56A2B6F1AA6DBC100F0D643 /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A2B6E1AA6DBC100F0D643 /* DashBoardViewController.m */; };
 		B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B701AA6E54900F0D643 /* add_friend.png */; };
 		B56A2B731AA6E85500F0D643 /* No_profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = B56A2B721AA6E85500F0D643 /* No_profilePic.png */; };
@@ -43,7 +44,6 @@
 		B766CD201A95FED400A03EAB /* SlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B766CD1F1A95FED400A03EAB /* SlideMenu.m */; };
 		B766CD281A9605D500A03EAB /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B766CD261A9605D500A03EAB /* VideosViewController.m */; };
 		B7F5AE141A95EA0C007D898F /* GCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD51A95EA0C007D898F /* GCModel.m */; };
-		B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADD91A95EA0C007D898F /* POIViewController.m */; };
 		B7F5AE161A95EA0C007D898F /* PopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */; };
 		B7F5AE261A95EA0C007D898F /* AttendiesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5ADFE1A95EA0C007D898F /* AttendiesListViewController.m */; };
 		B7F5AE271A95EA0C007D898F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F5AE011A95EA0C007D898F /* HomeViewController.m */; };
@@ -78,6 +78,8 @@
 		B56507A41AA5AF3900B68968 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		B56507A71AA5AF6700B68968 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
 		B56507A81AA5AF6700B68968 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		B566F0BE1AB8049100F2A2D4 /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
+		B566F0BF1AB8049100F2A2D4 /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		B56A2B6D1AA6DBC100F0D643 /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
 		B56A2B6E1AA6DBC100F0D643 /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
 		B56A2B701AA6E54900F0D643 /* add_friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_friend.png; sourceTree = "<group>"; };
@@ -127,8 +129,6 @@
 		B766CD261A9605D500A03EAB /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		B7F5ADD41A95EA0C007D898F /* GCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCModel.h; sourceTree = "<group>"; };
 		B7F5ADD51A95EA0C007D898F /* GCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCModel.m; sourceTree = "<group>"; };
-		B7F5ADD81A95EA0C007D898F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
-		B7F5ADD91A95EA0C007D898F /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		B7F5ADDA1A95EA0C007D898F /* PopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopOverViewController.h; sourceTree = "<group>"; };
 		B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopOverViewController.m; sourceTree = "<group>"; };
 		B7F5ADFD1A95EA0C007D898F /* AttendiesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendiesListViewController.h; sourceTree = "<group>"; };
@@ -186,6 +186,15 @@
 				2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B566F0BD1AB8044200F2A2D4 /* POi */ = {
+			isa = PBXGroup;
+			children = (
+				B566F0BE1AB8049100F2A2D4 /* POIViewController.h */,
+				B566F0BF1AB8049100F2A2D4 /* POIViewController.m */,
+			);
+			path = POi;
 			sourceTree = "<group>";
 		};
 		B56A2B6C1AA6DBB000F0D643 /* DashBoard */ = {
@@ -402,8 +411,6 @@
 		B7F5ADD71A95EA0C007D898F /* PopOverView */ = {
 			isa = PBXGroup;
 			children = (
-				B7F5ADD81A95EA0C007D898F /* POIViewController.h */,
-				B7F5ADD91A95EA0C007D898F /* POIViewController.m */,
 				B7F5ADDA1A95EA0C007D898F /* PopOverViewController.h */,
 				B7F5ADDB1A95EA0C007D898F /* PopOverViewController.m */,
 			);
@@ -413,6 +420,7 @@
 		B7F5ADFB1A95EA0C007D898F /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				B566F0BD1AB8044200F2A2D4 /* POi */,
 				B57833931AA8511A008D8EB7 /* Login */,
 				B56A2B6C1AA6DBB000F0D643 /* DashBoard */,
 				B766CD211A9605D500A03EAB /* FAQ */,
@@ -695,8 +703,8 @@
 				B71448A61A970A3B00F4CF39 /* VideosCellTableViewCell.m in Sources */,
 				B71448AF1A9734F100F4CF39 /* VideoplayerViewController.m in Sources */,
 				B56507A91AA5AF6700B68968 /* FAQViewController.m in Sources */,
-				B7F5AE151A95EA0C007D898F /* POIViewController.m in Sources */,
 				B7154E471A5FB09D007D12AD /* AppConstants.m in Sources */,
+				B566F0C01AB8049100F2A2D4 /* POIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
