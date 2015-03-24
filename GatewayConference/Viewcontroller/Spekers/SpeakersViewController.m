@@ -46,7 +46,7 @@
         /**
          * Unhide to get the Schedule Details
          */
-       // [self getScheduleDetails];
+      //  [self getScheduleDetails];
        
                
     }
@@ -71,6 +71,17 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
              
              NSLog(@"schedulesArray %@",schedulesArray);
+             //
+             NSArray * commanDatesArray =[[NSSet setWithArray:[schedulesArray valueForKey:@"sessionDay"]] allObjects];
+             
+             NSMutableArray * dataArray = [NSMutableArray new];
+             
+             for (int i = 0; i < [commanDatesArray count]; i++)
+             {
+                [dataArray addObject:[schedulesArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K == %@",@"sessionDay", [commanDatesArray objectAtIndex:i]]]];
+             }
+             
+             NSLog(@"commandataArray %@",dataArray);
              
          }
          else
