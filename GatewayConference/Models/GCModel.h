@@ -71,6 +71,17 @@
 
 @property (nonatomic, strong) NSArray *speakers;
 
+//Expandable Table
+
+@property (nonatomic,strong) NSString *child;
+@property (nonatomic) BOOL isExpandable;
+@property (nonatomic) BOOL expanded;
+@property (nonatomic,strong) NSString *parent;
+
++(NSArray *)defaultTableContents;
++(NSMutableArray *)filteredTableContents:(NSArray *)allContents;
++(NSArray *) addChildrenFromArray:(NSArray *)parentArray to:(NSMutableArray *)filteredArray atIndex:(NSInteger) parentIndex;
++(NSArray *) removeChildrenUsingArray:(NSArray *)parentArray to:(NSMutableArray *)filteredArray atIndex:(NSInteger) parentIndex;
 
 //Videos
 

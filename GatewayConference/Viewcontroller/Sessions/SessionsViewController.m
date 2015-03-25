@@ -7,8 +7,12 @@
 //
 
 #import "SessionsViewController.h"
+static NSString *const cellIndentifier = @"TableViewCell";
 
 @interface SessionsViewController ()
+
+@property (nonatomic,strong) NSArray *tableContents;
+@property (nonatomic,strong) NSMutableArray *filteredContents;
 
 @end
 
@@ -18,7 +22,6 @@
 {
     [super viewDidLoad];
     
-    
     schedulesTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 65, self.view.frame.size.width, self.view.frame.size.height-65)];
     schedulesTable.backgroundColor = [UIColor colorWithRed:95/255.0 green:63/255.0 blue:67/255.0 alpha:1.0];
     
@@ -27,6 +30,8 @@
     [self.view addSubview:schedulesTable];
     
     [self getScheduleDetails];
+    
+    [schedulesTable registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIndentifier];
 }
 
 -(void)getScheduleDetails
@@ -39,10 +44,19 @@
          {
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
              
-             NSLog(@"schedulesArray %@",schedulesArray);
+             // NSLog(@"schedulesArray %@",schedulesArray);
              
-             scheduleArray = [schedulesArray copy];
+             NSArray * commanDatesArray = [[NSSet setWithArray:[schedulesArray valueForKey:@"sessionDay"]] allObjects];
              
+             NSMutableArray * dataArray = [NSMutableArray new];
+             
+             for (int i = 0; i < [commanDatesArray count]; i++)
+             {
+                 [dataArray addObject:[schedulesArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K == %@",@"sessionDay", [commanDatesArray objectAtIndex:i]]]];
+             }
+             
+             NSLog(@"commandataArray %@",dataArray);
+             scheduleArray = [dataArray mutableCopy];
              [schedulesTable reloadData];
          }
          else
@@ -70,28 +84,69 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GCModel * gcSpeak = [scheduleArray objectAtIndex:indexPath.row];
+    GCModel *model;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier forIndexPath:indexPath];
     
-    static NSString *cellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (cell == nil)
+    if(!cell )
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
-        cell.textLabel.textColor = [UIColor whiteColor];
-         cell.detailTextLabel.textColor = [UIColor grayColor];
+        cell = [ [ UITableViewCell alloc ] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier: cellIndentifier ];
     }
-    
-    cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.text = gcSpeak.title;
-    cell.detailTextLabel.text = gcSpeak.datetime;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    else
+    {
+        NSArray * tesmpArray = [scheduleArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [[tesmpArray objectAtIndex:0]valueForKey:@"sessionDay"];
+        [cell setBackgroundColor:[UIColor clearColor]];
+        if ( tesmpArray .count > 1)
+        {
+            model.isExpandable = YES;
+             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        else{
+            model.isExpandable = NO;
+        }
+    }
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([[scheduleArray objectAtIndex:indexPath.row]isExpandable])
+    {
+        if(![[self.filteredContents objectAtIndex:indexPath.row]expanded])
+        {
+            [schedulesTable insertRowsAtIndexPaths:[GCModel addChildrenFromArray:self.tableContents to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
+        }
+        else
+            
+        {
+            [schedulesTable deleteRowsAtIndexPaths:[GCModel removeChildrenUsingArray:self.tableContents to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
+        }
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([[self.filteredContents objectAtIndex:indexPath.row]parent] == nil)
+    {
+        return 0;
+    }
+    else
+    {
+        return 2;
+    }
+}
+
+
+
+
+-(NSArray *)tableContents
+{
+    if(!_tableContents)
+    {
+        _tableContents = [GCModel defaultTableContents];
+    }
+    return _tableContents;
+}
 
 - (void)didReceiveMemoryWarning
 {
