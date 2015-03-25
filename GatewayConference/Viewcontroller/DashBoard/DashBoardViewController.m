@@ -65,12 +65,16 @@
             }
         }
     }
-    else if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"]length]>0)
+    else if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"]length]>0 && ![[[NSUserDefaults standardUserDefaults] valueForKey:@"TwitterName"]length]>0)
     {
         LoginViewController *loginObj = (LoginViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
         [self presentViewController:loginObj animated:YES completion:^{
             NSLog(@"Presented");
         }];
+    }
+    else if ([[NSUserDefaults standardUserDefaults] valueForKey:@"Twitter"])
+    {
+        _nameLable.text = [NSString stringWithFormat:@"@%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"TwitterName"]];
     }
     else
     {

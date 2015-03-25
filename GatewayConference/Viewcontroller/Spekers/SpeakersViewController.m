@@ -91,7 +91,6 @@
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
      }];
-    
 }
 
 

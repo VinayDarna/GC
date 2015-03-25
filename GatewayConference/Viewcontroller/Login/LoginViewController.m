@@ -14,6 +14,8 @@
 
 #import "UIViewController+RESideMenu.h"
 
+#import <Accounts/Accounts.h>
+
 @interface LoginViewController ()
 
 @end
@@ -56,7 +58,8 @@
     }
     else
     {
-        NSLog(@"No internet");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:@"Network Not Connceted. Please Connect" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 
@@ -117,7 +120,6 @@
              [[NSNotificationCenter defaultCenter]postNotificationName:@"removeConnectNowBtn" object:nil];
 
              [[NSUserDefaults standardUserDefaults]setValue:nil forKey:@"ConnectLater"];
-             
              [[NSUserDefaults standardUserDefaults]setValue:name forKey:@"fb_name"];
              [[NSUserDefaults standardUserDefaults]setValue:facebookID forKey:@"fb_id"];
              [[NSUserDefaults standardUserDefaults]setValue:faceBookLink forKey:@"fb_link"];
@@ -138,7 +140,47 @@
     return viewControllerObj;
 }
 
-- (IBAction)loginwithTwitter:(id)sender {
+- (IBAction)loginwithTwitter:(id)sender
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        self.accountStore = [[ACAccountStore alloc] init];
+        
+        ACAccountType *twitterAcc = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+        
+        [self.accountStore requestAccessToAccountsWithType:twitterAcc options:nil completion:^(BOOL granted, NSError *error)
+         {
+             if (granted)
+             {
+                 self.twitterAccount = [[self.accountStore accountsWithAccountType:twitterAcc] lastObject];
+                 NSLog(@" name %@",self.twitterAccount.username);
+                 
+                 [[NSNotificationCenter defaultCenter]postNotificationName:@"removeConnectNowBtn" object:nil];
+
+                 [[NSUserDefaults standardUserDefaults]setValue:nil forKey:@"ConnectLater"];
+                 [[NSUserDefaults standardUserDefaults]setValue:@"twitterLogin" forKey:@"Twitter"];
+                 [[NSUserDefaults standardUserDefaults]setValue:self.twitterAccount.username forKey:@"TwitterName"];
+                 [[NSUserDefaults standardUserDefaults]synchronize];
+
+                 [self dismissViewControllerAnimated:YES completion:nil];
+             }
+             else
+             {
+                 if (error == nil) {   
+                     NSLog(@"User Has disabled your app from settings...");
+                 }
+                 else
+                 {
+                     NSLog(@"Error in Login: %@", error);
+                 }
+             }
+         }];
+    }
+    else
+    {
+        UIAlertView *twitterAler = [[UIAlertView alloc]initWithTitle:@"Sorry!" message:@"Twitter was not configured in settings. Please Configure it." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [twitterAler show];
+    }
 }
 
 - (IBAction)connectLater:(id)sender

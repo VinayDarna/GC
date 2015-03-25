@@ -49,10 +49,9 @@
 
 -(void)removeCoonectNowBtn
 {
-    [button removeFromSuperview];
-    
+    [button setHidden:YES];
+     [button removeFromSuperview];
      [self.sideMenuViewController hideMenuViewController];
-    
 }
 
 #pragma mark -

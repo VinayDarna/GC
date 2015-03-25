@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22A4F7E71A9E2C9000B31FC4 /* Bkg_SideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F7E61A9E2C9000B31FC4 /* Bkg_SideMenu.png */; };
 		22A4F7EA1A9E323500B31FC4 /* systemMenuLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A4F7E81A9E323500B31FC4 /* systemMenuLogo.png */; };
+		B56267431AC29043000B661F /* Registration.png in Resources */ = {isa = PBXBuildFile; fileRef = B56267421AC29043000B661F /* Registration.png */; };
+		B56267451AC292D5000B661F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56267441AC292D5000B661F /* Social.framework */; };
 		B566F0C01AB8049100F2A2D4 /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B566F0BF1AB8049100F2A2D4 /* POIViewController.m */; };
 		B566F0C41AB809DB00F2A2D4 /* HashTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B566F0C31AB809DB00F2A2D4 /* HashTagViewController.m */; };
 		B566F0C81AB809E600F2A2D4 /* RealEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B566F0C71AB809E600F2A2D4 /* RealEyesViewController.m */; };
@@ -76,6 +78,8 @@
 		22A4F7E81A9E323500B31FC4 /* systemMenuLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = systemMenuLogo.png; sourceTree = "<group>"; };
 		2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6B33C8356A63C9D9D6AEF318 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56267421AC29043000B661F /* Registration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Registration.png; sourceTree = "<group>"; };
+		B56267441AC292D5000B661F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B566F0BE1AB8049100F2A2D4 /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
 		B566F0BF1AB8049100F2A2D4 /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		B566F0C21AB809DB00F2A2D4 /* HashTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTagViewController.h; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56267451AC292D5000B661F /* Social.framework in Frameworks */,
 				B71448AC1A97349300F4CF39 /* MediaPlayer.framework in Frameworks */,
 				FCAEDCF6F038909B59BB2DCD /* libPods.a in Frameworks */,
 			);
@@ -180,6 +185,7 @@
 		0EAF706CCA2E588337A387BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B56267441AC292D5000B661F /* Social.framework */,
 				B57DD4761AAEF8B400EB83C5 /* FacebookSDK.framework */,
 				B71448AB1A97349300F4CF39 /* MediaPlayer.framework */,
 				6B33C8356A63C9D9D6AEF318 /* libPods.a */,
@@ -523,6 +529,7 @@
 		B7F5AE321A95EA26007D898F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B56267421AC29043000B661F /* Registration.png */,
 				B566F0D11AB81FDD00F2A2D4 /* Faq_Background.png */,
 				B5811FAF1AB0545600DD001D /* SidebarImages1@2x.png */,
 				B5811FB01AB0545600DD001D /* SidebarImages2@2x.png */,
@@ -638,6 +645,7 @@
 				B566F0CD1AB81F8300F2A2D4 /* FAQTableViewCell.xib in Resources */,
 				B723B5671A9F193E0032FDB2 /* SponserCell.xib in Resources */,
 				22A4F7EA1A9E323500B31FC4 /* systemMenuLogo.png in Resources */,
+				B56267431AC29043000B661F /* Registration.png in Resources */,
 				B56A2B711AA6E54900F0D643 /* add_friend.png in Resources */,
 				B5811FB31AB0545600DD001D /* SidebarImages1@2x.png in Resources */,
 				B723B5621A9EFD250032FDB2 /* Survey.png in Resources */,

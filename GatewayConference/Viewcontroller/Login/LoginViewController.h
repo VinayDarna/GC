@@ -33,5 +33,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *connectWithTwitter;
 @property (weak, nonatomic) IBOutlet UIButton *connectLater;
 
+@property (nonatomic, retain) ACAccountStore * accountStore;
+@property (nonatomic, strong) ACAccount * twitterAccount;
+
+//@property (nonatomic, strong) NSString * username;
+//@property (nonatomic, strong) NSString * userFullName;
 
 @end
