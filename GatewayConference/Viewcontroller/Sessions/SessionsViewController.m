@@ -95,49 +95,51 @@ static NSString *const cellIndentifier = @"TableViewCell";
     {
         NSArray * tesmpArray = [scheduleArray objectAtIndex:indexPath.row];
         cell.textLabel.text = [[tesmpArray objectAtIndex:0]valueForKey:@"sessionDay"];
+        [cell.textLabel setTextColor:[UIColor whiteColor]];
         [cell setBackgroundColor:[UIColor clearColor]];
         if ( tesmpArray .count > 1)
         {
-            model.isExpandable = YES;
+             model.isExpandable = YES;
              cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
         else{
             model.isExpandable = NO;
         }
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([[scheduleArray objectAtIndex:indexPath.row]isExpandable])
-    {
-        if(![[self.filteredContents objectAtIndex:indexPath.row]expanded])
-        {
-            [schedulesTable insertRowsAtIndexPaths:[GCModel addChildrenFromArray:self.tableContents to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
-        }
-        else
-            
-        {
-            [schedulesTable deleteRowsAtIndexPaths:[GCModel removeChildrenUsingArray:self.tableContents to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
-        }
-    }
+//    if([[scheduleArray objectAtIndex:indexPath.row]isExpandable])
+//    {
+//        if(![[self.filteredContents objectAtIndex:indexPath.row]expanded])
+//        {
+//            [schedulesTable insertRowsAtIndexPaths:[GCModel addChildrenFromArray:scheduleArray to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
+//        }
+//        else
+//            
+//        {
+//            [schedulesTable deleteRowsAtIndexPaths:[GCModel removeChildrenUsingArray:self.tableContents to:self.filteredContents atIndex:indexPath.row] withRowAnimation:UITableViewRowAnimationTop];
+//        }
+//    }
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert!" message:@"Have to do functionality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([[self.filteredContents objectAtIndex:indexPath.row]parent] == nil)
-    {
-        return 0;
-    }
-    else
-    {
-        return 2;
-    }
-}
-
-
-
+//- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if([[self.filteredContents objectAtIndex:indexPath.row]parent] == nil)
+//    {
+//        return 0;
+//    }
+//    else
+//    {
+//        return 2;
+//    }
+//}
 
 -(NSArray *)tableContents
 {

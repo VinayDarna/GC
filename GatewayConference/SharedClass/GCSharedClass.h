@@ -25,6 +25,7 @@ typedef void(^GCBlock)(NSMutableArray * modelObjectsArray, BOOL Success);
 +(GCSharedClass *)sharedInstance;
 
 -(BOOL)checkNetworkAndProceed:(UIViewController*)viewControllerObject;
+
 -(BOOL)isNetworkAvalible;
 
 -(void)fetchDetailsWithParameter:(NSString*)paramStr andReturnWith:(GCBlock)completionHandler;
