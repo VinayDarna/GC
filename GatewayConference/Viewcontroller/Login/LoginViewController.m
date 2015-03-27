@@ -16,6 +16,8 @@
 
 #import <Accounts/Accounts.h>
 
+#import "STTwitterAPI.h"
+
 @interface LoginViewController ()
 
 @end
@@ -107,7 +109,7 @@
      {
          if (!error)
          {
-             NSString * fbImagelink = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[result valueForKey:@"id"]];
+             NSString * fbImagelink = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",[result valueForKey:@"id"]];
              
              NSLog(@"face book info is = %@\n %@ \n%@", fbImagelink ,[result valueForKey:@"name"],[result valueForKey:@"email"]);
              

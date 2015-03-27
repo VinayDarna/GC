@@ -39,6 +39,7 @@ PODS:
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
+  - STTwitter (0.2.0)
   - WYPopoverController (0.3.7)
 
 DEPENDENCIES:
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - Reachability (= 3.1.1)
   - RESideMenu (~> 4.0.7)
   - SDWebImage (= 3.7.1)
+  - STTwitter
   - WYPopoverController (~> 0.3)
 
 SPEC CHECKSUMS:
@@ -65,6 +67,7 @@ SPEC CHECKSUMS:
   Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
   RESideMenu: a9c1cd2e64e60e1d3166ddac01a83e215a0e4d30
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  STTwitter: 743ead8a65466ec0fe9b64cd2811de5590a0ed76
   WYPopoverController: 211e8e4d5178175cc8089cf754dd8631f819d0d1
 
 COCOAPODS: 0.35.0

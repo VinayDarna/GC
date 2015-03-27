@@ -824,7 +824,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "5dbf998d-98da-4b3a-9bd0-d23a2206a504";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -861,7 +861,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "5dbf998d-98da-4b3a-9bd0-d23a2206a504";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -873,8 +873,8 @@
 			baseConfigurationReference = 0D6D92A0A38A91BBB19AC42A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Olive Technology Ltd (QEY6UXHPPV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Olive Technology Ltd (QEY6UXHPPV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GatewayConference/STV",
@@ -893,7 +893,7 @@
 					"$(PROJECT_DIR)/GatewayConference/Vuforia/build/lib/arm",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "85068556-9cab-4c0b-b912-ff5ced08d7a5";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -903,8 +903,8 @@
 			baseConfigurationReference = 2AA38805CC4A2C5574697FBF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Olive Technology Ltd (QEY6UXHPPV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Olive Technology Ltd (QEY6UXHPPV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GatewayConference/STV",
@@ -923,7 +923,7 @@
 					"$(PROJECT_DIR)/GatewayConference/Vuforia/build/lib/arm",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "85068556-9cab-4c0b-b912-ff5ced08d7a5";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -932,8 +932,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -945,7 +945,7 @@
 				INFOPLIST_FILE = GatewayConferenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatewayConference.app/GatewayConference";
 			};
 			name = Debug;
@@ -954,8 +954,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravi Surathu (HJD5E9GNT7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -963,7 +963,7 @@
 				INFOPLIST_FILE = GatewayConferenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dccaebbd-c670-4d6c-9f29-eebe89ad61ca";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GatewayConference.app/GatewayConference";
 			};
 			name = Release;

@@ -11,7 +11,10 @@
 #import "HomeViewController.h"
 #import "DashBoardViewController.h"
 #import "SessionsViewController.h"
+#import "STTwitter.h"
 
+
+typedef void (^accountChooserBlock_t)(ACAccount *account, NSString *errorMessage);
 
 @class HomeViewController;
 
@@ -36,7 +39,16 @@
 @property (nonatomic, retain) ACAccountStore * accountStore;
 @property (nonatomic, strong) ACAccount * twitterAccount;
 
-//@property (nonatomic, strong) NSString * username;
+
+@property (nonatomic, strong) NSString * twiusername;
 //@property (nonatomic, strong) NSString * userFullName;
+@property (nonatomic, strong) accountChooserBlock_t accountChooserBlock;
+@property (nonatomic, weak) IBOutlet UILabel *loginStatusLabel;
+@property (nonatomic, strong) STTwitterAPI *STtwitter;
+@property (nonatomic, strong) NSArray *iOSAccounts;
+
+
+
+
 
 @end

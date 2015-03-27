@@ -75,6 +75,9 @@
     else if ([[NSUserDefaults standardUserDefaults] valueForKey:@"Twitter"])
     {
         _nameLable.text = [NSString stringWithFormat:@"@%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"TwitterName"]];
+        NSURL *url = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:@"twitterImage"]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        _profilePic.image = [UIImage imageWithData:data];
     }
     else
     {

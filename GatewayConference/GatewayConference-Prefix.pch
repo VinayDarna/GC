@@ -20,7 +20,9 @@
     #import "Reachability.h"
     #import <MBProgressHUD.h>
     #import <SDWebImage/UIImageView+WebCache.h>
+
     #import <Social/Social.h>
+    #import <Accounts/Accounts.h>
 
     #import "GCModel.h"
     #import "AppDelegate.h"
