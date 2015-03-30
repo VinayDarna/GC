@@ -85,7 +85,6 @@
     static NSString *cellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
@@ -119,10 +118,10 @@
         cell.textLabel.text = titles[indexPath.row];
         [cell.textLabel setFont:[UIFont fontWithName: @"Heiti TC" size:(20.0f)]];
         cell.textLabel.textColor = [UIColor whiteColor];
-        
         cell.imageView.image = imagesArray[indexPath.row];
         
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

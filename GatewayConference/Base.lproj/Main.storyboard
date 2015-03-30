@@ -325,7 +325,7 @@
                                     <constraint firstAttribute="height" constant="120" id="G83-cc-2AD"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfC-Nc-DUM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfC-Nc-DUM">
                                 <rect key="frame" x="135" y="340" width="330" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="PpO-md-dI9"/>
@@ -335,7 +335,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ddd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dor-ci-312">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dor-ci-312">
                                 <rect key="frame" x="135" y="539" width="330" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="auO-N6-TqQ"/>
@@ -345,7 +345,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ccc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u8-7a-6tZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u8-7a-6tZ">
                                 <rect key="frame" x="135" y="457" width="330" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="ZU6-f3-Rh6"/>
@@ -355,7 +355,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bbb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-ug-6xb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-ug-6xb">
                                 <rect key="frame" x="135" y="398" width="330" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="t3B-Nk-3tK"/>
@@ -802,13 +802,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xy-fU-qNb">
-                                <rect key="frame" x="152" y="426" width="298" height="41"/>
+                                <rect key="frame" x="152" y="413" width="298" height="54"/>
                                 <color key="backgroundColor" red="0.5725490196078431" green="0.78431372549019607" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="3Ne-9P-fWV"/>
+                                    <constraint firstAttribute="height" constant="54" id="3Ne-9P-fWV"/>
                                     <constraint firstAttribute="width" constant="298" id="up7-FH-Lmv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Take Survey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -836,7 +836,7 @@
                             <constraint firstItem="fKR-Am-W7z" firstAttribute="centerX" secondItem="hrO-9m-c4f" secondAttribute="centerX" id="lrg-2C-A0f"/>
                             <constraint firstAttribute="centerY" secondItem="hrO-9m-c4f" secondAttribute="centerY" constant="7" id="okU-X1-YoE"/>
                             <constraint firstItem="cpS-dB-Hwn" firstAttribute="top" secondItem="0xy-fU-qNb" secondAttribute="bottom" constant="133" id="r0Y-g5-FO5"/>
-                            <constraint firstItem="0xy-fU-qNb" firstAttribute="top" secondItem="hrO-9m-c4f" secondAttribute="bottom" constant="36" id="xtN-Th-ZKk"/>
+                            <constraint firstItem="0xy-fU-qNb" firstAttribute="top" secondItem="hrO-9m-c4f" secondAttribute="bottom" constant="23" id="xtN-Th-ZKk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -49,7 +49,7 @@
                         </variation>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DFb-Hj-7Sa">
-                        <rect key="frame" x="34" y="19" width="80" height="80"/>
+                        <rect key="frame" x="28" y="19" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="ep9-1R-GIE"/>
                             <constraint firstAttribute="height" constant="80" id="f16-DJ-Dm6"/>
@@ -61,7 +61,7 @@
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="43" id="AEe-qU-aD0"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="DY0-MR-JZ8"/>
                     <constraint firstItem="DFb-Hj-7Sa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="Eml-bQ-g1J"/>
-                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="PY8-lc-q1Q"/>
+                    <constraint firstItem="DFb-Hj-7Sa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="PY8-lc-q1Q"/>
                     <constraint firstItem="IJ1-gD-bZ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="iRP-E4-17l"/>
                     <constraint firstAttribute="trailingMargin" secondItem="IJ1-gD-bZ5" secondAttribute="trailing" constant="45" id="oTW-Sf-oiq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="IJ1-gD-bZ5" secondAttribute="trailing" constant="25" id="w4l-3e-8sx"/>

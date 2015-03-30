@@ -126,9 +126,7 @@
          if (Success)
          {
              [[GCSharedClass sharedInstance] dismissGlobalHUD];
-           
              NSLog(@"tracksArray %@",tracksArray);
-             
          }
          else
          {
@@ -151,14 +149,13 @@
 -(void)getSpeakerDetails
 {
     [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
-    
     [[GCSharedClass sharedInstance]fetchDetailsWithParameter:url_Speakers andReturnWith:^(NSMutableArray *speakers, BOOL Success)
      {
          if (Success)
          {
-             [[GCSharedClass sharedInstance] dismissGlobalHUD];
              speakersArray = [speakers copy];
              [speakersTableView reloadData];
+             [[GCSharedClass sharedInstance] dismissGlobalHUD];
          }
          else
          {

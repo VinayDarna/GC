@@ -41,6 +41,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [[GCSharedClass sharedInstance]showGlobalProgressHUDWithTitle:@"Loading..."];
     if ([[NSUserDefaults standardUserDefaults]valueForKey:@"ConnectLater"] || [[NSUserDefaults standardUserDefaults]valueForKey:@"FileManager"])
     {
         NSString *imagePath = [NSString stringWithFormat:@"%@/ProfilePics",[appObj docPath]];
@@ -64,6 +65,7 @@
                 _profilePic.image = [UIImage imageNamed:@"No_profilePic.png"];
             }
         }
+        [[GCSharedClass sharedInstance]dismissGlobalHUD];
     }
     else if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"]length]>0 && ![[[NSUserDefaults standardUserDefaults] valueForKey:@"TwitterName"]length]>0)
     {
@@ -71,6 +73,7 @@
         [self presentViewController:loginObj animated:YES completion:^{
             NSLog(@"Presented");
         }];
+        [[GCSharedClass sharedInstance]dismissGlobalHUD];
     }
     else if ([[NSUserDefaults standardUserDefaults] valueForKey:@"Twitter"])
     {
@@ -78,6 +81,7 @@
         NSURL *url = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:@"twitterImage"]];
         NSData *data = [NSData dataWithContentsOfURL:url];
         _profilePic.image = [UIImage imageWithData:data];
+        [[GCSharedClass sharedInstance]dismissGlobalHUD];
     }
     else
     {
@@ -88,6 +92,8 @@
         _fbIDLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"];
         _fbLinkLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_link"];
         _fbEmailIDlbl.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_email"];
+        
+        [[GCSharedClass sharedInstance]dismissGlobalHUD];
     }
 }
 

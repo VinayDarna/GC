@@ -19,17 +19,17 @@
                         <rect key="frame" x="13" y="15" width="387" height="66"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SV-Sz-kB9">
-                        <rect key="frame" x="23" y="19" width="356" height="32"/>
+                        <rect key="frame" x="23" y="21" width="365" height="31"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="356" id="6Gm-fP-qA8"/>
+                            <constraint firstAttribute="width" constant="365" id="6Gm-fP-qA8"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" red="0.84237484056122447" green="0.20820850761689821" blue="0.13192038081614227" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH3-er-q4n">
-                        <rect key="frame" x="24" y="55" width="376" height="18"/>
+                        <rect key="frame" x="24" y="56" width="364" height="18"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" red="0.51853475765306123" green="0.31462776587557173" blue="0.14208626468701799" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,10 +39,10 @@
                 <color key="backgroundColor" red="0.36862745099999999" green="0.2470588235" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="WcX-QP-nOU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="4T3-Id-oPk"/>
-                    <constraint firstItem="7SV-Sz-kB9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="56d-h4-AOX"/>
+                    <constraint firstItem="7SV-Sz-kB9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="56d-h4-AOX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="WcX-QP-nOU" secondAttribute="trailing" constant="7" id="58T-nH-363"/>
                     <constraint firstItem="mH3-er-q4n" firstAttribute="top" secondItem="7SV-Sz-kB9" secondAttribute="bottom" constant="1" id="DGi-Tu-Snm"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="7SV-Sz-kB9" secondAttribute="trailing" constant="28" id="Eiu-xL-z84"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7SV-Sz-kB9" secondAttribute="trailing" constant="19" id="Eiu-xL-z84"/>
                     <constraint firstItem="mH3-er-q4n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="Fh3-NC-CEf"/>
                     <constraint firstAttribute="bottomMargin" secondItem="mH3-er-q4n" secondAttribute="bottom" constant="66" id="LO2-0J-pv3"/>
                     <constraint firstItem="mH3-er-q4n" firstAttribute="leading" secondItem="7SV-Sz-kB9" secondAttribute="leading" constant="1" id="M4E-T8-GOy"/>
@@ -50,9 +50,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="WcX-QP-nOU" secondAttribute="bottom" id="OXJ-yP-ECo"/>
                     <constraint firstItem="7SV-Sz-kB9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="SSo-Vx-PpW"/>
                     <constraint firstItem="WcX-QP-nOU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="SgB-ee-geF"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="mH3-er-q4n" secondAttribute="bottom" constant="8" id="XTh-wk-rjW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mH3-er-q4n" secondAttribute="bottom" constant="7" id="XTh-wk-rjW"/>
                     <constraint firstItem="mH3-er-q4n" firstAttribute="top" secondItem="7SV-Sz-kB9" secondAttribute="bottom" constant="4" id="cId-UW-wj5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="mH3-er-q4n" secondAttribute="trailing" constant="7" id="jd1-9Q-3Zh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mH3-er-q4n" secondAttribute="trailing" constant="19" id="jd1-9Q-3Zh"/>
                     <constraint firstItem="7SV-Sz-kB9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="mzw-zb-XMR"/>
                     <constraint firstItem="WcX-QP-nOU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="5" id="sMe-gs-3nB"/>
                 </constraints>
@@ -70,7 +70,7 @@
                 <outlet property="answerLabel" destination="mH3-er-q4n" id="xBF-4J-xey"/>
                 <outlet property="questionLabel" destination="7SV-Sz-kB9" id="PR0-jT-Df9"/>
             </connections>
-            <point key="canvasLocation" x="414.5" y="112"/>
+            <point key="canvasLocation" x="414.5" y="110"/>
         </tableViewCell>
     </objects>
     <resources>
