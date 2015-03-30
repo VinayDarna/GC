@@ -44,7 +44,7 @@
     {
         if(!appObj.session.isOpen)
         {
-            appObj.session = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObjects:@"user_events",@"rsvp_event",@"publish_stream",@"friends_events",nil]];
+            appObj.session = [[FBSession alloc] initWithPermissions:[NSArray arrayWithObjects:@"user_events",@"rsvp_event",@"publish_stream",@"friends_events",@"public_profile", @"email",nil]];
             
             [appObj.session openWithCompletionHandler:^(FBSession *session,
                                                         FBSessionState status,
@@ -118,6 +118,7 @@
              place=[result valueForKey:@"place"];
              email=[result valueForKey:@"email"];
              faceBookLink = [result valueForKey:@"link"];
+             fbEmailID = [result valueForKey:@"email"];
              
              [[NSNotificationCenter defaultCenter]postNotificationName:@"removeConnectNowBtn" object:nil];
 
@@ -125,10 +126,10 @@
              [[NSUserDefaults standardUserDefaults]setValue:name forKey:@"fb_name"];
              [[NSUserDefaults standardUserDefaults]setValue:facebookID forKey:@"fb_id"];
              [[NSUserDefaults standardUserDefaults]setValue:faceBookLink forKey:@"fb_link"];
+             [[NSUserDefaults standardUserDefaults]setValue:fbEmailID forKey:@"fb_email"];
              [[NSUserDefaults standardUserDefaults]setValue:fbImagelink forKey:@"fb_image"];
              
              [[NSUserDefaults standardUserDefaults]synchronize];
-             
              
              [self dismissViewControllerAnimated:YES completion:nil];
          }

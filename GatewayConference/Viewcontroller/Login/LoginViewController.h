@@ -29,6 +29,7 @@ typedef void (^accountChooserBlock_t)(ACAccount *account, NSString *errorMessage
     NSString * place;
     NSString * email;
     NSString * faceBookLink;
+    NSString * fbEmailID;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

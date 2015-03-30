@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel * nameLable;
 @property (weak, nonatomic) IBOutlet UILabel *fbIDLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fbLinkLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fbEmailIDlbl;
 
 @end

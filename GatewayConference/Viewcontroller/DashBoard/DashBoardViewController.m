@@ -87,6 +87,7 @@
         _nameLable.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_name"];
         _fbIDLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_id"];
         _fbLinkLabel.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_link"];
+        _fbEmailIDlbl.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"fb_email"];
     }
 }
 
